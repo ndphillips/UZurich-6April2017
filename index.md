@@ -18,7 +18,7 @@ bibliography : bibliography.bib
 ---
 
 
-## Many research topics, one common thread
+## Four main research topics, one common thread
 
 
 <img src="images/rthread.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" width="65%" style="display: block; margin: auto;" />
@@ -84,7 +84,6 @@ Rotjan, R. D., Chabot, J. R., & Lewis, S. M. (2010). Social context of shell acq
 
 --- .class #id 
 
-## Example: Phillips et al. (2014)
 
 <img src="images/sampleordecide.png" title="plot of chunk unnamed-chunk-12" alt="plot of chunk unnamed-chunk-12" width="100%" style="display: block; margin: auto;" />
 
@@ -230,9 +229,7 @@ install.packages("https://goo.gl/q6GvBk",
 
 --- .class #id 
 
-## Making good decisions
-
-- R is not just good for documenting and sharing research, it can also help you to make better, faster decisions. Here's how:
+## Making good decisions with R
 
 <img src="images/complexity.jpg" title="plot of chunk unnamed-chunk-26" alt="plot of chunk unnamed-chunk-26" width="70%" style="display: block; margin: auto;" />
 
@@ -309,7 +306,7 @@ install.packages("https://goo.gl/q6GvBk",
 
 ***=left
 
-- Decision trees are simple, sequential, rule-based decision algorithms.
+- Simple, sequential, rule-based decision algorithms.
 - A fast and frugal decision tree (FFT) is a very simple decision tree (Martignon et al., 2008).
     - Predict depression (Jenny et al., 2013)
     - Terrorist attacks (Garcia, 2016)
@@ -328,9 +325,8 @@ Neth et al. (2014). "Homo heuristicus in the financial world".
 
 ***=left
 
-- Data set: Baden Wuerttemberg dataset -- 1101 patients, 46 cues (age, sex, diagnosis, drug history, etc...)
-- Goal: Predict who will be successfully released.
-- Problem: There was no off-the-shelf method to construct FFTs.
+- Data set: 1101 Baden Wuerttemberg patients, 46 cues (age, sex, diagnosis, drug history, etc...)
+- Goal: Predict who will be successfully released with an FFT.
 - Solution: `FFTrees`, an easy-to-use R package that constructs, visualizes, and implements FFTs from any data.
 
 Phillips et al. (under review). FFTrees: An R package to create, visualise, and impliment fast and frugal decision trees
@@ -472,6 +468,13 @@ Phillips, Neth, Gaissmaier & Woike (under review)
 ## Prediction accuracy across 10 dasets
 
 <img src="images/simulationagg_c.png" title="plot of chunk unnamed-chunk-40" alt="plot of chunk unnamed-chunk-40" width="90%" style="display: block; margin: auto;" />
+
+
+--- .class #id 
+## Speed and frugality
+
+
+
 
 
 
