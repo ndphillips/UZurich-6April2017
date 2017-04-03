@@ -39,7 +39,7 @@ bibliography : bibliography.bib
 
 ## Asking for data
 
-Towards the start of my PhD, I requested data from someone. Here was the response:
+Towards the start of my PhD, I requested data from a  Here was the response:
 
 #### What He wrote:
 
@@ -47,7 +47,7 @@ Towards the start of my PhD, I requested data from someone. Here was the respons
 
 #### What I understood:
 
-"My data are unorganized and it would take me a long time to prepare and distribute it to someone without getting something in return."
+"My data are unorganized and it would take me a long time to prepare and distribute it. Plus, what's in it for me?"
 
 
 ---&twocol
@@ -73,7 +73,7 @@ Towards the start of my PhD, I requested data from someone. Here was the respons
 
 --- .class #id 
 
-## A solution: Reasearch as an R package
+## A solution: Reasearch as an R manuscript package
 
 - Store everything in an R package: Data, data descriptions, analyses, tutorials.
 
@@ -140,7 +140,7 @@ Towards the start of my PhD, I requested data from someone. Here was the respons
 
 ## Phillips et al. (2014)
 
-All data analyses, and data descriptions are stored in an R package called `phillips2014rivals` available at [https://goo.gl/q6GvBk](https://goo.gl/q6GvBk)
+All data analyses, and data descriptions are stored in an R manuscript package called `phillips2014rivals` available at [https://goo.gl/q6GvBk](https://goo.gl/q6GvBk)
 
 ```
 # Install the phillips2014rivals R package
@@ -170,12 +170,12 @@ install.packages("https://goo.gl/q6GvBk",
 <img src="images/sampleordecide.png" title="plot of chunk unnamed-chunk-16" alt="plot of chunk unnamed-chunk-16" width="100%" style="display: block; margin: auto;" />
 
 
-
 --- .class #id 
 
 ## Example: Phillips et al. (2014)
 
 <img src="figure/unnamed-chunk-17-1.png" title="plot of chunk unnamed-chunk-17" alt="plot of chunk unnamed-chunk-17" width="70%" style="display: block; margin: auto;" />
+
 
 --- .class #id 
 
@@ -185,9 +185,29 @@ install.packages("https://goo.gl/q6GvBk",
 
 --- .class #id 
 
-## Barplot vs. Pirateplot
+## Example: Phillips et al. (2014)
 
-<img src="figure/unnamed-chunk-19-1.png" title="plot of chunk unnamed-chunk-19" alt="plot of chunk unnamed-chunk-19" width="100%" style="display: block; margin: auto;" />
+<img src="figure/unnamed-chunk-19-1.png" title="plot of chunk unnamed-chunk-19" alt="plot of chunk unnamed-chunk-19" width="70%" style="display: block; margin: auto;" />
+
+<!-- --- .class #id  -->
+
+<!-- ## Barplot vs. Pirateplot -->
+
+<!-- ```{r, fig.width = 12, fig.height = 6, echo = FALSE, out.width = "100%", dpi = 200, fig.align = 'center'} -->
+
+<!-- par(mfrow = c(1, 2)) -->
+
+<!-- # Create a pirateplot -->
+<!-- yarrr::pirateplot(trials ~ condition, data = sampling.data, xlim = c(.5, 2.5),  -->
+<!--                   sortx = "s", ylab = "Sampling Trials", cap.beans = TRUE, theme = 0,  -->
+<!--                   bar.f.o = .2, inf.disp = "line", inf.f.o = 1,  -->
+<!--                   pal = "black", ylim = c(0, 30), main = "A bad barplot")        -->
+
+<!-- # Create a pirateplot -->
+<!-- yarrr::pirateplot(trials ~ condition, data = sampling.data, xlim = c(.5, 2.5), sortx = "s", -->
+<!--                   ylab = "Sampling Trials", cap.beans = TRUE, main = "An informative pirateplot")        -->
+
+<!-- ``` -->
 
 
 
@@ -195,18 +215,7 @@ install.packages("https://goo.gl/q6GvBk",
 
 ## Why did competition decrease search so much?
 
-
-```
-## Error in xy.coords(x, y, xlabel, ylabel, log): 'x' and 'y' lengths differ
-```
-
-```
-## Error in axis(1, 1:10): plot.new has not been called yet
-```
-
-```
-## Error in int_abline(a = a, b = b, h = h, v = v, untf = untf, ...): plot.new has not been called yet
-```
+<img src="figure/unnamed-chunk-20-1.png" title="plot of chunk unnamed-chunk-20" alt="plot of chunk unnamed-chunk-20" width="70%" style="display: block; margin: auto;" />
 
 
 
@@ -231,11 +240,10 @@ install.packages("https://goo.gl/q6GvBk",
 
 ***=left
 
-### Advantages of an R package
+### Advantages of an R manuscript package
 
-- Data are fully documented.
-- Everything is avaiable with one line of code.
-- Total transparency and availability.
+- Data are fully organized and documented.
+- Accessible to anyone with one line of code.
 - Packages make your research interactive.
 
 ***=right
@@ -458,7 +466,7 @@ plot(patient.fft)
 ## Generalizing FFTrees
 
 - The `FFTrees` package can be used with any dataset with a binary criterion.
-- Simulation: 10 diverse datasets taken from the Machine Learning Database.
+- Simulation: 10 diverse datasets taken from the UCI Machine Learning Database.
 - FFTrees vs. regression, Naive Bayes, Random Forests and more
 
 ### How well can a simple fast and frugal tree predict data?  

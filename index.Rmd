@@ -44,7 +44,7 @@ knitr::include_graphics("images/Rlogo.png")
 
 ## Asking for data
 
-Towards the start of my PhD, I requested data from someone. Here was the response:
+Towards the start of my PhD, I requested data from a  Here was the response:
 
 #### What He wrote:
 
@@ -52,7 +52,7 @@ Towards the start of my PhD, I requested data from someone. Here was the respons
 
 #### What I understood:
 
-"My data are unorganized and it would take me a long time to prepare and distribute it to someone without getting something in return."
+"My data are unorganized and it would take me a long time to prepare and distribute it. Plus, what's in it for me?"
 
 
 ---&twocol
@@ -203,6 +203,25 @@ knitr::include_graphics("images/sampleordecide.png")
 ```
 
 
+--- .class #id 
+
+## Example: Phillips et al. (2014)
+
+```{r, out.width = '70%', fig.align = "center", echo = FALSE, message = FALSE, dpi = 200, fig.width = 6, fig.height = 5}
+library(phillips2014rivals)
+
+# Put data into one dataframe
+sampling.data <- data.frame("condition" = c(rep("Solitary", times = nrow(Sol.Game.df)),
+                                            rep("Competitive", times = nrow(Comp.Game.df))),
+                   "trials" = c(Sol.Game.df$Sampling.Trials, Comp.Game.df$Trials), 
+                   stringsAsFactors = FALSE)
+
+# Create a pirateplot
+yarrr::pirateplot(trials ~ condition, data = subset(sampling.data, condition == "Solitary"), xlim = c(.5, 2.5), 
+                  sortx = "s", ylab = "Sampling Trials", cap.beans = TRUE, theme = 0, gl.col = "gray", xlab = "")       
+
+```
+
 
 --- .class #id 
 
@@ -219,7 +238,7 @@ sampling.data <- data.frame("condition" = c(rep("Solitary", times = nrow(Sol.Gam
 
 # Create a pirateplot
 yarrr::pirateplot(trials ~ condition, data = subset(sampling.data, condition == "Solitary"), xlim = c(.5, 2.5), 
-                  sortx = "s", ylab = "Sampling Trials", cap.beans = TRUE)       
+                  sortx = "s", ylab = "Sampling Trials", cap.beans = TRUE, xlab = "")       
 
 ```
 
@@ -231,29 +250,29 @@ yarrr::pirateplot(trials ~ condition, data = subset(sampling.data, condition == 
 
 # Create a pirateplot
 yarrr::pirateplot(trials ~ condition, data = sampling.data, xlim = c(.5, 2.5), sortx = "s",
-                  ylab = "Sampling Trials", cap.beans = TRUE)       
+                  ylab = "Sampling Trials", cap.beans = TRUE, xlab = "")       
 
 ```
 
---- .class #id 
+<!-- --- .class #id  -->
 
-## Barplot vs. Pirateplot
+<!-- ## Barplot vs. Pirateplot -->
 
-```{r, fig.width = 12, fig.height = 6, echo = FALSE, out.width = "100%", dpi = 200, fig.align = 'center'}
+<!-- ```{r, fig.width = 12, fig.height = 6, echo = FALSE, out.width = "100%", dpi = 200, fig.align = 'center'} -->
 
-par(mfrow = c(1, 2))
+<!-- par(mfrow = c(1, 2)) -->
 
-# Create a pirateplot
-yarrr::pirateplot(trials ~ condition, data = sampling.data, xlim = c(.5, 2.5), 
-                  sortx = "s", ylab = "Sampling Trials", cap.beans = TRUE, theme = 0, 
-                  bar.f.o = .2, inf.disp = "line", inf.f.o = 1, 
-                  pal = "black", ylim = c(0, 30), main = "A bad barplot")       
+<!-- # Create a pirateplot -->
+<!-- yarrr::pirateplot(trials ~ condition, data = sampling.data, xlim = c(.5, 2.5),  -->
+<!--                   sortx = "s", ylab = "Sampling Trials", cap.beans = TRUE, theme = 0,  -->
+<!--                   bar.f.o = .2, inf.disp = "line", inf.f.o = 1,  -->
+<!--                   pal = "black", ylim = c(0, 30), main = "A bad barplot")        -->
 
-# Create a pirateplot
-yarrr::pirateplot(trials ~ condition, data = sampling.data, xlim = c(.5, 2.5), sortx = "s",
-                  ylab = "Sampling Trials", cap.beans = TRUE, main = "An informative pirateplot")       
+<!-- # Create a pirateplot -->
+<!-- yarrr::pirateplot(trials ~ condition, data = sampling.data, xlim = c(.5, 2.5), sortx = "s", -->
+<!--                   ylab = "Sampling Trials", cap.beans = TRUE, main = "An informative pirateplot")        -->
 
-```
+<!-- ``` -->
 
 
 
@@ -264,7 +283,7 @@ yarrr::pirateplot(trials ~ condition, data = sampling.data, xlim = c(.5, 2.5), s
 ```{r, echo = FALSE, fig.align = 'center', fig.width = 6, fig.height = 5, out.width = "70%", dpi=200}
 
 plot(x = 1:10, 
-     y = 1, 
+     y = 1:10, 
      type = "n", 
      ylim = c(.5, 1), 
      xlab = "Sample size", 
