@@ -18,84 +18,31 @@ load("data/BaselR_FFTrees.RData")
 load("data/forensictrees.RData")
 ```
 
----&twocol
+---
 
-***=left
-## Many research topics
 
-- Wisdom of crowds within one mind
-- Decision making under competition
-- Reinforcement learning
-- Fast and frugal decision trees
+## Four main research topics, one common thread
 
-***=right
-## One thread: R
 
-- Formulize theoretical predictions with cognitive models and simulations.
-- Visualize data in a transparent, and interesting way
-- Document and share my data and analyses.
-
-```{r, out.width = "50%", fig.align = "center", echo = FALSE}
-knitr::include_graphics("images/Rlogo.png")
+```{r, out.width = "65%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("images/rthread.png")
 ```
+
+
+
+---
+## Hermit crabs
+
+```{r, out.width = "65%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("images/hermitcrab.gif")
+```
+
+Rotjan, R. D., Chabot, J. R., & Lewis, S. M. (2010). Social context of shell acquisition in Coenobita clypeatus hermit crabs. Behavioral Ecology, 21(3), 639–646.
 
 
 --- .class #id 
 
-## Asking for data
-
-Towards the start of my PhD, I requested data from a  Here was the response:
-
-#### What He wrote:
-
-"This data is pretty old and it would take me a while to find it. If you can collaborate with a more senior researcher, and have a specific research question, I might be able to locate it."
-
-#### What I understood:
-
-"My data are unorganized and it would take me a long time to prepare and distribute it. Plus, what's in it for me?"
-
-
----&twocol
-
-***=left
-
-## The Problem
-
-- For many researchers, while the publication is important to share, the data and analyses details are not.
-
-```{r, out.width = "80%", fig.align = "center", echo = FALSE}
-knitr::include_graphics("images/replicationcrisis.png")
-```
-
-***=right
-
-## Progress is being made
-
-- Journals are asking for raw data.
-- Open Science Framework (OSF)
-- However, sharing the data is just the start: it must be documented, and in a useable format.
-
-```{r, out.width = "50%", fig.align = "center", echo = FALSE}
-knitr::include_graphics("images/cos_stack.png")
-```
-
-
---- .class #id 
-
-## A solution: Reasearch as an R manuscript package
-
-- Store everything in an R package: Data, data descriptions, analyses, tutorials.
-
-```{r, out.width = "70%", fig.align = "center", echo = FALSE}
-knitr::include_graphics("images/rpackagediagram.png")
-```
-
-- Share the package at the time of publication (before someone asks for it)
-- Now everyone (even your future self) can always recover the data and analyses.
-
---- .class #id 
-
-## Example: Phillips et al. (2014)
+## Phillips et al. (2014)
 
 
 ```{r, out.width = "100%", fig.align = "center", echo = FALSE}
@@ -104,7 +51,6 @@ knitr::include_graphics("images/rivals_screen.png")
 
 --- .class #id 
 
-## Phillips et al. (2014)
 
 ```{r, out.width = "80%", fig.align = "center", echo = FALSE}
 knitr::include_graphics("images/searchA.png")
@@ -113,7 +59,6 @@ knitr::include_graphics("images/searchA.png")
 
 --- .class #id 
 
-## Phillips et al. (2014)
 
 ```{r, out.width = "80%", fig.align = "center", echo = FALSE}
 knitr::include_graphics("images/searchB.png")
@@ -122,7 +67,6 @@ knitr::include_graphics("images/searchB.png")
 
 --- .class #id 
 
-## Phillips et al. (2014)
 
 ```{r, out.width = "80%", fig.align = "center", echo = FALSE}
 knitr::include_graphics("images/searchC.png")
@@ -131,7 +75,6 @@ knitr::include_graphics("images/searchC.png")
 
 --- .class #id 
 
-## Phillips et al. (2014)
 
 ```{r, out.width = "80%", fig.align = "center", echo = FALSE}
 knitr::include_graphics("images/searchD.png")
@@ -139,7 +82,6 @@ knitr::include_graphics("images/searchD.png")
 
 --- .class #id 
 
-## Phillips et al. (2014)
 
 ```{r, out.width = "80%", fig.align = "center", echo = FALSE}
 knitr::include_graphics("images/searchE.png")
@@ -147,7 +89,6 @@ knitr::include_graphics("images/searchE.png")
 
 --- .class #id 
 
-## Phillips et al. (2014)
 
 ```{r, out.width = "80%", fig.align = "center", echo = FALSE}
 knitr::include_graphics("images/searchF.png")
@@ -163,40 +104,9 @@ knitr::include_graphics("images/gamediagram.png")
 ```
 
 
---- .class #id 
-
-## Phillips et al. (2014)
-
-All data analyses, and data descriptions are stored in an R manuscript package called `phillips2014rivals` available at [https://goo.gl/q6GvBk](https://goo.gl/q6GvBk)
-
-```
-# Install the phillips2014rivals R package
-
-install.packages("https://goo.gl/q6GvBk", 
-                 repos = NULL, 
-                 type = "source")
-```
 
 --- .class #id 
 
-## Example: Phillips et al. (2014)
-
-```{r, out.width = "100%", fig.align = "center", echo = FALSE}
-knitr::include_graphics("images/rstudioss.png")
-```
-
---- .class #id 
-
-## Example: Phillips et al. (2014)
-
-```{r, out.width = "60%", fig.align = "center", echo = FALSE}
-knitr::include_graphics("images/guidess.png")
-```
-
-
---- .class #id 
-
-## Example: Phillips et al. (2014)
 
 ```{r, out.width = "100%", fig.align = "center", echo = FALSE}
 knitr::include_graphics("images/sampleordecide.png")
@@ -353,6 +263,73 @@ text(2.5, .95, labels = "Competition", font = 2)
 ```
 
 
+---&twocol
+
+## Accessing the data from Phillips et al. (2014)
+
+***=left
+
+- How can I store the data, analyses, and documentation from Phillips et al. (2014) in an open and transparent way?
+
+- For many researchers, while the publication is important to share, the data and analyses details are not.
+
+
+***=right
+
+```{r, out.width = "80%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("images/replicationcrisis.png")
+```
+
+```{r, out.width = "50%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("images/cos_stack.png")
+```
+
+
+
+--- .class #id 
+
+## A solution: Reasearch as an R manuscript package
+
+- Store everything in an R package: Data, data descriptions, analyses, tutorials.
+
+```{r, out.width = "70%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("images/rpackagediagram.png")
+```
+
+- Share the package at the time of publication (before someone asks for it)
+- Now everyone (even your future self) can always recover the data and analyses. Anytime. Anywhere.
+
+
+--- .class #id 
+
+## Phillips et al. (2014)
+
+All data analyses, and data descriptions are stored in an R manuscript package called `phillips2014rivals` available at [https://goo.gl/q6GvBk](https://goo.gl/q6GvBk)
+
+```{r, eval = FALSE}
+# Install the phillips2014rivals R package
+
+install.packages("https://goo.gl/q6GvBk", 
+                 repos = NULL, 
+                 type = "source")
+```
+
+
+--- .class #id 
+
+
+```{r, out.width = "100%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("images/rstudioss.png")
+```
+
+--- .class #id 
+
+## Data documentation
+
+```{r, out.width = "60%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("images/guidess.png")
+```
+
 
 
 ---&twocol
@@ -362,7 +339,7 @@ text(2.5, .95, labels = "Competition", font = 2)
 ### Advantages of an R manuscript package
 
 - Data are fully organized and documented.
-- Accessible to anyone with one line of code.
+- Accessible to anyone (like your future self) with one line of code.
 - Packages make your research interactive.
 
 ***=right
@@ -374,9 +351,7 @@ knitr::include_graphics("images/rstudioss2.png")
 
 --- .class #id 
 
-## Making good decisions
-
-- R is not just good for documenting and sharing research, it can also help you to make better, faster decisions. Here's how:
+## Making good decisions with R
 
 ```{r, eval = TRUE, echo = FALSE, out.width = "70%", fig.align = 'center'}
 knitr::include_graphics("images/complexity.jpg")
@@ -457,9 +432,11 @@ knitr::include_graphics(c("images/professor.jpg"))
 
 ***=left
 
-- Decision trees are simple, sequential, rule-based decision algorithms.
-- A fast and frugal decision tree (FFT) is the simplest possible decision tree (Martignon et al., 2008).
-- FFTs have been used to predict depression (Jenny et al., 2013), terrorist attacks (Garcia, 2016), and bank failure (Aikman et al., 2014; Neth et al., 2014)
+- Simple, sequential, rule-based decision algorithms.
+- A fast and frugal decision tree (FFT) is a very simple decision tree (Martignon et al., 2008).
+    - Predict depression (Jenny et al., 2013)
+    - Terrorist attacks (Garcia, 2016)
+    - Bank failure (Aikman et al., 2014; Neth et al., 2014)
 
 ***=right
 
@@ -476,9 +453,8 @@ Neth et al. (2014). "Homo heuristicus in the financial world".
 
 ***=left
 
-- Data set: Baden Wuerttemberg dataset -- 1101 patients, 46 cues (age, sex, diagnosis, drug history, etc...)
-- Goal: Predict who will be successfully released.
-- Problem: There was no off-the-shelf method to construct FFTs.
+- Data set: 1101 Baden Wuerttemberg patients, 46 cues (age, sex, diagnosis, drug history, etc...)
+- Goal: Predict who will be successfully released with an FFT.
 - Solution: `FFTrees`, an easy-to-use R package that constructs, visualizes, and implements FFTs from any data.
 
 Phillips et al. (under review). FFTrees: An R package to create, visualise, and impliment fast and frugal decision trees
@@ -530,9 +506,9 @@ plot(patient.fft)
 
 
 --- 
-## A forensic FFT
+## An FFT of the Forensic data
 
-```{r, eval = TRUE, fig.align = 'center', echo = FALSE ,message = FALSE, dpi = 200, out.width = "55%", fig.width = 7, fig.height = 7}
+```{r, eval = TRUE, fig.align = 'center', echo = FALSE ,message = FALSE, dpi = 200, out.width = "55%", fig.width = 8, fig.height = 8}
 library(FFTrees)
 load(file = "/Users/nphillips/Dropbox/manuscripts/ForensicFFT/data/ForensicFFTManuscript.RData")
 plot(tree.63.m, 
@@ -554,23 +530,23 @@ plot(tree.63.m,
 
 
 
---- 
-## Regression
+<!-- ---  -->
+<!-- ## Regression -->
 
-```{r, eval = TRUE, fig.align = 'center', echo = FALSE ,message = FALSE, dpi = 200, out.width = "55%", message = FALSE, warning=FALSE}
-valid <- sapply(1:ncol(fds.63.data), FUN = function(x) {length(unique(fds.63.data[,x])) > 1})
+<!-- ```{r, eval = TRUE, fig.align = 'center', echo = FALSE ,message = FALSE, dpi = 200, out.width = "55%", message = FALSE, warning=FALSE} -->
+<!-- valid <- sapply(1:ncol(fds.63.data), FUN = function(x) {length(unique(fds.63.data[,x])) > 1}) -->
 
-forensic.lm <- glm(formula = fds.63.crit ~ ., 
-                   data = fds.63.data[,valid], 
-                   family = "binomial")
+<!-- forensic.lm <- glm(formula = fds.63.crit ~ .,  -->
+<!--                    data = fds.63.data[,valid],  -->
+<!--                    family = "binomial") -->
 
-forensic.lm.coef <- summary(forensic.lm)$coefficients
+<!-- forensic.lm.coef <- summary(forensic.lm)$coefficients -->
 
-forensic.lm.coef.sig <- as.data.frame(forensic.lm.coef[forensic.lm.coef[,4] < .05,])
-names(forensic.lm.coef.sig)[4] <- "p"
-knitr::kable(forensic.lm.coef.sig[,c(1, 4)], digits = 3)
+<!-- forensic.lm.coef.sig <- as.data.frame(forensic.lm.coef[forensic.lm.coef[,4] < .05,]) -->
+<!-- names(forensic.lm.coef.sig)[4] <- "p" -->
+<!-- knitr::kable(forensic.lm.coef.sig[,c(1, 4)], digits = 3) -->
 
-```
+<!-- ``` -->
 
 
 <!-- ---  -->
@@ -593,6 +569,7 @@ knitr::kable(forensic.lm.coef.sig[,c(1, 4)], digits = 3)
 ### Prediction simulation
 
 - 1,000 Cross-validation prediction simulations
+- Compare FFTrees to regression and non-frugal decision trees.
 
 
 ```{r , fig.margin = TRUE, echo = FALSE, out.width = "70%", fig.align='center', fig.cap = "Cross Validation procedure"}
@@ -652,14 +629,21 @@ knitr::include_graphics(c("images/simulationagg_c.png"))
 ```
 
 
+--- .class #id 
+## Speed and frugality
+
+
+
+
+
 
 --- .class #id 
 ## Simplifying your life with R
 
-- R can help you promote and share your work in a transparent, effective way.
-- Make simpler, better decisions (or simply clarify what's really important) with `FFTrees`.
+- R can help you promote and share your work with others (and your future self).
+- R can help you make simpler, better decisions (or simply clarify what's really important) with `FFTrees`.
 
-```{r , fig.margin = TRUE, echo = FALSE, out.width = "60%", fig.align='center'}
+```{r , fig.margin = TRUE, echo = FALSE, out.width = "50%", fig.align='center'}
 knitr::include_graphics(c("images/minimalist.jpg"))
 ```
 
