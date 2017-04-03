@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Simply your life with R. From making decisions to sharing and documenting research</title>
+  <title>Simply your life with R</title>
   <meta charset="utf-8">
-  <meta name="description" content="Simply your life with R. From making decisions to sharing and documenting research">
-  <meta name="author" content="Nathaniel Phillips">
+  <meta name="description" content="Simply your life with R">
+  <meta name="author" content="Nathaniel Phillips, University of Basel">
   <meta name="generator" content="slidify" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -32,9 +32,9 @@
     <!-- LOGO SLIDE -->
         <slide class="title-slide segue nobackground">
   <hgroup class="auto-fadein">
-    <h1>Simply your life with R. From making decisions to sharing and documenting research</h1>
-    <h2>Or, how I learned to stop worrying and love R</h2>
-    <p>Nathaniel Phillips<br/></p>
+    <h1>Simply your life with R</h1>
+    <h2>From making decisions to sharing and documenting research</h2>
+    <p>Nathaniel Phillips, University of Basel<br/>Department Presentation, University of Zurich, Department of Economics</p>
   </hgroup>
   <article></article>  
 </slide>
@@ -114,9 +114,9 @@
   <h2>Progress is being made</h2>
 
 <ul>
-<li>Journals are increasingly asking for, or insisting, on raw data.</li>
-<li>Portals such as the Open Science Framework (OSF) can serve as data repositories</li>
-<li>However, sharing the data is just the start, it must be documented, and in a format people can actually use.</li>
+<li>Journals are asking for raw data.</li>
+<li>Open Science Framework (OSF)</li>
+<li>However, sharing the data is just the start: it must be documented, and in a useable format.</li>
 </ul>
 
 <p><img src="images/cos_stack.png" title="plot of chunk unnamed-chunk-4" alt="plot of chunk unnamed-chunk-4" width="50%" style="display: block; margin: auto;" /></p>
@@ -128,16 +128,19 @@
 
 <slide class="class" id="id" style="background:;">
   <hgroup>
-    <h2>A solution: sharing data as an R package</h2>
+    <h2>A solution: Reasearch as an R package</h2>
   </hgroup>
   <article data-timings="">
     <ul>
 <li>Store everything in an R package: Data, data descriptions, analyses, tutorials.</li>
-<li>Share the package at the time of publication (before someone asks for it)</li>
-<li>Now everyone, even your future self, can always recover the data and analyses.</li>
 </ul>
 
 <p><img src="images/rpackagediagram.png" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" width="70%" style="display: block; margin: auto;" /></p>
+
+<ul>
+<li>Share the package at the time of publication (before someone asks for it)</li>
+<li>Now everyone (even your future self) can always recover the data and analyses.</li>
+</ul>
 
   </article>
   <!-- Presenter Notes -->
@@ -222,7 +225,7 @@
 
 <slide class="class" id="id" style="background:;">
   <hgroup>
-    <h2>Phillips et al. (2014)</h2>
+    <h2>The Competitive Sampling Game (CSG)</h2>
   </hgroup>
   <article data-timings="">
     <p><img src="images/gamediagram.png" title="plot of chunk unnamed-chunk-13" alt="plot of chunk unnamed-chunk-13" width="80%" style="display: block; margin: auto;" /></p>
@@ -236,9 +239,11 @@
     <h2>Phillips et al. (2014)</h2>
   </hgroup>
   <article data-timings="">
-    <p>This is all the code you need to access the data, analyses, data descriptions. Everything.</p>
+    <p>All data analyses, and data descriptions are stored in an R package called <code>phillips2014rivals</code> available at <a href="https://goo.gl/q6GvBk">https://goo.gl/q6GvBk</a></p>
 
-<pre><code>install.packages(&quot;https://goo.gl/q6GvBk&quot;, 
+<pre><code># Install the phillips2014rivals R package
+
+install.packages(&quot;https://goo.gl/q6GvBk&quot;, 
                  repos = NULL, 
                  type = &quot;source&quot;)
 </code></pre>
@@ -304,7 +309,7 @@
 
 <slide class="class" id="id" style="background:;">
   <hgroup>
-    <h2>A bad plot!</h2>
+    <h2>Barplot vs. Pirateplot</h2>
   </hgroup>
   <article data-timings="">
     <p><img src="figure/unnamed-chunk-19-1.png" title="plot of chunk unnamed-chunk-19" alt="plot of chunk unnamed-chunk-19" width="100%" style="display: block; margin: auto;" /></p>
@@ -318,7 +323,25 @@
     <h2>Why did competition decrease search so much?</h2>
   </hgroup>
   <article data-timings="">
-    <p><img src="figure/unnamed-chunk-20-1.png" title="plot of chunk unnamed-chunk-20" alt="plot of chunk unnamed-chunk-20" width="70%" style="display: block; margin: auto;" /></p>
+    <pre><code>## Error in xy.coords(x, y, xlabel, ylabel, log): &#39;x&#39; and &#39;y&#39; lengths differ
+</code></pre>
+
+<pre><code>## Error in axis(1, 1:10): plot.new has not been called yet
+</code></pre>
+
+<pre><code>## Error in int_abline(a = a, b = b, h = h, v = v, untf = untf, ...): plot.new has not been called yet
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Why did competition decrease search so much?</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="figure/unnamed-chunk-21-1.png" title="plot of chunk unnamed-chunk-21" alt="plot of chunk unnamed-chunk-21" width="70%" style="display: block; margin: auto;" /></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -329,27 +352,28 @@
     <h2>Example: Phillips et al. (2014)</h2>
   </hgroup>
   <article data-timings="">
-    <p><img src="figure/unnamed-chunk-21-1.png" title="plot of chunk unnamed-chunk-21" alt="plot of chunk unnamed-chunk-21" width="70%" style="display: block; margin: auto;" /></p>
+    <p><img src="figure/unnamed-chunk-22-1.png" title="plot of chunk unnamed-chunk-22" alt="plot of chunk unnamed-chunk-22" width="70%" style="display: block; margin: auto;" /></p>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-23" style="background:;">
+<slide class="" id="slide-24" style="background:;">
   <article data-timings="">
     
 <div style='float:left;width:48%;' class='centered'>
   <h3>Advantages of an R package</h3>
 
 <ul>
-<li>Total transparency and freedom.</li>
-<li>Data are immediately available and fully documented.</li>
-<li>Once packages are installed, you always have easy access to the data.</li>
+<li>Data are fully documented.</li>
+<li>Everything is avaiable with one line of code.</li>
+<li>Total transparency and availability.</li>
+<li>Packages make your research interactive.</li>
 </ul>
 
 </div>
 <div style='float:right;width:48%;'>
-  <p><img src="images/library.jpg" title="plot of chunk unnamed-chunk-22" alt="plot of chunk unnamed-chunk-22" width="100%" /></p>
+  <p><img src="images/rstudioss2.png" title="plot of chunk unnamed-chunk-23" alt="plot of chunk unnamed-chunk-23" width="100%" /></p>
 
 </div>
   </article>
@@ -365,7 +389,7 @@
 <li>R is not just good for documenting and sharing research, it can also help you to make better, faster decisions. Here&#39;s how:</li>
 </ul>
 
-<p><img src="images/complexity.jpg" title="plot of chunk unnamed-chunk-23" alt="plot of chunk unnamed-chunk-23" width="70%" style="display: block; margin: auto;" /></p>
+<p><img src="images/complexity.jpg" title="plot of chunk unnamed-chunk-24" alt="plot of chunk unnamed-chunk-24" width="70%" style="display: block; margin: auto;" /></p>
 
 <!-- --- .class #id  -->
 
@@ -437,18 +461,18 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-25" style="background:;">
+<slide class="" id="slide-26" style="background:;">
   <hgroup>
     <h2>Making good decisions</h2>
   </hgroup>
   <article data-timings="">
-    <p><img src="images/professor.jpg" title="plot of chunk unnamed-chunk-24" alt="plot of chunk unnamed-chunk-24" width="70%" style="display: block; margin: auto;" /></p>
+    <p><img src="images/professor.jpg" title="plot of chunk unnamed-chunk-25" alt="plot of chunk unnamed-chunk-25" width="70%" style="display: block; margin: auto;" /></p>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-26" style="background:;">
+<slide class="" id="slide-27" style="background:;">
   <hgroup>
     <h2>Fast and Frugal Trees (FFTs)</h2>
   </hgroup>
@@ -456,14 +480,14 @@
     
 <div style='float:left;width:48%;' class='centered'>
   <ul>
+<li>Decision trees are simple, sequential, rule-based decision algorithms.</li>
 <li>A fast and frugal decision tree (FFT) is the simplest possible decision tree (Martignon et al., 2008).</li>
 <li>FFTs have been used to predict depression (Jenny et al., 2013), terrorist attacks (Garcia, 2016), and bank failure (Aikman et al., 2014; Neth et al., 2014)</li>
-<li>Can an FFT create a simple, interpretable model of patient success?</li>
 </ul>
 
 </div>
 <div style='float:right;width:48%;'>
-  <p><img src="images/nethfft.png" title="plot of chunk unnamed-chunk-25" alt="plot of chunk unnamed-chunk-25" width="100%" style="display: block; margin: auto;" /></p>
+  <p><img src="images/nethfft.png" title="plot of chunk unnamed-chunk-26" alt="plot of chunk unnamed-chunk-26" width="100%" style="display: block; margin: auto;" /></p>
 
 <p>Neth et al. (2014). &quot;Homo heuristicus in the financial world&quot;.</p>
 
@@ -472,7 +496,7 @@
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-27" style="background:;">
+<slide class="" id="slide-28" style="background:;">
   <hgroup>
     <h2>Predicting patient success</h2>
   </hgroup>
@@ -490,7 +514,7 @@
 
 </div>
 <div style='float:right;width:48%;'>
-  <p><img src="images/hospital.jpg" title="plot of chunk unnamed-chunk-26" alt="plot of chunk unnamed-chunk-26" width="100%" style="display: block; margin: auto;" /></p>
+  <p><img src="images/hospital.jpg" title="plot of chunk unnamed-chunk-27" alt="plot of chunk unnamed-chunk-27" width="100%" style="display: block; margin: auto;" /></p>
 
 </div>
   </article>
@@ -521,26 +545,26 @@ plot(patient.fft)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-29" style="background:;">
+<slide class="" id="slide-30" style="background:;">
   <hgroup>
     <h2>A forensic FFT</h2>
   </hgroup>
   <article data-timings="">
-    <p><img src="figure/unnamed-chunk-30-1.png" title="plot of chunk unnamed-chunk-30" alt="plot of chunk unnamed-chunk-30" width="55%" style="display: block; margin: auto;" /></p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-30" style="background:;">
-  <article data-timings="">
-    <p><img src="figure/unnamed-chunk-31-1.png" title="plot of chunk unnamed-chunk-31" alt="plot of chunk unnamed-chunk-31" width="70%" style="display: block; margin: auto;" /></p>
+    <p><img src="figure/unnamed-chunk-31-1.png" title="plot of chunk unnamed-chunk-31" alt="plot of chunk unnamed-chunk-31" width="55%" style="display: block; margin: auto;" /></p>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
 <slide class="" id="slide-31" style="background:;">
+  <article data-timings="">
+    <p><img src="figure/unnamed-chunk-32-1.png" title="plot of chunk unnamed-chunk-32" alt="plot of chunk unnamed-chunk-32" width="70%" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-32" style="background:;">
   <hgroup>
     <h2>Regression</h2>
   </hgroup>
@@ -624,7 +648,7 @@ plot(patient.fft)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-32" style="background:;">
+<slide class="" id="slide-33" style="background:;">
   <hgroup>
     <h2>How accurate can a simple tree be?</h2>
   </hgroup>
@@ -646,17 +670,17 @@ plot(patient.fft)
     <h2>How accurate can a simple tree be?</h2>
   </hgroup>
   <article data-timings="">
-    <p><img src="images/P63_SimulationPP.png" title="plot of chunk unnamed-chunk-34" alt="plot of chunk unnamed-chunk-34" width="70%" style="display: block; margin: auto;" /></p>
+    <p><img src="images/P63_SimulationPP.png" title="plot of chunk unnamed-chunk-35" alt="plot of chunk unnamed-chunk-35" width="70%" style="display: block; margin: auto;" /></p>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-34" style="background:;">
+<slide class="" id="slide-35" style="background:;">
   <article data-timings="">
     
 <div style='float:left;width:48%;' class='centered'>
-  <h2>Using FFTrees with other datasets</h2>
+  <h2>Generalizing FFTrees</h2>
 
 <ul>
 <li>The <code>FFTrees</code> package can be used with any dataset with a binary criterion.</li>
@@ -668,7 +692,7 @@ plot(patient.fft)
 
 </div>
 <div style='float:right;width:48%;'>
-  <p><img src="images/datacollage.png" title="plot of chunk unnamed-chunk-35" alt="plot of chunk unnamed-chunk-35" width="90%" style="display: block; margin: auto;" /></p>
+  <p><img src="images/datacollage.png" title="plot of chunk unnamed-chunk-36" alt="plot of chunk unnamed-chunk-36" width="90%" style="display: block; margin: auto;" /></p>
 
 </div>
   </article>
@@ -680,7 +704,7 @@ plot(patient.fft)
     <h2>Prediction accuracy across 10 dasets</h2>
   </hgroup>
   <article data-timings="">
-    <p><img src="images/simulationagg_a.png" title="plot of chunk unnamed-chunk-36" alt="plot of chunk unnamed-chunk-36" width="90%" style="display: block; margin: auto;" /></p>
+    <p><img src="images/simulationagg_a.png" title="plot of chunk unnamed-chunk-37" alt="plot of chunk unnamed-chunk-37" width="90%" style="display: block; margin: auto;" /></p>
 
 <p>Phillips, Neth, Gaissmaier &amp; Woike (under review)</p>
 
@@ -693,7 +717,7 @@ plot(patient.fft)
     <h2>Prediction accuracy across 10 dasets</h2>
   </hgroup>
   <article data-timings="">
-    <p><img src="images/simulationagg_b.png" title="plot of chunk unnamed-chunk-37" alt="plot of chunk unnamed-chunk-37" width="90%" style="display: block; margin: auto;" /></p>
+    <p><img src="images/simulationagg_b.png" title="plot of chunk unnamed-chunk-38" alt="plot of chunk unnamed-chunk-38" width="90%" style="display: block; margin: auto;" /></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -704,7 +728,7 @@ plot(patient.fft)
     <h2>Prediction accuracy across 10 dasets</h2>
   </hgroup>
   <article data-timings="">
-    <p><img src="images/simulationagg_c.png" title="plot of chunk unnamed-chunk-38" alt="plot of chunk unnamed-chunk-38" width="90%" style="display: block; margin: auto;" /></p>
+    <p><img src="images/simulationagg_c.png" title="plot of chunk unnamed-chunk-39" alt="plot of chunk unnamed-chunk-39" width="90%" style="display: block; margin: auto;" /></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -720,13 +744,13 @@ plot(patient.fft)
 <li>Make simpler, better decisions (or simply clarify what&#39;s really important) with <code>FFTrees</code>.</li>
 </ul>
 
-<p><img src="images/minimalist.jpg" title="plot of chunk unnamed-chunk-39" alt="plot of chunk unnamed-chunk-39" width="60%" style="display: block; margin: auto;" /></p>
+<p><img src="images/minimalist.jpg" title="plot of chunk unnamed-chunk-40" alt="plot of chunk unnamed-chunk-40" width="60%" style="display: block; margin: auto;" /></p>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-39" style="background:;">
+<slide class="" id="slide-40" style="background:;">
   <hgroup>
     <h2>Collaborators</h2>
   </hgroup>
@@ -745,7 +769,7 @@ plot(patient.fft)
 
 </div>
 <div style='float:right;width:48%;'>
-  <p><img src="images/photocollage.png" title="plot of chunk unnamed-chunk-40" alt="plot of chunk unnamed-chunk-40" width="90%" style="display: block; margin: auto;" /></p>
+  <p><img src="images/photocollage.png" title="plot of chunk unnamed-chunk-41" alt="plot of chunk unnamed-chunk-41" width="90%" style="display: block; margin: auto;" /></p>
 
 </div>
   </article>
@@ -757,7 +781,9 @@ plot(patient.fft)
     <h3>Simply your life with R. From making decisions to sharing and documenting research</h3>
   </hgroup>
   <article data-timings="">
-    <p>Website: <a href="https://ndphillips.github.io">https://ndphillips.github.io</a></p>
+    <p>This presentation: <a href="https://ndphillips.github.io/UZurich-6April2017/">https://ndphillips.github.io/UZurich-6April2017/</a></p>
+
+<p>Website: <a href="https://ndphillips.github.io">https://ndphillips.github.io</a></p>
 
 <p>Email: <a href="mailto:Nathaniel.D.Phillips.is@gmail.com">Nathaniel.D.Phillips.is@gmail.com</a></p>
 
@@ -771,7 +797,7 @@ plot(patient.fft)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-41" style="background:;">
+<slide class="" id="slide-42" style="background:;">
   <hgroup>
     <h2>Efficiency</h2>
   </hgroup>
@@ -791,7 +817,7 @@ plot(patient.fft)
 
 </div>
 <div style='float:right;width:48%;'>
-  <p><img src="images/traintreestats.png" title="plot of chunk unnamed-chunk-41" alt="plot of chunk unnamed-chunk-41" width="100%" style="display: block; margin: auto;" /></p>
+  <p><img src="images/traintreestats.png" title="plot of chunk unnamed-chunk-42" alt="plot of chunk unnamed-chunk-42" width="100%" style="display: block; margin: auto;" /></p>
 
 </div>
   </article>
@@ -828,7 +854,7 @@ plot(patient.fft)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=5 title='A solution: sharing data as an R package'>
+        data-slide=5 title='A solution: Reasearch as an R package'>
          5
       </a>
     </li>
@@ -876,7 +902,7 @@ plot(patient.fft)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=13 title='Phillips et al. (2014)'>
+        data-slide=13 title='The Competitive Sampling Game (CSG)'>
          13
       </a>
     </li>
@@ -918,7 +944,7 @@ plot(patient.fft)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=20 title='A bad plot!'>
+        data-slide=20 title='Barplot vs. Pirateplot'>
          20
       </a>
     </li>
@@ -930,19 +956,19 @@ plot(patient.fft)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=22 title='Example: Phillips et al. (2014)'>
+        data-slide=22 title='Why did competition decrease search so much?'>
          22
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=23 title='NA'>
+        data-slide=23 title='Example: Phillips et al. (2014)'>
          23
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=24 title='Making good decisions'>
+        data-slide=24 title='NA'>
          24
       </a>
     </li>
@@ -954,43 +980,43 @@ plot(patient.fft)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=26 title='Fast and Frugal Trees (FFTs)'>
+        data-slide=26 title='Making good decisions'>
          26
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=27 title='Predicting patient success'>
+        data-slide=27 title='Fast and Frugal Trees (FFTs)'>
          27
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=28 title='FFTrees'>
+        data-slide=28 title='Predicting patient success'>
          28
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=29 title='A forensic FFT'>
+        data-slide=29 title='FFTrees'>
          29
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=30 title='NA'>
+        data-slide=30 title='A forensic FFT'>
          30
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=31 title='Regression'>
+        data-slide=31 title='NA'>
          31
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=32 title='How accurate can a simple tree be?'>
+        data-slide=32 title='Regression'>
          32
       </a>
     </li>
@@ -1002,13 +1028,13 @@ plot(patient.fft)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=34 title='NA'>
+        data-slide=34 title='How accurate can a simple tree be?'>
          34
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=35 title='Prediction accuracy across 10 dasets'>
+        data-slide=35 title='NA'>
          35
       </a>
     </li>
@@ -1026,26 +1052,32 @@ plot(patient.fft)
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=38 title='Simplifying your life with R'>
+        data-slide=38 title='Prediction accuracy across 10 dasets'>
          38
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=39 title='Collaborators'>
+        data-slide=39 title='Simplifying your life with R'>
          39
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=40 title='Simply your life with R. From making decisions to sharing and documenting research'>
+        data-slide=40 title='Collaborators'>
          40
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=41 title='Efficiency'>
+        data-slide=41 title='Simply your life with R. From making decisions to sharing and documenting research'>
          41
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=42 title='Efficiency'>
+         42
       </a>
     </li>
   </ul>

@@ -1,8 +1,8 @@
 ---
-title       : Simply your life with R. From making decisions to sharing and documenting research
-subtitle    : Or, how I learned to stop worrying and love R
-author      : Nathaniel Phillips
-job         : 
+title       : Simply your life with R
+subtitle    : From making decisions to sharing and documenting research
+author      : Nathaniel Phillips, University of Basel
+job         : Department Presentation, University of Zurich, Department of Economics
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
@@ -71,9 +71,9 @@ knitr::include_graphics("images/replicationcrisis.png")
 
 ## Progress is being made
 
-- Journals are increasingly asking for, or insisting, on raw data.
-- Portals such as the Open Science Framework (OSF) can serve as data repositories
-- However, sharing the data is just the start, it must be documented, and in a format people can actually use.
+- Journals are asking for raw data.
+- Open Science Framework (OSF)
+- However, sharing the data is just the start: it must be documented, and in a useable format.
 
 ```{r, out.width = "50%", fig.align = "center", echo = FALSE}
 knitr::include_graphics("images/cos_stack.png")
@@ -82,16 +82,16 @@ knitr::include_graphics("images/cos_stack.png")
 
 --- .class #id 
 
-## A solution: sharing data as an R package
+## A solution: Reasearch as an R manuscript package
 
 - Store everything in an R package: Data, data descriptions, analyses, tutorials.
-- Share the package at the time of publication (before someone asks for it)
-- Now everyone, even your future self, can always recover the data and analyses.
-
 
 ```{r, out.width = "70%", fig.align = "center", echo = FALSE}
 knitr::include_graphics("images/rpackagediagram.png")
 ```
+
+- Share the package at the time of publication (before someone asks for it)
+- Now everyone (even your future self) can always recover the data and analyses.
 
 --- .class #id 
 
@@ -156,7 +156,7 @@ knitr::include_graphics("images/searchF.png")
 
 --- .class #id 
 
-## Phillips et al. (2014)
+## The Competitive Sampling Game (CSG)
 
 ```{r, out.width = "80%", fig.align = "center", echo = FALSE}
 knitr::include_graphics("images/gamediagram.png")
@@ -167,9 +167,11 @@ knitr::include_graphics("images/gamediagram.png")
 
 ## Phillips et al. (2014)
 
-This is all the code you need to access the data, analyses, data descriptions. Everything.
+All data analyses, and data descriptions are stored in an R manuscript package called `phillips2014rivals` available at [https://goo.gl/q6GvBk](https://goo.gl/q6GvBk)
 
 ```
+# Install the phillips2014rivals R package
+
 install.packages("https://goo.gl/q6GvBk", 
                  repos = NULL, 
                  type = "source")
@@ -235,7 +237,7 @@ yarrr::pirateplot(trials ~ condition, data = sampling.data, xlim = c(.5, 2.5), s
 
 --- .class #id 
 
-## A bad plot!
+## Barplot vs. Pirateplot
 
 ```{r, fig.width = 12, fig.height = 6, echo = FALSE, out.width = "100%", dpi = 200, fig.align = 'center'}
 
@@ -251,6 +253,28 @@ yarrr::pirateplot(trials ~ condition, data = sampling.data, xlim = c(.5, 2.5),
 yarrr::pirateplot(trials ~ condition, data = sampling.data, xlim = c(.5, 2.5), sortx = "s",
                   ylab = "Sampling Trials", cap.beans = TRUE, main = "An informative pirateplot")       
 
+```
+
+
+
+--- .class #id 
+
+## Why did competition decrease search so much?
+
+```{r, echo = FALSE, fig.align = 'center', fig.width = 6, fig.height = 5, out.width = "70%", dpi=200}
+
+plot(x = 1:10, 
+     y = 1, 
+     type = "n", 
+     ylim = c(.5, 1), 
+     xlab = "Sample size", 
+     ylab = "p(Choose high EV)", 
+     main = "Choice accuracy | Sample Size",
+     xaxt = "n")
+
+axis(1, 1:10)
+
+grid()
 ```
 
 
@@ -299,7 +323,8 @@ choice.data <- data.frame(group = c(rep("solitary", length(solitary.choices)),
 yarrr::pirateplot(choice ~ group, 
                   data = choice.data, 
                   sortx = "s", 
-                  point.o = 0, main = "Choice Accuracy: p(Choose high EV)")
+                  point.o = 0, 
+                  main = "Choice Accuracy: p(Obtain high EV)", ylab = "Choice Accuracy")
 
 abline(h = .5)
 
@@ -315,16 +340,16 @@ text(2.5, .95, labels = "Competition", font = 2)
 
 ***=left
 
-### Advantages of an R package
+### Advantages of an R manuscript package
 
-- Total transparency and freedom.
-- Data are immediately available and fully documented.
-- Once packages are installed, you always have easy access to the data.
+- Data are fully organized and documented.
+- Accessible to anyone with one line of code.
+- Packages make your research interactive.
 
 ***=right
 
 ```{r, eval = TRUE, echo = FALSE, out.width = "100%"}
-knitr::include_graphics("images/library.jpg")
+knitr::include_graphics("images/rstudioss2.png")
 ```
 
 
@@ -413,9 +438,9 @@ knitr::include_graphics(c("images/professor.jpg"))
 
 ***=left
 
+- Decision trees are simple, sequential, rule-based decision algorithms.
 - A fast and frugal decision tree (FFT) is the simplest possible decision tree (Martignon et al., 2008).
 - FFTs have been used to predict depression (Jenny et al., 2013), terrorist attacks (Garcia, 2016), and bank failure (Aikman et al., 2014; Neth et al., 2014)
-- Can an FFT create a simple, interpretable model of patient success?
 
 ***=right
 
@@ -573,7 +598,7 @@ knitr::include_graphics(c("images/P63_SimulationPP.png"))
 ## Generalizing FFTrees
 
 - The `FFTrees` package can be used with any dataset with a binary criterion.
-- Simulation: 10 diverse datasets taken from the Machine Learning Database.
+- Simulation: 10 diverse datasets taken from the UCI Machine Learning Database.
 - FFTrees vs. regression, Naive Bayes, Random Forests and more
 
 ### How well can a simple fast and frugal tree predict data?  
@@ -647,7 +672,7 @@ knitr::include_graphics(c("images/photocollage.png"))
 
 ### Simply your life with R. From making decisions to sharing and documenting research
 
-This presentation: 
+This presentation: [https://ndphillips.github.io/UZurich-6April2017/](https://ndphillips.github.io/UZurich-6April2017/)
 
 Website: https://ndphillips.github.io
 
