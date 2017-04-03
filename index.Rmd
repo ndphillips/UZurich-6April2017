@@ -18,86 +18,75 @@ load("data/BaselR_FFTrees.RData")
 load("data/forensictrees.RData")
 ```
 
+---&twocol
 
-## A love letter to R
+***=left
+## Many research topics
 
-1. Todd Hare
-2. Philip Topler
-3. Christian Ruff
-
-
-1. R is a tool for open, efficient research
-    - Story: asking for data
-    - Problem: Our data management process is scattered.
-    - Solution: An interconnected system that ties a thread to each stage of the research process
-        - Replicable, documented, shareable.
-    - If you're going to spend the time to collect data and write a paper, you should also dedicate time to making the data available and as useable as possible.
-    - Stages of research: 
-    - Open source quotes.
-    - Markdown
-        - Sharing ideas and code online with rpubs.
-    - Programming online experiments with Shiny.
-    - Writing papers with Markdown or Sweave
-    - Documenting code with an R package (and OSF)
-        - phillips2014competition package
-
-2. Making good decisions with R
-    - FFTrees package
-        - Simulation results
-    - Predicting patient release decisions
-
-3. 
-
-3. Conclusion
-    - R 
-
-
---- .class #id 
-
-## Many reseearch topics, but one thread
-
-- Wisdom of crowds within one mind,
-- Bayesian reasoning.
+- Wisdom of crowds within one mind
 - Decision making under competition
+- Reinforcement learning
 - Fast and frugal decision trees
 
-One thread: R
-- Formulize theoretical predictions with simulations
-- Document and share my data and analyses
-- Visualize data in a transparent, and interesting, way
-- Construct simple decision making tools (fast and frugal decision trees)
+***=right
+## One thread: R
+
+- Formulize theoretical predictions with cognitive models and simulations.
+- Visualize data in a transparent, and interesting way
+- Document and share my data and analyses.
+
+```{r, out.width = "50%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("images/Rlogo.png")
+```
 
 
 --- .class #id 
 
 ## Asking for data
 
-- Towards the start of my PhD, I requested data from someone. Here was the response:
+Towards the start of my PhD, I requested data from someone. Here was the response:
 
-"This data is pretty old [It was from a 5 year old publication] and it would take me a while to find it. If you can collaborate with a more senior researcher, and have a specific research question [I did], I might be able to locate it."
+#### What He wrote:
+
+"This data is pretty old and it would take me a while to find it. If you can collaborate with a more senior researcher, and have a specific research question, I might be able to locate it."
+
+#### What I understood:
+
+"My data are unorganized and it would take me a long time to prepare and distribute it to someone without getting something in return."
 
 
---- .class #id 
+---&twocol
 
-```{r, out.width = "100%", fig.align = "center", echo = FALSE}
-knitr::include_graphics("images/datasharinginsights.jpg")
-```
+***=left
 
---- .class #id 
-
-## The data -- analysis -- writing link
+## The Problem
 
 - For many researchers, while the publication is important to share, the data and analyses details are not.
-- After publication, the raw data are now 'old' (or are kept for personal use)
-- An old boys club -- "Only established researchers, who might benefit me, can get the data"
+
+```{r, out.width = "80%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("images/replicationcrisis.png")
+```
+
+***=right
+
+## Progress is being made
+
+- Journals are increasingly asking for, or insisting, on raw data.
+- Portals such as the Open Science Framework (OSF) can serve as data repositories
+- However, sharing the data is just the start, it must be documented, and in a format people can actually use.
+
+```{r, out.width = "50%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("images/cos_stack.png")
+```
+
 
 --- .class #id 
 
 ## A solution: sharing data as an R package
 
-- Store everything in an R package.
-    - Data, data descriptions, analyses, tutorials
+- Store everything in an R package: Data, data descriptions, analyses, tutorials.
 - Share the package at the time of publication (before someone asks for it)
+- Now everyone, even your future self, can always recover the data and analyses.
 
 
 ```{r, out.width = "70%", fig.align = "center", echo = FALSE}
@@ -178,7 +167,7 @@ knitr::include_graphics("images/gamediagram.png")
 
 ## Phillips et al. (2014)
 
-This is all the code you need to access the data
+This is all the code you need to access the data, analyses, data descriptions. Everything.
 
 ```
 install.packages("https://goo.gl/q6GvBk", 
@@ -201,6 +190,16 @@ knitr::include_graphics("images/rstudioss.png")
 ```{r, out.width = "60%", fig.align = "center", echo = FALSE}
 knitr::include_graphics("images/guidess.png")
 ```
+
+
+--- .class #id 
+
+## Example: Phillips et al. (2014)
+
+```{r, out.width = "100%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("images/sampleordecide.png")
+```
+
 
 
 --- .class #id 
@@ -255,6 +254,32 @@ yarrr::pirateplot(trials ~ condition, data = sampling.data, xlim = c(.5, 2.5), s
 ```
 
 
+
+--- .class #id 
+
+## Why did competition decrease search so much?
+
+```{r, echo = FALSE, fig.align = 'center', fig.width = 6, fig.height = 5, out.width = "70%", dpi=200}
+sample.sim <- Competitive.Sampling.Simulation.fun(Max.N = 10,      # Maximum sample size is 10
+                                                  Sim.n = 1e3,     # Simulate 10,000 gambles 
+                                                  Print.N = FALSE) # Don't print status reports
+
+plot(x = 1:10, 
+     y = sample.sim$`Solitary Performance`, 
+     type = "b", 
+     ylim = c(.5, 1), 
+     xlab = "Sample size", 
+     ylab = "p(Choose high EV)", 
+     main = "Choice accuracy | Sample Size",
+     xaxt = "n")
+
+axis(1, 1:10)
+
+grid()
+```
+
+
+
 --- .class #id 
 
 ## Example: Phillips et al. (2014)
@@ -277,6 +302,10 @@ yarrr::pirateplot(choice ~ group,
                   point.o = 0, main = "Choice Accuracy: p(Choose high EV)")
 
 abline(h = .5)
+
+abline(v = 1.5)
+text(1, .95, labels = "Solitary", font = 2)
+text(2.5, .95, labels = "Competition", font = 2)
 ```
 
 
@@ -286,30 +315,16 @@ abline(h = .5)
 
 ***=left
 
-### Competitive decision making under uncertainty
+### Advantages of an R package
 
-```{r, out.width = "100%", echo = FALSE}
-knitr::include_graphics("images/searchD.png")
-```
-
-Phillips et al. (2014). Rivals in the dark: How competition influences search and decisions under uncertainty
+- Total transparency and freedom.
+- Data are immediately available and fully documented.
+- Once packages are installed, you always have easy access to the data.
 
 ***=right
 
-### Advantages of an R package
-
-- Data are immediately available and fully documented.
-- Analyses are always connected to the data.
-- Explain data, models and analyses with vignettes.
-- Not just good for others, but also for your future self
-
-
-
-```{r, eval = FALSE, echo = TRUE}
-# Get the data, documentation, and analyses
-install.packages("https://goo.gl/q6GvBk", 
-                 repos = NULL, 
-                 type = "source")
+```{r, eval = TRUE, echo = FALSE, out.width = "100%"}
+knitr::include_graphics("images/library.jpg")
 ```
 
 
@@ -319,7 +334,9 @@ install.packages("https://goo.gl/q6GvBk",
 
 - R is not just good for documenting and sharing research, it can also help you to make better, faster decisions. Here's how:
 
-
+```{r, eval = TRUE, echo = FALSE, out.width = "70%", fig.align = 'center'}
+knitr::include_graphics("images/complexity.jpg")
+```
 
 <!-- --- .class #id  -->
 
@@ -380,18 +397,48 @@ install.packages("https://goo.gl/q6GvBk",
 
 
 
----&twocol
-## Predicting patient outcomes
+---
 
+## Making good decisions
+
+
+```{r , fig.margin = TRUE, echo = FALSE, out.width = "70%", fig.align='center', message = FALSE, echo = FALSE}
+knitr::include_graphics(c("images/professor.jpg"))
+```
+
+
+--- &twocol
+
+## Fast and Frugal Trees (FFTs)
 
 ***=left
 
-- How can we predict which patients are at risk for psychiatric treatment failure?
-- If you know who is at risk, you can do targeted care, plan and allocate resources.
+- A fast and frugal decision tree (FFT) is the simplest possible decision tree (Martignon et al., 2008).
+- FFTs have been used to predict depression (Jenny et al., 2013), terrorist attacks (Garcia, 2016), and bank failure (Aikman et al., 2014; Neth et al., 2014)
+- Can an FFT create a simple, interpretable model of patient success?
 
-- Baden Werttemberg DATASET
-- 1101 patients, 46 cues (age, sex, diagnosis, drug history, etc...)
-- Linear regression finds 12 significant cues (out of the original 46)
+***=right
+
+```{r , fig.margin = TRUE, echo = FALSE, out.width = "100%", fig.align='center', message = FALSE, echo = FALSE}
+knitr::include_graphics(c("images/nethfft.png"))
+```
+
+Neth et al. (2014). "Homo heuristicus in the financial world".
+
+
+
+---&twocol
+## Predicting patient success
+
+***=left
+
+- Data set: Baden Wuerttemberg dataset -- 1101 patients, 46 cues (age, sex, diagnosis, drug history, etc...)
+- Goal: Predict who will be successfully released.
+- Problem: There was no off-the-shelf method to construct FFTs.
+- Solution: `FFTrees`, an easy-to-use R package that constructs, visualizes, and implements FFTs from any data.
+
+Phillips et al. (under review). FFTrees: An R package to create, visualise, and impliment fast and frugal decision trees
+
 
 ***=right
 
@@ -401,41 +448,23 @@ knitr::include_graphics(c("images/hospital.jpg"))
 
 
 
-
---- &twocol
-
-## Fast and Frugal tree
-
-***=left
-
-- A fast and frugal decision tree (FFT) is the simplest possible decision tree (Martignon et al., 2008).
-- Easy to understand, consistent, requires little information, can be calculated 'in the head'
-- FFTs have been used to predict depression (Jenny et al., 2013), terrorist attacks (Garcia, 2016), and bank failure (Aikman et al., 2014; Neth et al., 2014)
-
-- Can an FFT create a simple, interpretable model of patient success?
-
-***=right
-
-```{r , fig.margin = TRUE, echo = FALSE, out.width = "100%", fig.align='center', message = FALSE, echo = FALSE}
-knitr::include_graphics(c("images/nethfft.png"))
+```{r , fig.margin = TRUE, echo = FALSE, out.width = "30%", fig.align='center', message = FALSE, echo = FALSE}
+# knitr::include_graphics(c("images/FFTrees_Logo.jpg"))
 ```
+
+
+
+```{r, echo = FALSE, message = FALSE}
+library(FFTrees)
+load(file = "/Users/nphillips/Dropbox/manuscripts/ForensicFFT/data/ForensicFFTManuscript.RData")
+```
+
 
 
 
 
 --- .class #id 
 ## FFTrees
-
-- There is no off-the-shelf method to construct FFTs.
-- Create `FFTrees`, an easy-to-use R package that constructs, visualizes, and implements FFTs.
-
-```{r , fig.margin = TRUE, echo = FALSE, out.width = "40%", fig.align='center', message = FALSE, echo = FALSE}
-knitr::include_graphics(c("images/FFTrees_Logo.jpg"))
-```
-
-
---- .class #id 
-## Getting FFTrees
 
 
 ```{r, eval = FALSE}
@@ -470,31 +499,61 @@ plot(tree.63.m,
 
 
 --- 
-## A forensic non-frugal tree
 
-```{r, eval = TRUE, fig.align = 'center', echo = FALSE ,message = FALSE, dpi = 200, out.width = "55%"}
-library(rpart)
-forensic.cart <- rpart::rpart(fds.63.crit ~ ., data = fds.63.data)
-plot(forensic.cart)
-text(forensic.cart)
+```{r, eval = TRUE, fig.align = 'center', echo = FALSE ,message = FALSE, dpi = 200, out.width = "70%", fig.width = 8, fig.height = 7}
+library(FFTrees)
+load(file = "/Users/nphillips/Dropbox/manuscripts/ForensicFFT/data/ForensicFFTManuscript.RData")
+plot(tree.63.m, 
+     main = "Psychiatric patient FFT", 
+     decision.names = c("High-Risk", "Low-Risk"))
 ```
 
 
 
----&twocol
+--- 
+## Regression
+
+```{r, eval = TRUE, fig.align = 'center', echo = FALSE ,message = FALSE, dpi = 200, out.width = "55%", message = FALSE, warning=FALSE}
+valid <- sapply(1:ncol(fds.63.data), FUN = function(x) {length(unique(fds.63.data[,x])) > 1})
+
+forensic.lm <- glm(formula = fds.63.crit ~ ., 
+                   data = fds.63.data[,valid], 
+                   family = "binomial")
+
+forensic.lm.coef <- summary(forensic.lm)$coefficients
+
+forensic.lm.coef.sig <- as.data.frame(forensic.lm.coef[forensic.lm.coef[,4] < .05,])
+names(forensic.lm.coef.sig)[4] <- "p"
+knitr::kable(forensic.lm.coef.sig[,c(1, 4)], digits = 3)
+
+```
+
+
+<!-- ---  -->
+<!-- ## A forensic non-frugal tree -->
+
+<!-- ```{r, eval = TRUE, fig.align = 'center', echo = FALSE ,message = FALSE, dpi = 200, out.width = "55%"} -->
+<!-- library(rpart) -->
+<!-- forensic.cart <- rpart::rpart(fds.63.crit ~ ., data = fds.63.data) -->
+<!-- plot(forensic.cart) -->
+<!-- text(forensic.cart) -->
+<!-- ``` -->
+
+
+
+---
 
 ## How accurate can a simple tree be?
 
-- The tree is simple, but how accurate can it be?
-
-***=left
 
 ### Prediction simulation
 
-- Cross-validation prediction simulation.
-- Compare the performance of fast and frugal trees created by `FFTrees` to regression and (non-frugal) decision trees.
+- 1,000 Cross-validation prediction simulations
 
-***=right
+
+```{r , fig.margin = TRUE, echo = FALSE, out.width = "70%", fig.align='center', fig.cap = "Cross Validation procedure"}
+knitr::include_graphics(c("images/crossvalidation.jpg"))
+```
 
 
 --- .class #id 
@@ -506,8 +565,27 @@ knitr::include_graphics(c("images/P63_SimulationPP.png"))
 ```
 
 
+
+---&twocol
+
+***=left
+
+## Generalizing FFTrees
+
+- The `FFTrees` package can be used with any dataset with a binary criterion.
+- Simulation: 10 diverse datasets taken from the Machine Learning Database.
+- FFTrees vs. regression, Naive Bayes, Random Forests and more
+
+### How well can a simple fast and frugal tree predict data?  
+
+***=right
+
+```{r , fig.margin = TRUE, echo = FALSE, out.width = "90%", fig.align='center'}
+knitr::include_graphics(c("images/datacollage.png"))
+```
+
 --- .class #id 
-## Aggregate simulation prediction results
+## Prediction accuracy across 10 dasets
 
 ```{r , fig.margin = TRUE, echo = FALSE, out.width = "90%", fig.align='center'}
 knitr::include_graphics(c("images/simulationagg_a.png"))
@@ -516,32 +594,31 @@ knitr::include_graphics(c("images/simulationagg_a.png"))
 Phillips, Neth, Gaissmaier & Woike (under review)
 
 --- .class #id 
-## Aggregate simulation prediction results
+## Prediction accuracy across 10 dasets
 
 ```{r , fig.margin = TRUE, echo = FALSE, out.width = "90%", fig.align='center'}
 knitr::include_graphics(c("images/simulationagg_b.png"))
 ```
 
 --- .class #id 
-## Aggregate simulation prediction results
+## Prediction accuracy across 10 dasets
 
 ```{r , fig.margin = TRUE, echo = FALSE, out.width = "90%", fig.align='center'}
 knitr::include_graphics(c("images/simulationagg_c.png"))
 ```
 
 
---- .class #id 
-## FFT conclusions
-
-1. Simple decision strategies can be extremely effective, even for complex tasks. R, along with `FFTrees` can help.
 
 --- .class #id 
-## What have we learned.
+## Simplifying your life with R
 
+- R can help you promote and share your work in a transparent, effective way.
+- Make simpler, better decisions (or simply clarify what's really important) with `FFTrees`.
 
-- Open science is the way forward.
-- R can help you promote and share your work in a transparent, effective way
-- Make simpler, better decisions with `FFTrees`
+```{r , fig.margin = TRUE, echo = FALSE, out.width = "60%", fig.align='center'}
+knitr::include_graphics(c("images/minimalist.jpg"))
+```
+
 
 ---&twocol
 ## Collaborators
@@ -570,6 +647,7 @@ knitr::include_graphics(c("images/photocollage.png"))
 
 ### Simply your life with R. From making decisions to sharing and documenting research
 
+This presentation: 
 
 Website: https://ndphillips.github.io
 
@@ -580,4 +658,23 @@ FFTrees Package: `install.packages("FFTrees")`
 yarrr package: `install.packages("yarrr")`
 
 YaRrr! The Pirate's Guide to R: www.thepiratesguidetor.com
+
+
+---&twocol
+## Efficiency
+
+***=left
+
+- FFTs are very cheap to implement
+
+- Heart disease data
+    - Regression: $300
+    - rpart: > $100
+    - Heart disease FFT: $75.91
+
+***=right
+
+```{r , fig.margin = TRUE, echo = FALSE, out.width = "100%", fig.align='center', message = FALSE, echo = FALSE}
+knitr::include_graphics(c("images/traintreestats.png"))
+```
 
