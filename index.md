@@ -474,8 +474,14 @@ Phillips, Neth, Gaissmaier & Woike (under review)
 ## Speed and frugality
 
 
+<img src="assets/fig/unnamed-chunk-41-1.png" title="plot of chunk unnamed-chunk-41" alt="plot of chunk unnamed-chunk-41" width="60%" style="display: block; margin: auto;" />
 
 
+--- .class #id 
+## Speed and frugality
+
+
+<img src="assets/fig/unnamed-chunk-42-1.png" title="plot of chunk unnamed-chunk-42" alt="plot of chunk unnamed-chunk-42" width="60%" style="display: block; margin: auto;" />
 
 
 --- .class #id 
@@ -484,7 +490,7 @@ Phillips, Neth, Gaissmaier & Woike (under review)
 - R can help you promote and share your work with others (and your future self).
 - R can help you make simpler, better decisions (or simply clarify what's really important) with `FFTrees`.
 
-<img src="images/minimalist.jpg" title="plot of chunk unnamed-chunk-41" alt="plot of chunk unnamed-chunk-41" width="50%" style="display: block; margin: auto;" />
+<img src="images/minimalist.jpg" title="plot of chunk unnamed-chunk-43" alt="plot of chunk unnamed-chunk-43" width="50%" style="display: block; margin: auto;" />
 
 
 ---&twocol
@@ -505,7 +511,7 @@ Phillips, Neth, Gaissmaier & Woike (under review)
 
 ***=right
 
-<img src="images/photocollage.png" title="plot of chunk unnamed-chunk-42" alt="plot of chunk unnamed-chunk-42" width="90%" style="display: block; margin: auto;" />
+<img src="images/photocollage.png" title="plot of chunk unnamed-chunk-44" alt="plot of chunk unnamed-chunk-44" width="90%" style="display: block; margin: auto;" />
 
 
 --- .class #id 
@@ -539,5 +545,5 @@ YaRrr! The Pirate's Guide to R: www.thepiratesguidetor.com
 
 ***=right
 
-<img src="images/traintreestats.png" title="plot of chunk unnamed-chunk-43" alt="plot of chunk unnamed-chunk-43" width="100%" style="display: block; margin: auto;" />
+<img src="images/traintreestats.png" title="plot of chunk unnamed-chunk-45" alt="plot of chunk unnamed-chunk-45" width="100%" style="display: block; margin: auto;" />
 
