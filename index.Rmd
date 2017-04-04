@@ -331,6 +331,16 @@ knitr::include_graphics("images/rpackagediagram.png")
 - Now everyone (even your future self) can always recover the data and analyses. Anytime. Anywhere.
 
 
+
+--- .class #id 
+
+
+```{r, out.width = "85%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("images/markdownpage.png")
+```
+
+
+
 --- .class #id 
 
 ## Markdown
