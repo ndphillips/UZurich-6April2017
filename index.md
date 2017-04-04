@@ -33,66 +33,66 @@ bibliography : bibliography.bib
 Rotjan, R. D., Chabot, J. R., & Lewis, S. M. (2010). Social context of shell acquisition in Coenobita clypeatus hermit crabs. Behavioral Ecology, 21(3), 639–646.
 
 
+---
+## Hermit crabs
+
+<img src="images/crabcompetition.png" title="plot of chunk unnamed-chunk-4" alt="plot of chunk unnamed-chunk-4" width="75%" style="display: block; margin: auto;" />
+
+
+
 --- .class #id 
 
 ## Phillips et al. (2014)
 
 
-<img src="images/rivals_screen.png" title="plot of chunk unnamed-chunk-4" alt="plot of chunk unnamed-chunk-4" width="100%" style="display: block; margin: auto;" />
+<img src="images/rivals_screen.png" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" width="100%" style="display: block; margin: auto;" />
 
 --- .class #id 
 
 
-<img src="images/searchA.png" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" width="80%" style="display: block; margin: auto;" />
-
-
---- .class #id 
-
-
-<img src="images/searchB.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" width="80%" style="display: block; margin: auto;" />
+<img src="images/searchA.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" width="80%" style="display: block; margin: auto;" />
 
 
 --- .class #id 
 
 
-<img src="images/searchC.png" title="plot of chunk unnamed-chunk-7" alt="plot of chunk unnamed-chunk-7" width="80%" style="display: block; margin: auto;" />
+<img src="images/searchB.png" title="plot of chunk unnamed-chunk-7" alt="plot of chunk unnamed-chunk-7" width="80%" style="display: block; margin: auto;" />
 
 
 --- .class #id 
 
 
-<img src="images/searchD.png" title="plot of chunk unnamed-chunk-8" alt="plot of chunk unnamed-chunk-8" width="80%" style="display: block; margin: auto;" />
+<img src="images/searchC.png" title="plot of chunk unnamed-chunk-8" alt="plot of chunk unnamed-chunk-8" width="80%" style="display: block; margin: auto;" />
+
 
 --- .class #id 
 
 
-<img src="images/searchE.png" title="plot of chunk unnamed-chunk-9" alt="plot of chunk unnamed-chunk-9" width="80%" style="display: block; margin: auto;" />
+<img src="images/searchD.png" title="plot of chunk unnamed-chunk-9" alt="plot of chunk unnamed-chunk-9" width="80%" style="display: block; margin: auto;" />
 
 --- .class #id 
 
 
-<img src="images/searchF.png" title="plot of chunk unnamed-chunk-10" alt="plot of chunk unnamed-chunk-10" width="80%" style="display: block; margin: auto;" />
+<img src="images/searchE.png" title="plot of chunk unnamed-chunk-10" alt="plot of chunk unnamed-chunk-10" width="80%" style="display: block; margin: auto;" />
+
+--- .class #id 
+
+
+<img src="images/searchF.png" title="plot of chunk unnamed-chunk-11" alt="plot of chunk unnamed-chunk-11" width="80%" style="display: block; margin: auto;" />
 
 
 --- .class #id 
 
 ## The Competitive Sampling Game (CSG)
 
-<img src="images/gamediagram.png" title="plot of chunk unnamed-chunk-11" alt="plot of chunk unnamed-chunk-11" width="80%" style="display: block; margin: auto;" />
+<img src="images/gamediagram.png" title="plot of chunk unnamed-chunk-12" alt="plot of chunk unnamed-chunk-12" width="80%" style="display: block; margin: auto;" />
 
 
 
 --- .class #id 
 
 
-<img src="images/sampleordecide.png" title="plot of chunk unnamed-chunk-12" alt="plot of chunk unnamed-chunk-12" width="100%" style="display: block; margin: auto;" />
-
-
---- .class #id 
-
-## Example: Phillips et al. (2014)
-
-<img src="assets/fig/unnamed-chunk-13-1.png" title="plot of chunk unnamed-chunk-13" alt="plot of chunk unnamed-chunk-13" width="70%" style="display: block; margin: auto;" />
+<img src="images/sampleordecide.png" title="plot of chunk unnamed-chunk-13" alt="plot of chunk unnamed-chunk-13" width="100%" style="display: block; margin: auto;" />
 
 
 --- .class #id 
@@ -101,11 +101,18 @@ Rotjan, R. D., Chabot, J. R., & Lewis, S. M. (2010). Social context of shell acq
 
 <img src="assets/fig/unnamed-chunk-14-1.png" title="plot of chunk unnamed-chunk-14" alt="plot of chunk unnamed-chunk-14" width="70%" style="display: block; margin: auto;" />
 
+
 --- .class #id 
 
 ## Example: Phillips et al. (2014)
 
 <img src="assets/fig/unnamed-chunk-15-1.png" title="plot of chunk unnamed-chunk-15" alt="plot of chunk unnamed-chunk-15" width="70%" style="display: block; margin: auto;" />
+
+--- .class #id 
+
+## Example: Phillips et al. (2014)
+
+<img src="assets/fig/unnamed-chunk-16-1.png" title="plot of chunk unnamed-chunk-16" alt="plot of chunk unnamed-chunk-16" width="70%" style="display: block; margin: auto;" />
 
 <!-- --- .class #id  -->
 
@@ -133,7 +140,7 @@ Rotjan, R. D., Chabot, J. R., & Lewis, S. M. (2010). Social context of shell acq
 
 ## Why did competition decrease search so much?
 
-<img src="assets/fig/unnamed-chunk-16-1.png" title="plot of chunk unnamed-chunk-16" alt="plot of chunk unnamed-chunk-16" width="70%" style="display: block; margin: auto;" />
+<img src="assets/fig/unnamed-chunk-17-1.png" title="plot of chunk unnamed-chunk-17" alt="plot of chunk unnamed-chunk-17" width="70%" style="display: block; margin: auto;" />
 
 
 
@@ -141,7 +148,7 @@ Rotjan, R. D., Chabot, J. R., & Lewis, S. M. (2010). Social context of shell acq
 
 ## Why did competition decrease search so much?
 
-<img src="assets/fig/unnamed-chunk-17-1.png" title="plot of chunk unnamed-chunk-17" alt="plot of chunk unnamed-chunk-17" width="70%" style="display: block; margin: auto;" />
+<img src="assets/fig/unnamed-chunk-18-1.png" title="plot of chunk unnamed-chunk-18" alt="plot of chunk unnamed-chunk-18" width="70%" style="display: block; margin: auto;" />
 
 
 
@@ -149,25 +156,45 @@ Rotjan, R. D., Chabot, J. R., & Lewis, S. M. (2010). Social context of shell acq
 
 ## Example: Phillips et al. (2014)
 
-<img src="assets/fig/unnamed-chunk-18-1.png" title="plot of chunk unnamed-chunk-18" alt="plot of chunk unnamed-chunk-18" width="70%" style="display: block; margin: auto;" />
+<img src="assets/fig/unnamed-chunk-19-1.png" title="plot of chunk unnamed-chunk-19" alt="plot of chunk unnamed-chunk-19" width="70%" style="display: block; margin: auto;" />
 
 
 ---&twocol
 
-## Accessing the data from Phillips et al. (2014)
+## Documenting and sharing data
 
 ***=left
 
-- How can I store the data, analyses, and documentation from Phillips et al. (2014) in an open and transparent way?
+- How can I store, document, and share data and analyses in an open and transparent way?
 
-- For many researchers, while the publication is important to share, the data and analyses details are not.
+- Many researchers "The publication is the end of the story and is important to share. The data and analyses details are less so."
 
+- For those that think its important, they don't know how
 
 ***=right
 
-<img src="images/replicationcrisis.png" title="plot of chunk unnamed-chunk-19" alt="plot of chunk unnamed-chunk-19" width="80%" style="display: block; margin: auto;" />
+<img src="images/replicationcrisis.png" title="plot of chunk unnamed-chunk-20" alt="plot of chunk unnamed-chunk-20" width="80%" style="display: block; margin: auto;" />
 
-<img src="images/cos_stack.png" title="plot of chunk unnamed-chunk-20" alt="plot of chunk unnamed-chunk-20" width="50%" style="display: block; margin: auto;" />
+<img src="images/cos_stack.png" title="plot of chunk unnamed-chunk-21" alt="plot of chunk unnamed-chunk-21" width="50%" style="display: block; margin: auto;" />
+
+
+---&twocol
+
+***=left
+
+### 5 Selfish reasons to share data
+
+1. Gives your research credibility.
+2. Forces you to look for bugs, and document.
+3. Invites other researchers to get involved, cite and collaborate.
+4. Get constructive feedback.
+5. Know that you're contributing to open science.
+
+***=right
+
+<img src="images/selfishreasons.jpg" title="plot of chunk unnamed-chunk-22" alt="plot of chunk unnamed-chunk-22" width="75%" />
+
+Wagenmakers, E. J., & Dutilh, G. (2016). Seven Selfish Reasons for Preregistration. APS Observer, 29(9).
 
 
 
@@ -177,10 +204,22 @@ Rotjan, R. D., Chabot, J. R., & Lewis, S. M. (2010). Social context of shell acq
 
 - Store everything in an R package: Data, data descriptions, analyses, tutorials.
 
-<img src="images/rpackagediagram.png" title="plot of chunk unnamed-chunk-21" alt="plot of chunk unnamed-chunk-21" width="70%" style="display: block; margin: auto;" />
+<img src="images/rpackagediagram.png" title="plot of chunk unnamed-chunk-23" alt="plot of chunk unnamed-chunk-23" width="70%" style="display: block; margin: auto;" />
 
 - Share the package at the time of publication (before someone asks for it)
 - Now everyone (even your future self) can always recover the data and analyses. Anytime. Anywhere.
+
+
+--- .class #id 
+
+## Markdown
+
+- Write vignettes and examples using Markdown (aka, LaTeX light)
+- Markdown = Text + Code + Output.
+- Result: Data, Analyses and Output are linked.
+
+<img src="images/markdownexamples.png" title="plot of chunk unnamed-chunk-24" alt="plot of chunk unnamed-chunk-24" width="60%" style="display: block; margin: auto;" />
+
 
 
 --- .class #id 
@@ -202,13 +241,13 @@ install.packages("https://goo.gl/q6GvBk",
 --- .class #id 
 
 
-<img src="images/rstudioss.png" title="plot of chunk unnamed-chunk-23" alt="plot of chunk unnamed-chunk-23" width="100%" style="display: block; margin: auto;" />
+<img src="images/rstudioss.png" title="plot of chunk unnamed-chunk-26" alt="plot of chunk unnamed-chunk-26" width="100%" style="display: block; margin: auto;" />
 
 --- .class #id 
 
 ## Data documentation
 
-<img src="images/guidess.png" title="plot of chunk unnamed-chunk-24" alt="plot of chunk unnamed-chunk-24" width="60%" style="display: block; margin: auto;" />
+<img src="images/guidess.png" title="plot of chunk unnamed-chunk-27" alt="plot of chunk unnamed-chunk-27" width="60%" style="display: block; margin: auto;" />
 
 
 
@@ -216,22 +255,30 @@ install.packages("https://goo.gl/q6GvBk",
 
 ***=left
 
-### Advantages of an R manuscript package
+### R manuscript package pros
 
-- Data are fully organized and documented.
+- Data are fully organized, documented, and linked to the analyses.
 - Accessible to anyone (like your future self) with one line of code.
 - Packages make your research interactive.
 
+
 ***=right
 
-<img src="images/rstudioss2.png" title="plot of chunk unnamed-chunk-25" alt="plot of chunk unnamed-chunk-25" width="100%" />
+<img src="images/rstudioss2.png" title="plot of chunk unnamed-chunk-28" alt="plot of chunk unnamed-chunk-28" width="100%" />
 
 
---- .class #id 
 
-## Making good decisions with R
+---&twocol
 
-<img src="images/complexity.jpg" title="plot of chunk unnamed-chunk-26" alt="plot of chunk unnamed-chunk-26" width="70%" style="display: block; margin: auto;" />
+## Making good, simple decisions with R
+
+***=left
+
+<img src="images/complexity.jpg" title="plot of chunk unnamed-chunk-29" alt="plot of chunk unnamed-chunk-29" width="100%" style="display: block; margin: auto;" />
+
+***=right
+
+<img src="images/decisionsimple.jpg" title="plot of chunk unnamed-chunk-30" alt="plot of chunk unnamed-chunk-30" width="95%" style="display: block; margin: auto;" />
 
 <!-- --- .class #id  -->
 
@@ -297,7 +344,7 @@ install.packages("https://goo.gl/q6GvBk",
 ## Making good decisions
 
 
-<img src="images/professor.jpg" title="plot of chunk unnamed-chunk-27" alt="plot of chunk unnamed-chunk-27" width="70%" style="display: block; margin: auto;" />
+<img src="images/professor.jpg" title="plot of chunk unnamed-chunk-31" alt="plot of chunk unnamed-chunk-31" width="70%" style="display: block; margin: auto;" />
 
 
 --- &twocol
@@ -314,7 +361,7 @@ install.packages("https://goo.gl/q6GvBk",
 
 ***=right
 
-<img src="images/nethfft.png" title="plot of chunk unnamed-chunk-28" alt="plot of chunk unnamed-chunk-28" width="100%" style="display: block; margin: auto;" />
+<img src="images/nethfft.png" title="plot of chunk unnamed-chunk-32" alt="plot of chunk unnamed-chunk-32" width="100%" style="display: block; margin: auto;" />
 
 Neth et al. (2014). "Homo heuristicus in the financial world".
 
@@ -334,7 +381,7 @@ Phillips et al. (under review). FFTrees: An R package to create, visualise, and 
 
 ***=right
 
-<img src="images/hospital.jpg" title="plot of chunk unnamed-chunk-29" alt="plot of chunk unnamed-chunk-29" width="100%" style="display: block; margin: auto;" />
+<img src="images/hospital.jpg" title="plot of chunk unnamed-chunk-33" alt="plot of chunk unnamed-chunk-33" width="100%" style="display: block; margin: auto;" />
 
 
 
@@ -372,14 +419,13 @@ plot(patient.fft)
 
 
 --- 
-## An FFT of the Forensic data
 
-<img src="assets/fig/unnamed-chunk-33-1.png" title="plot of chunk unnamed-chunk-33" alt="plot of chunk unnamed-chunk-33" width="55%" style="display: block; margin: auto;" />
+<img src="assets/fig/unnamed-chunk-37-1.png" title="plot of chunk unnamed-chunk-37" alt="plot of chunk unnamed-chunk-37" width="70%" style="display: block; margin: auto;" />
 
 
 --- 
 
-<img src="assets/fig/unnamed-chunk-34-1.png" title="plot of chunk unnamed-chunk-34" alt="plot of chunk unnamed-chunk-34" width="70%" style="display: block; margin: auto;" />
+<img src="assets/fig/unnamed-chunk-38-1.png" title="plot of chunk unnamed-chunk-38" alt="plot of chunk unnamed-chunk-38" width="70%" style="display: block; margin: auto;" />
 
 
 
@@ -432,7 +478,7 @@ plot(patient.fft)
 
 ## How accurate can a simple tree be?
 
-<img src="images/P63_SimulationPP.png" title="plot of chunk unnamed-chunk-36" alt="plot of chunk unnamed-chunk-36" width="70%" style="display: block; margin: auto;" />
+<img src="images/P63_SimulationPP.png" title="plot of chunk unnamed-chunk-40" alt="plot of chunk unnamed-chunk-40" width="70%" style="display: block; margin: auto;" />
 
 
 
@@ -450,31 +496,7 @@ plot(patient.fft)
 
 ***=right
 
-<img src="images/datacollage.png" title="plot of chunk unnamed-chunk-37" alt="plot of chunk unnamed-chunk-37" width="90%" style="display: block; margin: auto;" />
-
---- .class #id 
-## Prediction accuracy across 10 dasets
-
-<img src="images/simulationagg_a.png" title="plot of chunk unnamed-chunk-38" alt="plot of chunk unnamed-chunk-38" width="90%" style="display: block; margin: auto;" />
-
-Phillips, Neth, Gaissmaier & Woike (under review)
-
---- .class #id 
-## Prediction accuracy across 10 dasets
-
-<img src="images/simulationagg_b.png" title="plot of chunk unnamed-chunk-39" alt="plot of chunk unnamed-chunk-39" width="90%" style="display: block; margin: auto;" />
-
---- .class #id 
-## Prediction accuracy across 10 dasets
-
-<img src="images/simulationagg_c.png" title="plot of chunk unnamed-chunk-40" alt="plot of chunk unnamed-chunk-40" width="90%" style="display: block; margin: auto;" />
-
-
---- .class #id 
-## Speed and frugality
-
-
-<img src="assets/fig/unnamed-chunk-41-1.png" title="plot of chunk unnamed-chunk-41" alt="plot of chunk unnamed-chunk-41" width="60%" style="display: block; margin: auto;" />
+<img src="images/datacollage.png" title="plot of chunk unnamed-chunk-41" alt="plot of chunk unnamed-chunk-41" width="90%" style="display: block; margin: auto;" />
 
 
 --- .class #id 
@@ -485,12 +507,40 @@ Phillips, Neth, Gaissmaier & Woike (under review)
 
 
 --- .class #id 
+## Speed and frugality
+
+
+<img src="assets/fig/unnamed-chunk-43-1.png" title="plot of chunk unnamed-chunk-43" alt="plot of chunk unnamed-chunk-43" width="60%" style="display: block; margin: auto;" />
+
+
+--- .class #id 
+## Prediction accuracy across 10 dasets
+
+<img src="images/simulationagg_a.png" title="plot of chunk unnamed-chunk-44" alt="plot of chunk unnamed-chunk-44" width="90%" style="display: block; margin: auto;" />
+
+Phillips, Neth, Gaissmaier & Woike (under review)
+
+--- .class #id 
+## Prediction accuracy across 10 dasets
+
+<img src="images/simulationagg_b.png" title="plot of chunk unnamed-chunk-45" alt="plot of chunk unnamed-chunk-45" width="90%" style="display: block; margin: auto;" />
+
+--- .class #id 
+## Prediction accuracy across 10 dasets
+
+<img src="images/simulationagg_c.png" title="plot of chunk unnamed-chunk-46" alt="plot of chunk unnamed-chunk-46" width="90%" style="display: block; margin: auto;" />
+
+
+
+
+
+--- .class #id 
 ## Simplifying your life with R
 
 - R can help you promote and share your work with others (and your future self).
 - R can help you make simpler, better decisions (or simply clarify what's really important) with `FFTrees`.
 
-<img src="images/minimalist.jpg" title="plot of chunk unnamed-chunk-43" alt="plot of chunk unnamed-chunk-43" width="50%" style="display: block; margin: auto;" />
+<img src="images/minimalist.jpg" title="plot of chunk unnamed-chunk-47" alt="plot of chunk unnamed-chunk-47" width="50%" style="display: block; margin: auto;" />
 
 
 ---&twocol
@@ -511,24 +561,28 @@ Phillips, Neth, Gaissmaier & Woike (under review)
 
 ***=right
 
-<img src="images/photocollage.png" title="plot of chunk unnamed-chunk-44" alt="plot of chunk unnamed-chunk-44" width="90%" style="display: block; margin: auto;" />
+<img src="images/photocollage.png" title="plot of chunk unnamed-chunk-48" alt="plot of chunk unnamed-chunk-48" width="90%" style="display: block; margin: auto;" />
 
 
 --- .class #id 
 
 ### Simply your life with R. From making decisions to sharing and documenting research
 
-This presentation: [https://ndphillips.github.io/UZurich-6April2017/](https://ndphillips.github.io/UZurich-6April2017/)
+#### My Links
 
-Website: https://ndphillips.github.io
+- This presentation: [https://ndphillips.github.io/UZurich-6April2017/](https://ndphillips.github.io/UZurich-6April2017/)
+- Website: https://ndphillips.github.io
+- Email: Nathaniel.D.Phillips.is@gmail.com
 
-Email: Nathaniel.D.Phillips.is@gmail.com
+#### Packages
 
-FFTrees Package: `install.packages("FFTrees")`
+- FFTrees: `install.packages("FFTrees")`
+- yarrr: `install.packages("yarrr")`
 
-yarrr package: `install.packages("yarrr")`
+#### Tutorials
 
-YaRrr! The Pirate's Guide to R: www.thepiratesguidetor.com
+- YaRrr! The Pirate's Guide to R: www.thepiratesguidetor.com
+- R Markdown: http://rmarkdown.rstudio.com/
 
 
 ---&twocol
@@ -545,5 +599,5 @@ YaRrr! The Pirate's Guide to R: www.thepiratesguidetor.com
 
 ***=right
 
-<img src="images/traintreestats.png" title="plot of chunk unnamed-chunk-45" alt="plot of chunk unnamed-chunk-45" width="100%" style="display: block; margin: auto;" />
+<img src="images/traintreestats.png" title="plot of chunk unnamed-chunk-49" alt="plot of chunk unnamed-chunk-49" width="100%" style="display: block; margin: auto;" />
 

@@ -40,6 +40,15 @@ knitr::include_graphics("images/hermitcrab.gif")
 Rotjan, R. D., Chabot, J. R., & Lewis, S. M. (2010). Social context of shell acquisition in Coenobita clypeatus hermit crabs. Behavioral Ecology, 21(3), 639–646.
 
 
+---
+## Hermit crabs
+
+```{r, out.width = "75%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("images/crabcompetition.png")
+```
+
+
+
 --- .class #id 
 
 ## Phillips et al. (2014)
@@ -265,14 +274,15 @@ text(2.5, .95, labels = "Competition", font = 2)
 
 ---&twocol
 
-## Accessing the data from Phillips et al. (2014)
+## Documenting and sharing data
 
 ***=left
 
-- How can I store the data, analyses, and documentation from Phillips et al. (2014) in an open and transparent way?
+- How can I store, document, and share data and analyses in an open and transparent way?
 
-- For many researchers, while the publication is important to share, the data and analyses details are not.
+- Many researchers "The publication is the end of the story and is important to share. The data and analyses details are less so."
 
+- For those that think its important, they don't know how
 
 ***=right
 
@@ -283,6 +293,27 @@ knitr::include_graphics("images/replicationcrisis.png")
 ```{r, out.width = "50%", fig.align = "center", echo = FALSE}
 knitr::include_graphics("images/cos_stack.png")
 ```
+
+
+---&twocol
+
+***=left
+
+### 5 Selfish reasons to share data
+
+1. Gives your research credibility.
+2. Forces you to look for bugs, and document.
+3. Invites other researchers to get involved, cite and collaborate.
+4. Get constructive feedback.
+5. Know that you're contributing to open science.
+
+***=right
+
+```{r, eval = TRUE, echo = FALSE, out.width = "75%"}
+knitr::include_graphics("images/selfishreasons.jpg")
+```
+
+Wagenmakers, E. J., & Dutilh, G. (2016). Seven Selfish Reasons for Preregistration. APS Observer, 29(9).
 
 
 
@@ -298,6 +329,20 @@ knitr::include_graphics("images/rpackagediagram.png")
 
 - Share the package at the time of publication (before someone asks for it)
 - Now everyone (even your future self) can always recover the data and analyses. Anytime. Anywhere.
+
+
+--- .class #id 
+
+## Markdown
+
+- Write vignettes and examples using Markdown (aka, LaTeX light)
+- Markdown = Text + Code + Output.
+- Result: Data, Analyses and Output are linked.
+
+```{r, out.width = "60%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("images/markdownexamples.png")
+```
+
 
 
 --- .class #id 
@@ -336,11 +381,12 @@ knitr::include_graphics("images/guidess.png")
 
 ***=left
 
-### Advantages of an R manuscript package
+### R manuscript package pros
 
-- Data are fully organized and documented.
+- Data are fully organized, documented, and linked to the analyses.
 - Accessible to anyone (like your future self) with one line of code.
 - Packages make your research interactive.
+
 
 ***=right
 
@@ -349,12 +395,21 @@ knitr::include_graphics("images/rstudioss2.png")
 ```
 
 
---- .class #id 
 
-## Making good decisions with R
+---&twocol
 
-```{r, eval = TRUE, echo = FALSE, out.width = "70%", fig.align = 'center'}
+## Making good, simple decisions with R
+
+***=left
+
+```{r, eval = TRUE, echo = FALSE, out.width = "100%", fig.align = 'center'}
 knitr::include_graphics("images/complexity.jpg")
+```
+
+***=right
+
+```{r, eval = TRUE, echo = FALSE, out.width = "95%", fig.align = 'center'}
+knitr::include_graphics("images/decisionsimple.jpg")
 ```
 
 <!-- --- .class #id  -->
@@ -506,9 +561,8 @@ plot(patient.fft)
 
 
 --- 
-## An FFT of the Forensic data
 
-```{r, eval = TRUE, fig.align = 'center', echo = FALSE ,message = FALSE, dpi = 200, out.width = "55%", fig.width = 8, fig.height = 8}
+```{r, eval = TRUE, fig.align = 'center', echo = FALSE ,message = FALSE, dpi = 200, out.width = "70%", fig.width = 8, fig.height = 8}
 library(FFTrees)
 load(file = "/Users/nphillips/Dropbox/manuscripts/ForensicFFT/data/ForensicFFTManuscript.RData")
 plot(tree.63.m, 
@@ -605,29 +659,6 @@ knitr::include_graphics(c("images/P63_SimulationPP.png"))
 knitr::include_graphics(c("images/datacollage.png"))
 ```
 
---- .class #id 
-## Prediction accuracy across 10 dasets
-
-```{r , fig.margin = TRUE, echo = FALSE, out.width = "90%", fig.align='center'}
-knitr::include_graphics(c("images/simulationagg_a.png"))
-```
-
-Phillips, Neth, Gaissmaier & Woike (under review)
-
---- .class #id 
-## Prediction accuracy across 10 dasets
-
-```{r , fig.margin = TRUE, echo = FALSE, out.width = "90%", fig.align='center'}
-knitr::include_graphics(c("images/simulationagg_b.png"))
-```
-
---- .class #id 
-## Prediction accuracy across 10 dasets
-
-```{r , fig.margin = TRUE, echo = FALSE, out.width = "90%", fig.align='center'}
-knitr::include_graphics(c("images/simulationagg_c.png"))
-```
-
 
 --- .class #id 
 ## Speed and frugality
@@ -645,6 +676,8 @@ plot(mcu, pci, xlim = c(1, 10), ylim = c(0, 1), xlab = "Mean cues used to make a
 grid()
 axis(1, 1:10)
 axis(2, seq(0, 1, .2), las = 1)
+
+rect(7, .05, 10, .95, col = yarrr::transparent("white", .2), border = gray(.5, .5))
 
 text(rep(8, length(data.name)), seq(.1, .9, length.out = length(data.name)), labels = data.name, adj = 0)
 points(rep(7.5, length(data.name)), seq(.1, .9, length.out = length(data.name)), pch = 21, col = "white", bg = yarrr::piratepal("basel", trans = .2), cex = 2)
@@ -671,6 +704,8 @@ grid()
 axis(1, 1:10)
 axis(2, seq(0, 1, .2), las = 1)
 
+rect(7, .05, 10, .95, col = yarrr::transparent("white", .2), border = gray(.5, .5))
+
 text(rep(8, length(data.name)), seq(.1, .9, length.out = length(data.name)), labels = data.name, adj = 0)
 points(rep(7.5, length(data.name)), seq(.1, .9, length.out = length(data.name)), pch = 21, col = "white", bg = yarrr::piratepal("basel", trans = .7), cex = 2)
 
@@ -678,6 +713,33 @@ segments(mcu, pci, rep(7.5, length(data.name)), seq(.1, .9, length.out = length(
 
 
 ```
+
+
+--- .class #id 
+## Prediction accuracy across 10 dasets
+
+```{r , fig.margin = TRUE, echo = FALSE, out.width = "90%", fig.align='center'}
+knitr::include_graphics(c("images/simulationagg_a.png"))
+```
+
+Phillips, Neth, Gaissmaier & Woike (under review)
+
+--- .class #id 
+## Prediction accuracy across 10 dasets
+
+```{r , fig.margin = TRUE, echo = FALSE, out.width = "90%", fig.align='center'}
+knitr::include_graphics(c("images/simulationagg_b.png"))
+```
+
+--- .class #id 
+## Prediction accuracy across 10 dasets
+
+```{r , fig.margin = TRUE, echo = FALSE, out.width = "90%", fig.align='center'}
+knitr::include_graphics(c("images/simulationagg_c.png"))
+```
+
+
+
 
 
 --- .class #id 
@@ -718,17 +780,21 @@ knitr::include_graphics(c("images/photocollage.png"))
 
 ### Simply your life with R. From making decisions to sharing and documenting research
 
-This presentation: [https://ndphillips.github.io/UZurich-6April2017/](https://ndphillips.github.io/UZurich-6April2017/)
+#### My Links
 
-Website: https://ndphillips.github.io
+- This presentation: [https://ndphillips.github.io/UZurich-6April2017/](https://ndphillips.github.io/UZurich-6April2017/)
+- Website: https://ndphillips.github.io
+- Email: Nathaniel.D.Phillips.is@gmail.com
 
-Email: Nathaniel.D.Phillips.is@gmail.com
+#### Packages
 
-FFTrees Package: `install.packages("FFTrees")`
+- FFTrees: `install.packages("FFTrees")`
+- yarrr: `install.packages("yarrr")`
 
-yarrr package: `install.packages("yarrr")`
+#### Tutorials
 
-YaRrr! The Pirate's Guide to R: www.thepiratesguidetor.com
+- YaRrr! The Pirate's Guide to R: www.thepiratesguidetor.com
+- R Markdown: http://rmarkdown.rstudio.com/
 
 
 ---&twocol
