@@ -582,6 +582,7 @@ install.packages("FFTrees")
 ```{r, echo = FALSE, message = FALSE}
 library(FFTrees)
 load(file = "/Users/nphillips/Dropbox/manuscripts/ForensicFFT/data/ForensicFFTManuscript.RData")
+load("data/UZurich.RData")
 ```
 
 
@@ -845,7 +846,7 @@ segments(mcu, pci, rep(7.5, length(data.name)), seq(.1, .9, length.out = length(
 
 ---
 
-```{r}
+```{r, eval = FALSE}
 heart.fft <- FFTrees(diagnosis ~ ., data = heartdisease)
 ```
 
