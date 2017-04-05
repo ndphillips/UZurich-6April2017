@@ -1,6 +1,6 @@
 ---
 title       : Simply your life with R
-subtitle    : From making decisions to sharing and documenting research
+subtitle    : From sharing and documenting research, to modeling simple decisions
 author      : Nathaniel Phillips, University of Basel
 job         : Department Presentation, University of Zurich, Department of Economics
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
@@ -280,9 +280,14 @@ text(2.5, .95, labels = "Competition", font = 2)
 
 - How can I store, document, and share data and analyses in an open and transparent way?
 
-- Many researchers "The publication is the end of the story and is important to share. The data and analyses details are less so."
+### 5 Selfish reasons to share data
 
-- For those that think its important, they don't know how
+1. Gives your research credibility (Wagenmakers & Dutilh, 2016).
+2. Forces you to look for bugs, and document.
+3. Invites other researchers to get involved, cite and collaborate (Piwowar et al, 2007).
+4. Get constructive feedback.
+5. Know that you're contributing to open science (Wagenmakers & Dutilh, 2016)
+
 
 ***=right
 
@@ -295,25 +300,6 @@ knitr::include_graphics("images/cos_stack.png")
 ```
 
 
----&twocol
-
-***=left
-
-### 5 Selfish reasons to share data
-
-1. Gives your research credibility.
-2. Forces you to look for bugs, and document.
-3. Invites other researchers to get involved, cite and collaborate.
-4. Get constructive feedback.
-5. Know that you're contributing to open science.
-
-***=right
-
-```{r, eval = TRUE, echo = FALSE, out.width = "75%"}
-knitr::include_graphics("images/selfishreasons.jpg")
-```
-
-Wagenmakers, E. J., & Dutilh, G. (2016). Seven Selfish Reasons for Preregistration. APS Observer, 29(9).
 
 
 
@@ -395,7 +381,10 @@ knitr::include_graphics("images/guidess.png")
 
 - Data are fully organized, documented, and linked to the analyses.
 - Accessible to anyone (like your future self) with one line of code.
-- Packages make your research interactive.
+    - R becomes not just a statistical engine, but a fully documented data repository.
+- Packages make your research interactive -- calls for other researchers to get involved.
+
+
 
 
 ***=right
@@ -405,18 +394,41 @@ knitr::include_graphics("images/rstudioss2.png")
 ```
 
 
+<!-- ---&twocol -->
+
+<!-- ***=left -->
+
+<!-- ### 5 Selfish reasons to share data -->
+
+<!-- 1. Gives your research credibility. -->
+<!-- 2. Forces you to look for bugs, and document. -->
+<!-- 3. Invites other researchers to get involved, cite and collaborate. -->
+<!-- 4. Get constructive feedback. -->
+<!-- 5. Know that you're contributing to open science. -->
+
+<!-- ***=right -->
+
+<!-- ```{r, eval = TRUE, echo = FALSE, out.width = "75%"} -->
+<!-- knitr::include_graphics("images/selfishreasons.jpg") -->
+<!-- ``` -->
+
+<!-- Wagenmakers, E. J., & Dutilh, G. (2016). Seven Selfish Reasons for Preregistration. APS Observer, 29(9). -->
 
 ---&twocol
 
-## Making good, simple decisions with R
+## Complexity vs. Simplicity
 
 ***=left
+
+<br>
 
 ```{r, eval = TRUE, echo = FALSE, out.width = "100%", fig.align = 'center'}
 knitr::include_graphics("images/complexity.jpg")
 ```
 
 ***=right
+
+<br>
 
 ```{r, eval = TRUE, echo = FALSE, out.width = "95%", fig.align = 'center'}
 knitr::include_graphics("images/decisionsimple.jpg")
@@ -483,12 +495,18 @@ knitr::include_graphics("images/decisionsimple.jpg")
 
 ---
 
-## Making good decisions
+## Decision Strategies
 
 
-```{r , fig.margin = TRUE, echo = FALSE, out.width = "70%", fig.align='center', message = FALSE, echo = FALSE}
-knitr::include_graphics(c("images/professor.jpg"))
-```
+| | Compensatory|Non-Compensatory |
+|:---------|:----|:-----|
+|     Example|    Weighted averaging: Expected utility, Tally, Bayes|Heuristics: Take the Best, Tit-for-tat|
+|     Information Requirements|    High|Low     |
+|     Search|    Comprehensive|Sequential     |
+|     Speed|    Slow|Fast     |
+| When do people use? <br>(Payne, Bettman, Johnson, 1993)| Low time pressure, high processing capacity | High time-pressure, low processing capacity |
+
+
 
 
 --- &twocol
@@ -497,11 +515,19 @@ knitr::include_graphics(c("images/professor.jpg"))
 
 ***=left
 
-- Simple, sequential, rule-based decision algorithms.
-- A fast and frugal decision tree (FFT) is a very simple decision tree (Martignon et al., 2008).
-    - Predict depression (Jenny et al., 2013)
-    - Terrorist attacks (Garcia, 2016)
-    - Bank failure (Aikman et al., 2014; Neth et al., 2014)
+#### Descriptive
+
+- Inference (Gigerenzer & Goldstein, 1996)
+- Judge's bailing decisions (Dhami, 2003)
+- Competition "Tit-for-Tat" (Axelrod, 1984)
+- Social "Imitate the successful" (Boyd & Richerson, 2005)
+
+#### Prescriptive
+
+- Heart disease (Breiman et al. 1993)
+- Terrorist attacks (Garcia, 2016)
+- Bank failure (Aikman et al., 2014; Neth et al., 2014)
+
 
 ***=right
 
@@ -514,16 +540,53 @@ Neth et al. (2014). "Homo heuristicus in the financial world".
 
 
 ---&twocol
-## Predicting patient success
+## FFTrees
 
 ***=left
 
-- Data set: 1101 Baden Wuerttemberg patients, 46 cues (age, sex, diagnosis, drug history, etc...)
-- Goal: Predict who will be successfully released with an FFT.
-- Solution: `FFTrees`, an easy-to-use R package that constructs, visualizes, and implements FFTs from any data.
+- Problem: There is no widely available tool to create FFTs from data.
+    - Tools-to-theories heuristic (Gigerenzer, 1991)
+- `FFTrees`
 
-Phillips et al. (under review). FFTrees: An R package to create, visualise, and impliment fast and frugal decision trees
+<br>
+<div style="text-align:left"><font size="1"> Phillips et al. (under review). FFTrees: An R package to create, visualise, and impliment fast and frugal decision trees</font></div>
 
+
+***=right
+
+```{r, eval = FALSE}
+# Install FFTrees
+install.packages("FFTrees")
+
+# Create FFTs from data
+my.fft <- FFTrees(formula = decision ~.,
+                  data = data)
+```
+
+
+
+```{r , fig.margin = TRUE, echo = FALSE, out.width = "80%", fig.align='center', message = FALSE, echo = FALSE}
+ knitr::include_graphics(c("images/FFTrees_Logo.jpg"))
+```
+
+
+
+```{r, echo = FALSE, message = FALSE}
+library(FFTrees)
+load(file = "/Users/nphillips/Dropbox/manuscripts/ForensicFFT/data/ForensicFFTManuscript.RData")
+```
+
+
+
+
+---&twocol
+## Patient Release Decisions
+
+***=left
+
+- How can we explain psychiatric patient release decisions?
+- Dataset: Release decisions from 1101 patients described by 46 cues (age, sex, diagnosis, drug history, etc...)
+- Goal: Create a fast and frugal decision tree to predict release decisions
 
 ***=right
 
@@ -548,87 +611,75 @@ load(file = "/Users/nphillips/Dropbox/manuscripts/ForensicFFT/data/ForensicFFTMa
 
 
 
---- .class #id 
-## FFTrees
+<!-- ---  -->
 
+<!-- ```{r, eval = TRUE, fig.align = 'center', echo = FALSE ,message = FALSE, dpi = 200, out.width = "70%", fig.width = 8, fig.height = 8} -->
+<!-- library(FFTrees) -->
+<!-- load(file = "/Users/nphillips/Dropbox/manuscripts/ForensicFFT/data/ForensicFFTManuscript.RData") -->
+<!-- plot(tree.63.m,  -->
+<!--      main = "Psychiatric patient FFT",  -->
+<!--      decision.names = c("High-Risk", "Low-Risk"),  -->
+<!--      stats = FALSE) -->
+<!-- ``` -->
+
+
+---
+## Regression
 
 ```{r, eval = FALSE}
-# Step 0: Install and load FFTrees
-install.packages("FFTrees")
-library("FFTrees")
-
-# Step 1: Create the trees
-patient.fft <- FFTrees(formula = fds.63.crit ~., 
-                     data = fds.63.data)
-
-# Step 2: View summary statistics
-print(patient.fft)
-
-# Step 3: Visualise the tree
-plot(patient.fft)
+forensic.lm <- glm(formula = decision ~ .,
+                   data = patient.data,
+                   family = "binomial")
 ```
 
+
+```{r, eval = TRUE, fig.align = 'center', echo = FALSE ,message = FALSE, dpi = 200, out.width = "55%", message = FALSE, warning=FALSE}
+valid <- sapply(1:ncol(fds.63.data), FUN = function(x) {length(unique(fds.63.data[,x])) > 1})
+
+forensic.lm <- glm(formula = fds.63.crit ~ .,
+                   data = fds.63.data[,valid & names(fds.63.data) != "yit"],
+                   family = "binomial")
+
+coef <- as.matrix(summary(aov(forensic.lm))[[1]])
+coef <- coef[1:(nrow(coef) - 1),]
+coef <- coef[coef[,5] < .05,]
+coef <- cbind(1:nrow(coef), coef)
+knitr::kable(coef[,c(1,2, 5, 6)], digits = 3)
+```
 
 
 --- 
 
-```{r, eval = TRUE, fig.align = 'center', echo = FALSE ,message = FALSE, dpi = 200, out.width = "70%", fig.width = 8, fig.height = 8}
-library(FFTrees)
-load(file = "/Users/nphillips/Dropbox/manuscripts/ForensicFFT/data/ForensicFFTManuscript.RData")
-plot(tree.63.m, 
-     main = "Psychiatric patient FFT", 
-     decision.names = c("High-Risk", "Low-Risk"), 
-     stats = FALSE)
+```{r, eval = FALSE}
+patient.fft <- FFTrees(formula = decision ~., 
+                       data = patient.data)
 ```
 
+
+```{r, eval = TRUE, fig.align = 'center', echo = FALSE ,message = FALSE, dpi = 200, out.width = "70%", fig.width = 8, fig.height = 7}
+set.seed(100)
+library(FFTrees)
+load(file = "/Users/nphillips/Dropbox/manuscripts/ForensicFFT/data/ForensicFFTManuscript.RData")
+x <- FFTrees::FFTrees(fds.63.crit ~ ., data = fds.63.data[, names(fds.63.data) != "yit"])
+plot(x, 
+     main = "Release Decision FFT", 
+     decision.names = c("Unlikely Release", "Likely Release"), stats = FALSE)
+```
 
 --- 
 
 ```{r, eval = TRUE, fig.align = 'center', echo = FALSE ,message = FALSE, dpi = 200, out.width = "70%", fig.width = 8, fig.height = 7}
-library(FFTrees)
-load(file = "/Users/nphillips/Dropbox/manuscripts/ForensicFFT/data/ForensicFFTManuscript.RData")
-plot(tree.63.m, 
-     main = "Psychiatric patient FFT", 
-     decision.names = c("High-Risk", "Low-Risk"))
+plot(x, 
+     main = "Release Decision FFT", 
+     decision.names = c("Unlikely Release", "Likely Release"))
 ```
 
-
-
-<!-- ---  -->
-<!-- ## Regression -->
-
-<!-- ```{r, eval = TRUE, fig.align = 'center', echo = FALSE ,message = FALSE, dpi = 200, out.width = "55%", message = FALSE, warning=FALSE} -->
-<!-- valid <- sapply(1:ncol(fds.63.data), FUN = function(x) {length(unique(fds.63.data[,x])) > 1}) -->
-
-<!-- forensic.lm <- glm(formula = fds.63.crit ~ .,  -->
-<!--                    data = fds.63.data[,valid],  -->
-<!--                    family = "binomial") -->
-
-<!-- forensic.lm.coef <- summary(forensic.lm)$coefficients -->
-
-<!-- forensic.lm.coef.sig <- as.data.frame(forensic.lm.coef[forensic.lm.coef[,4] < .05,]) -->
-<!-- names(forensic.lm.coef.sig)[4] <- "p" -->
-<!-- knitr::kable(forensic.lm.coef.sig[,c(1, 4)], digits = 3) -->
-
-<!-- ``` -->
-
-
-<!-- ---  -->
-<!-- ## A forensic non-frugal tree -->
-
-<!-- ```{r, eval = TRUE, fig.align = 'center', echo = FALSE ,message = FALSE, dpi = 200, out.width = "55%"} -->
-<!-- library(rpart) -->
-<!-- forensic.cart <- rpart::rpart(fds.63.crit ~ ., data = fds.63.data) -->
-<!-- plot(forensic.cart) -->
-<!-- text(forensic.cart) -->
-<!-- ``` -->
 
 
 
 ---
 
 ## How accurate can a simple tree be?
-
 
 ### Prediction simulation
 
@@ -749,17 +800,67 @@ knitr::include_graphics(c("images/simulationagg_c.png"))
 ```
 
 
+---
+
+## FFTrees conclusion
+
+- Fast and frugal trees are promising descriptive and prescriptive models of decision making.
+    - Now with the `FFTrees` R package, you can create them and compare to compensatory models.
+- If data can be predicted by a very simple model, then that model should be seriously considered, even if it is terribly naive.
 
 
 
---- .class #id 
-## Simplifying your life with R
+```{r , fig.margin = TRUE, echo = FALSE, out.width = "50%", fig.align='center', message = FALSE, echo = FALSE, eval = FALSE}
+knitr::include_graphics(c("images/FFTrees_Logo.jpg"))
+```
 
-- R can help you promote and share your work with others (and your future self).
-- R can help you make simpler, better decisions (or simply clarify what's really important) with `FFTrees`.
+```{r , fig.margin = TRUE, echo = FALSE, out.width = "75%", fig.align='center', message = FALSE, echo = FALSE}
+ knitr::include_graphics(c("images/decisionheads.png"))
+```
+
+```{r, echo = FALSE, eval = FALSE}
+set.seed(101)
+x <- seq(0, 100, length.out = 20)
+y <- 2 * x
+y.noisy <- y + rnorm(20, mean = 0, sd = 50)
+
+plot(x, y.noisy)
+
+model <- lm(y.noisy ~ poly(x,9))
+model.pred <- model$fitted.values
+
+lines(x, model.pred, col = "red", lwd = 2)
+
+abline(lm(y.noisy ~ x), col = "blue", lwd = 2)
+```
+
+
+
+---&twocol
+
+***=left
+
+## If you only remember two things...
+
+1. Share and document your data and analyses -- R has great tools to do this.
+2. Consider simple heuristics in addition to compensatory models.
+
+
+***=right
+<br>
+<br>
+
+```{r, echo = FALSE, out.width = "90%"}
+knitr::include_graphics("images/rpackagediagram.png")
+```
+
+```{r, echo = FALSE, out.width = "70%"}
+knitr::include_graphics("images/FFTrees_Logo.jpg")
+```
+
 
 ```{r , fig.margin = TRUE, echo = FALSE, out.width = "50%", fig.align='center'}
-knitr::include_graphics(c("images/minimalist.jpg"))
+#knitr::include_graphics(c("images/minimalist.jpg"))
 ```
 
 
@@ -788,7 +889,7 @@ knitr::include_graphics(c("images/photocollage.png"))
 
 --- .class #id 
 
-### Simply your life with R. From making decisions to sharing and documenting research
+### Simply your life with R: From sharing and documenting research to modeling simple decisions.
 
 #### My Links
 
@@ -825,3 +926,15 @@ knitr::include_graphics(c("images/photocollage.png"))
 knitr::include_graphics(c("images/traintreestats.png"))
 ```
 
+
+
+
+---
+## A forensic non-frugal tree
+
+```{r, eval = TRUE, fig.align = 'center', echo = FALSE ,message = FALSE, dpi = 200, out.width = "55%"}
+library(rpart)
+forensic.cart <- rpart::rpart(fds.63.crit ~ ., data = fds.63.data)
+plot(forensic.cart)
+text(forensic.cart)
+```

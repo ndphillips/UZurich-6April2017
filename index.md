@@ -1,6 +1,6 @@
 ---
 title       : Simply your life with R
-subtitle    : From making decisions to sharing and documenting research
+subtitle    : From sharing and documenting research, to modeling simple decisions
 author      : Nathaniel Phillips, University of Basel
 job         : Department Presentation, University of Zurich, Department of Economics
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
@@ -99,20 +99,20 @@ Rotjan, R. D., Chabot, J. R., & Lewis, S. M. (2010). Social context of shell acq
 
 ## Example: Phillips et al. (2014)
 
-<img src="figure/unnamed-chunk-14-1.png" title="plot of chunk unnamed-chunk-14" alt="plot of chunk unnamed-chunk-14" width="70%" style="display: block; margin: auto;" />
+<img src="assets/fig/unnamed-chunk-14-1.png" title="plot of chunk unnamed-chunk-14" alt="plot of chunk unnamed-chunk-14" width="70%" style="display: block; margin: auto;" />
 
 
 --- .class #id 
 
 ## Example: Phillips et al. (2014)
 
-<img src="figure/unnamed-chunk-15-1.png" title="plot of chunk unnamed-chunk-15" alt="plot of chunk unnamed-chunk-15" width="70%" style="display: block; margin: auto;" />
+<img src="assets/fig/unnamed-chunk-15-1.png" title="plot of chunk unnamed-chunk-15" alt="plot of chunk unnamed-chunk-15" width="70%" style="display: block; margin: auto;" />
 
 --- .class #id 
 
 ## Example: Phillips et al. (2014)
 
-<img src="figure/unnamed-chunk-16-1.png" title="plot of chunk unnamed-chunk-16" alt="plot of chunk unnamed-chunk-16" width="70%" style="display: block; margin: auto;" />
+<img src="assets/fig/unnamed-chunk-16-1.png" title="plot of chunk unnamed-chunk-16" alt="plot of chunk unnamed-chunk-16" width="70%" style="display: block; margin: auto;" />
 
 <!-- --- .class #id  -->
 
@@ -140,7 +140,7 @@ Rotjan, R. D., Chabot, J. R., & Lewis, S. M. (2010). Social context of shell acq
 
 ## Why did competition decrease search so much?
 
-<img src="figure/unnamed-chunk-17-1.png" title="plot of chunk unnamed-chunk-17" alt="plot of chunk unnamed-chunk-17" width="70%" style="display: block; margin: auto;" />
+<img src="assets/fig/unnamed-chunk-17-1.png" title="plot of chunk unnamed-chunk-17" alt="plot of chunk unnamed-chunk-17" width="70%" style="display: block; margin: auto;" />
 
 
 
@@ -148,7 +148,7 @@ Rotjan, R. D., Chabot, J. R., & Lewis, S. M. (2010). Social context of shell acq
 
 ## Why did competition decrease search so much?
 
-<img src="figure/unnamed-chunk-18-1.png" title="plot of chunk unnamed-chunk-18" alt="plot of chunk unnamed-chunk-18" width="70%" style="display: block; margin: auto;" />
+<img src="assets/fig/unnamed-chunk-18-1.png" title="plot of chunk unnamed-chunk-18" alt="plot of chunk unnamed-chunk-18" width="70%" style="display: block; margin: auto;" />
 
 
 
@@ -156,7 +156,7 @@ Rotjan, R. D., Chabot, J. R., & Lewis, S. M. (2010). Social context of shell acq
 
 ## Example: Phillips et al. (2014)
 
-<img src="figure/unnamed-chunk-19-1.png" title="plot of chunk unnamed-chunk-19" alt="plot of chunk unnamed-chunk-19" width="70%" style="display: block; margin: auto;" />
+<img src="assets/fig/unnamed-chunk-19-1.png" title="plot of chunk unnamed-chunk-19" alt="plot of chunk unnamed-chunk-19" width="70%" style="display: block; margin: auto;" />
 
 
 ---&twocol
@@ -167,9 +167,14 @@ Rotjan, R. D., Chabot, J. R., & Lewis, S. M. (2010). Social context of shell acq
 
 - How can I store, document, and share data and analyses in an open and transparent way?
 
-- Many researchers "The publication is the end of the story and is important to share. The data and analyses details are less so."
+### 5 Selfish reasons to share data
 
-- For those that think its important, they don't know how
+1. Gives your research credibility (Wagenmakers & Dutilh, 2016).
+2. Forces you to look for bugs, and document.
+3. Invites other researchers to get involved, cite and collaborate (Piwowar et al, 2007).
+4. Get constructive feedback.
+5. Know that you're contributing to open science (Wagenmakers & Dutilh, 2016)
+
 
 ***=right
 
@@ -178,23 +183,6 @@ Rotjan, R. D., Chabot, J. R., & Lewis, S. M. (2010). Social context of shell acq
 <img src="images/cos_stack.png" title="plot of chunk unnamed-chunk-21" alt="plot of chunk unnamed-chunk-21" width="50%" style="display: block; margin: auto;" />
 
 
----&twocol
-
-***=left
-
-### 5 Selfish reasons to share data
-
-1. Gives your research credibility.
-2. Forces you to look for bugs, and document.
-3. Invites other researchers to get involved, cite and collaborate.
-4. Get constructive feedback.
-5. Know that you're contributing to open science.
-
-***=right
-
-<img src="images/selfishreasons.jpg" title="plot of chunk unnamed-chunk-22" alt="plot of chunk unnamed-chunk-22" width="75%" />
-
-Wagenmakers, E. J., & Dutilh, G. (2016). Seven Selfish Reasons for Preregistration. APS Observer, 29(9).
 
 
 
@@ -204,7 +192,7 @@ Wagenmakers, E. J., & Dutilh, G. (2016). Seven Selfish Reasons for Preregistrati
 
 - Store everything in an R package: Data, data descriptions, analyses, tutorials.
 
-<img src="images/rpackagediagram.png" title="plot of chunk unnamed-chunk-23" alt="plot of chunk unnamed-chunk-23" width="70%" style="display: block; margin: auto;" />
+<img src="images/rpackagediagram.png" title="plot of chunk unnamed-chunk-22" alt="plot of chunk unnamed-chunk-22" width="70%" style="display: block; margin: auto;" />
 
 - Share the package at the time of publication (before someone asks for it)
 - Now everyone (even your future self) can always recover the data and analyses. Anytime. Anywhere.
@@ -214,7 +202,7 @@ Wagenmakers, E. J., & Dutilh, G. (2016). Seven Selfish Reasons for Preregistrati
 --- .class #id 
 
 
-<img src="images/markdownpage.png" title="plot of chunk unnamed-chunk-24" alt="plot of chunk unnamed-chunk-24" width="85%" style="display: block; margin: auto;" />
+<img src="images/markdownpage.png" title="plot of chunk unnamed-chunk-23" alt="plot of chunk unnamed-chunk-23" width="85%" style="display: block; margin: auto;" />
 
 
 
@@ -226,7 +214,7 @@ Wagenmakers, E. J., & Dutilh, G. (2016). Seven Selfish Reasons for Preregistrati
 - Markdown = Text + Code + Output.
 - Result: Data, Analyses and Output are linked.
 
-<img src="images/markdownexamples.png" title="plot of chunk unnamed-chunk-25" alt="plot of chunk unnamed-chunk-25" width="60%" style="display: block; margin: auto;" />
+<img src="images/markdownexamples.png" title="plot of chunk unnamed-chunk-24" alt="plot of chunk unnamed-chunk-24" width="60%" style="display: block; margin: auto;" />
 
 
 
@@ -249,13 +237,13 @@ install.packages("https://goo.gl/q6GvBk",
 --- .class #id 
 
 
-<img src="images/rstudioss.png" title="plot of chunk unnamed-chunk-27" alt="plot of chunk unnamed-chunk-27" width="100%" style="display: block; margin: auto;" />
+<img src="images/rstudioss.png" title="plot of chunk unnamed-chunk-26" alt="plot of chunk unnamed-chunk-26" width="100%" style="display: block; margin: auto;" />
 
 --- .class #id 
 
 ## Data documentation
 
-<img src="images/guidess.png" title="plot of chunk unnamed-chunk-28" alt="plot of chunk unnamed-chunk-28" width="60%" style="display: block; margin: auto;" />
+<img src="images/guidess.png" title="plot of chunk unnamed-chunk-27" alt="plot of chunk unnamed-chunk-27" width="60%" style="display: block; margin: auto;" />
 
 
 
@@ -267,26 +255,52 @@ install.packages("https://goo.gl/q6GvBk",
 
 - Data are fully organized, documented, and linked to the analyses.
 - Accessible to anyone (like your future self) with one line of code.
-- Packages make your research interactive.
+    - R becomes not just a statistical engine, but a fully documented data repository.
+- Packages make your research interactive -- calls for other researchers to get involved.
+
+
 
 
 ***=right
 
-<img src="images/rstudioss2.png" title="plot of chunk unnamed-chunk-29" alt="plot of chunk unnamed-chunk-29" width="100%" />
+<img src="images/rstudioss2.png" title="plot of chunk unnamed-chunk-28" alt="plot of chunk unnamed-chunk-28" width="100%" />
 
 
+<!-- ---&twocol -->
+
+<!-- ***=left -->
+
+<!-- ### 5 Selfish reasons to share data -->
+
+<!-- 1. Gives your research credibility. -->
+<!-- 2. Forces you to look for bugs, and document. -->
+<!-- 3. Invites other researchers to get involved, cite and collaborate. -->
+<!-- 4. Get constructive feedback. -->
+<!-- 5. Know that you're contributing to open science. -->
+
+<!-- ***=right -->
+
+<!-- ```{r, eval = TRUE, echo = FALSE, out.width = "75%"} -->
+<!-- knitr::include_graphics("images/selfishreasons.jpg") -->
+<!-- ``` -->
+
+<!-- Wagenmakers, E. J., & Dutilh, G. (2016). Seven Selfish Reasons for Preregistration. APS Observer, 29(9). -->
 
 ---&twocol
 
-## Making good, simple decisions with R
+## Complexity vs. Simplicity
 
 ***=left
 
-<img src="images/complexity.jpg" title="plot of chunk unnamed-chunk-30" alt="plot of chunk unnamed-chunk-30" width="100%" style="display: block; margin: auto;" />
+<br>
+
+<img src="images/complexity.jpg" title="plot of chunk unnamed-chunk-29" alt="plot of chunk unnamed-chunk-29" width="100%" style="display: block; margin: auto;" />
 
 ***=right
 
-<img src="images/decisionsimple.jpg" title="plot of chunk unnamed-chunk-31" alt="plot of chunk unnamed-chunk-31" width="95%" style="display: block; margin: auto;" />
+<br>
+
+<img src="images/decisionsimple.jpg" title="plot of chunk unnamed-chunk-30" alt="plot of chunk unnamed-chunk-30" width="95%" style="display: block; margin: auto;" />
 
 <!-- --- .class #id  -->
 
@@ -349,10 +363,18 @@ install.packages("https://goo.gl/q6GvBk",
 
 ---
 
-## Making good decisions
+## Decision Strategies
 
 
-<img src="images/professor.jpg" title="plot of chunk unnamed-chunk-32" alt="plot of chunk unnamed-chunk-32" width="70%" style="display: block; margin: auto;" />
+| | Compensatory|Non-Compensatory |
+|:---------|:----|:-----|
+|     Example|    Weighted averaging: Expected utility, Tally, Bayes|Heuristics: Take the Best, Tit-for-tat|
+|     Information Requirements|    High|Low     |
+|     Search|    Comprehensive|Sequential     |
+|     Speed|    Slow|Fast     |
+| When do people use? <br>(Payne, Bettman, Johnson, 1993)| Low time pressure, high processing capacity | High time-pressure, low processing capacity |
+
+
 
 
 --- &twocol
@@ -361,117 +383,148 @@ install.packages("https://goo.gl/q6GvBk",
 
 ***=left
 
-- Simple, sequential, rule-based decision algorithms.
-- A fast and frugal decision tree (FFT) is a very simple decision tree (Martignon et al., 2008).
-    - Predict depression (Jenny et al., 2013)
-    - Terrorist attacks (Garcia, 2016)
-    - Bank failure (Aikman et al., 2014; Neth et al., 2014)
+#### Descriptive
+
+- Inference (Gigerenzer & Goldstein, 1996)
+- Judge's bailing decisions (Dhami, 2003)
+- Competition "Tit-for-Tat" (Axelrod, 1984)
+- Social "Imitate the successful" (Boyd & Richerson, 2005)
+
+#### Prescriptive
+
+- Heart disease (Breiman et al. 1993)
+- Terrorist attacks (Garcia, 2016)
+- Bank failure (Aikman et al., 2014; Neth et al., 2014)
+
 
 ***=right
 
-<img src="images/nethfft.png" title="plot of chunk unnamed-chunk-33" alt="plot of chunk unnamed-chunk-33" width="100%" style="display: block; margin: auto;" />
+<img src="images/nethfft.png" title="plot of chunk unnamed-chunk-31" alt="plot of chunk unnamed-chunk-31" width="100%" style="display: block; margin: auto;" />
 
 Neth et al. (2014). "Homo heuristicus in the financial world".
 
 
 
 ---&twocol
-## Predicting patient success
+## FFTrees
 
 ***=left
 
-- Data set: 1101 Baden Wuerttemberg patients, 46 cues (age, sex, diagnosis, drug history, etc...)
-- Goal: Predict who will be successfully released with an FFT.
-- Solution: `FFTrees`, an easy-to-use R package that constructs, visualizes, and implements FFTs from any data.
+- Problem: There is no widely available tool to create FFTs from data.
+    - Tools-to-theories heuristic (Gigerenzer, 1991)
+- `FFTrees`
 
-Phillips et al. (under review). FFTrees: An R package to create, visualise, and impliment fast and frugal decision trees
+<br>
+<div style="text-align:left"><font size="1"> Phillips et al. (under review). FFTrees: An R package to create, visualise, and impliment fast and frugal decision trees</font></div>
 
 
 ***=right
 
-<img src="images/hospital.jpg" title="plot of chunk unnamed-chunk-34" alt="plot of chunk unnamed-chunk-34" width="100%" style="display: block; margin: auto;" />
-
-
-
-
-
-
-
-
-
-
-
-
-
---- .class #id 
-## FFTrees
-
-
 
 ```r
-# Step 0: Install and load FFTrees
+# Install FFTrees
 install.packages("FFTrees")
-library("FFTrees")
 
-# Step 1: Create the trees
-patient.fft <- FFTrees(formula = fds.63.crit ~., 
-                     data = fds.63.data)
-
-# Step 2: View summary statistics
-print(patient.fft)
-
-# Step 3: Visualise the tree
-plot(patient.fft)
+# Create FFTs from data
+my.fft <- FFTrees(formula = decision ~.,
+                  data = data)
 ```
 
 
 
---- 
-
-<img src="figure/unnamed-chunk-38-1.png" title="plot of chunk unnamed-chunk-38" alt="plot of chunk unnamed-chunk-38" width="70%" style="display: block; margin: auto;" />
+<img src="images/FFTrees_Logo.jpg" title="plot of chunk unnamed-chunk-33" alt="plot of chunk unnamed-chunk-33" width="80%" style="display: block; margin: auto;" />
 
 
---- 
 
-<img src="figure/unnamed-chunk-39-1.png" title="plot of chunk unnamed-chunk-39" alt="plot of chunk unnamed-chunk-39" width="70%" style="display: block; margin: auto;" />
+
+
+
+
+
+---&twocol
+## Patient Release Decisions
+
+***=left
+
+- How can we explain psychiatric patient release decisions?
+- Dataset: Release decisions from 1101 patients described by 46 cues (age, sex, diagnosis, drug history, etc...)
+- Goal: Create a fast and frugal decision tree to predict release decisions
+
+***=right
+
+<img src="images/hospital.jpg" title="plot of chunk unnamed-chunk-35" alt="plot of chunk unnamed-chunk-35" width="100%" style="display: block; margin: auto;" />
+
+
+
+
+
+
+
+
+
+
 
 
 
 <!-- ---  -->
-<!-- ## Regression -->
 
-<!-- ```{r, eval = TRUE, fig.align = 'center', echo = FALSE ,message = FALSE, dpi = 200, out.width = "55%", message = FALSE, warning=FALSE} -->
-<!-- valid <- sapply(1:ncol(fds.63.data), FUN = function(x) {length(unique(fds.63.data[,x])) > 1}) -->
-
-<!-- forensic.lm <- glm(formula = fds.63.crit ~ .,  -->
-<!--                    data = fds.63.data[,valid],  -->
-<!--                    family = "binomial") -->
-
-<!-- forensic.lm.coef <- summary(forensic.lm)$coefficients -->
-
-<!-- forensic.lm.coef.sig <- as.data.frame(forensic.lm.coef[forensic.lm.coef[,4] < .05,]) -->
-<!-- names(forensic.lm.coef.sig)[4] <- "p" -->
-<!-- knitr::kable(forensic.lm.coef.sig[,c(1, 4)], digits = 3) -->
-
+<!-- ```{r, eval = TRUE, fig.align = 'center', echo = FALSE ,message = FALSE, dpi = 200, out.width = "70%", fig.width = 8, fig.height = 8} -->
+<!-- library(FFTrees) -->
+<!-- load(file = "/Users/nphillips/Dropbox/manuscripts/ForensicFFT/data/ForensicFFTManuscript.RData") -->
+<!-- plot(tree.63.m,  -->
+<!--      main = "Psychiatric patient FFT",  -->
+<!--      decision.names = c("High-Risk", "Low-Risk"),  -->
+<!--      stats = FALSE) -->
 <!-- ``` -->
 
 
-<!-- ---  -->
-<!-- ## A forensic non-frugal tree -->
+---
+## Regression
 
-<!-- ```{r, eval = TRUE, fig.align = 'center', echo = FALSE ,message = FALSE, dpi = 200, out.width = "55%"} -->
-<!-- library(rpart) -->
-<!-- forensic.cart <- rpart::rpart(fds.63.crit ~ ., data = fds.63.data) -->
-<!-- plot(forensic.cart) -->
-<!-- text(forensic.cart) -->
-<!-- ``` -->
+
+```r
+forensic.lm <- glm(formula = decision ~ .,
+                   data = patient.data,
+                   family = "binomial")
+```
+
+
+
+|            |   | Df| F value| Pr(>F)|
+|:-----------|--:|--:|-------:|------:|
+|socsit      |  1|  6|   8.604|  0.000|
+|schoolqual  |  2|  6|   5.076|  0.000|
+|migration   |  3|  6|   3.166|  0.005|
+|transfac    |  4| 14|   2.539|  0.002|
+|withdr      |  5|  1|  10.526|  0.001|
+|offense     |  6| 10|   3.154|  0.001|
+|sentence    |  7|  1|  10.880|  0.001|
+|prisonprior |  8|  1|   4.578|  0.033|
+|raext       |  9|  3|   8.060|  0.000|
+|migration2  | 10|  1|   4.256|  0.040|
+
+
+--- 
+
+
+```r
+patient.fft <- FFTrees(formula = decision ~., 
+                       data = patient.data)
+```
+
+
+<img src="assets/fig/unnamed-chunk-41-1.png" title="plot of chunk unnamed-chunk-41" alt="plot of chunk unnamed-chunk-41" width="70%" style="display: block; margin: auto;" />
+
+--- 
+
+<img src="assets/fig/unnamed-chunk-42-1.png" title="plot of chunk unnamed-chunk-42" alt="plot of chunk unnamed-chunk-42" width="70%" style="display: block; margin: auto;" />
+
 
 
 
 ---
 
 ## How accurate can a simple tree be?
-
 
 ### Prediction simulation
 
@@ -486,7 +539,7 @@ plot(patient.fft)
 
 ## How accurate can a simple tree be?
 
-<img src="images/P63_SimulationPP.png" title="plot of chunk unnamed-chunk-41" alt="plot of chunk unnamed-chunk-41" width="70%" style="display: block; margin: auto;" />
+<img src="images/P63_SimulationPP.png" title="plot of chunk unnamed-chunk-44" alt="plot of chunk unnamed-chunk-44" width="70%" style="display: block; margin: auto;" />
 
 
 
@@ -504,51 +557,79 @@ plot(patient.fft)
 
 ***=right
 
-<img src="images/datacollage.png" title="plot of chunk unnamed-chunk-42" alt="plot of chunk unnamed-chunk-42" width="90%" style="display: block; margin: auto;" />
+<img src="images/datacollage.png" title="plot of chunk unnamed-chunk-45" alt="plot of chunk unnamed-chunk-45" width="90%" style="display: block; margin: auto;" />
 
 
 --- .class #id 
 ## Speed and frugality
 
 
-<img src="figure/unnamed-chunk-43-1.png" title="plot of chunk unnamed-chunk-43" alt="plot of chunk unnamed-chunk-43" width="60%" style="display: block; margin: auto;" />
+<img src="assets/fig/unnamed-chunk-46-1.png" title="plot of chunk unnamed-chunk-46" alt="plot of chunk unnamed-chunk-46" width="60%" style="display: block; margin: auto;" />
 
 
 --- .class #id 
 ## Speed and frugality
 
 
-<img src="figure/unnamed-chunk-44-1.png" title="plot of chunk unnamed-chunk-44" alt="plot of chunk unnamed-chunk-44" width="60%" style="display: block; margin: auto;" />
+<img src="assets/fig/unnamed-chunk-47-1.png" title="plot of chunk unnamed-chunk-47" alt="plot of chunk unnamed-chunk-47" width="60%" style="display: block; margin: auto;" />
 
 
 --- .class #id 
 ## Prediction accuracy across 10 dasets
 
-<img src="images/simulationagg_a.png" title="plot of chunk unnamed-chunk-45" alt="plot of chunk unnamed-chunk-45" width="90%" style="display: block; margin: auto;" />
+<img src="images/simulationagg_a.png" title="plot of chunk unnamed-chunk-48" alt="plot of chunk unnamed-chunk-48" width="90%" style="display: block; margin: auto;" />
 
 Phillips, Neth, Gaissmaier & Woike (under review)
 
 --- .class #id 
 ## Prediction accuracy across 10 dasets
 
-<img src="images/simulationagg_b.png" title="plot of chunk unnamed-chunk-46" alt="plot of chunk unnamed-chunk-46" width="90%" style="display: block; margin: auto;" />
+<img src="images/simulationagg_b.png" title="plot of chunk unnamed-chunk-49" alt="plot of chunk unnamed-chunk-49" width="90%" style="display: block; margin: auto;" />
 
 --- .class #id 
 ## Prediction accuracy across 10 dasets
 
-<img src="images/simulationagg_c.png" title="plot of chunk unnamed-chunk-47" alt="plot of chunk unnamed-chunk-47" width="90%" style="display: block; margin: auto;" />
+<img src="images/simulationagg_c.png" title="plot of chunk unnamed-chunk-50" alt="plot of chunk unnamed-chunk-50" width="90%" style="display: block; margin: auto;" />
+
+
+---
+
+## FFTrees conclusion
+
+- Fast and frugal trees are promising descriptive and prescriptive models of decision making.
+    - Now with the `FFTrees` R package, you can create them and compare to compensatory models.
+- If data can be predicted by a very simple model, then that model should be seriously considered, even if it is terribly naive.
 
 
 
 
 
---- .class #id 
-## Simplifying your life with R
+<img src="images/decisionheads.png" title="plot of chunk unnamed-chunk-52" alt="plot of chunk unnamed-chunk-52" width="75%" style="display: block; margin: auto;" />
 
-- R can help you promote and share your work with others (and your future self).
-- R can help you make simpler, better decisions (or simply clarify what's really important) with `FFTrees`.
 
-<img src="images/minimalist.jpg" title="plot of chunk unnamed-chunk-48" alt="plot of chunk unnamed-chunk-48" width="50%" style="display: block; margin: auto;" />
+
+
+
+---&twocol
+
+***=left
+
+## If you only remember two things...
+
+1. Share and document your data and analyses -- R has great tools to do this.
+2. Consider simple heuristics in addition to compensatory models.
+
+
+***=right
+<br>
+<br>
+
+<img src="images/rpackagediagram.png" title="plot of chunk unnamed-chunk-54" alt="plot of chunk unnamed-chunk-54" width="90%" />
+
+<img src="images/FFTrees_Logo.jpg" title="plot of chunk unnamed-chunk-55" alt="plot of chunk unnamed-chunk-55" width="70%" />
+
+
+
 
 
 ---&twocol
@@ -569,12 +650,12 @@ Phillips, Neth, Gaissmaier & Woike (under review)
 
 ***=right
 
-<img src="images/photocollage.png" title="plot of chunk unnamed-chunk-49" alt="plot of chunk unnamed-chunk-49" width="90%" style="display: block; margin: auto;" />
+<img src="images/photocollage.png" title="plot of chunk unnamed-chunk-57" alt="plot of chunk unnamed-chunk-57" width="90%" style="display: block; margin: auto;" />
 
 
 --- .class #id 
 
-### Simply your life with R. From making decisions to sharing and documenting research
+### Simply your life with R: From sharing and documenting research to modeling simple decisions.
 
 #### My Links
 
@@ -607,5 +688,12 @@ Phillips, Neth, Gaissmaier & Woike (under review)
 
 ***=right
 
-<img src="images/traintreestats.png" title="plot of chunk unnamed-chunk-50" alt="plot of chunk unnamed-chunk-50" width="100%" style="display: block; margin: auto;" />
+<img src="images/traintreestats.png" title="plot of chunk unnamed-chunk-58" alt="plot of chunk unnamed-chunk-58" width="100%" style="display: block; margin: auto;" />
 
+
+
+
+---
+## A forensic non-frugal tree
+
+<img src="assets/fig/unnamed-chunk-59-1.png" title="plot of chunk unnamed-chunk-59" alt="plot of chunk unnamed-chunk-59" width="55%" style="display: block; margin: auto;" />
