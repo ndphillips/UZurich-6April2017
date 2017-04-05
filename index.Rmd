@@ -1,5 +1,5 @@
 ---
-title       : Simply your life with R
+title       : Simplify your life with R
 subtitle    : From sharing and documenting research, to modeling simple decisions
 author      : Nathaniel Phillips, University of Basel
 job         : Department Presentation, University of Zurich, Department of Economics
@@ -21,11 +21,14 @@ load("data/forensictrees.RData")
 ---
 
 
-## Four main research topics, one common thread
+```{r, out.width = "85%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("images/talkstructure.001.png")
+```
 
+---
 
-```{r, out.width = "65%", fig.align = "center", echo = FALSE}
-knitr::include_graphics("images/rthread.png")
+```{r, out.width = "85%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("images/talkstructure.002.png")
 ```
 
 
@@ -272,6 +275,14 @@ text(2.5, .95, labels = "Competition", font = 2)
 ```
 
 
+---
+
+```{r, out.width = "85%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("images/talkstructure.003.png")
+```
+
+
+
 ---&twocol
 
 ## Documenting and sharing data
@@ -279,15 +290,6 @@ text(2.5, .95, labels = "Competition", font = 2)
 ***=left
 
 - How can I store, document, and share data and analyses in an open and transparent way?
-
-### 5 Selfish reasons to share data
-
-1. Gives your research credibility (Wagenmakers & Dutilh, 2016).
-2. Forces you to look for bugs, and document.
-3. Invites other researchers to get involved, cite and collaborate (Piwowar et al, 2007).
-4. Get constructive feedback.
-5. Know that you're contributing to open science (Wagenmakers & Dutilh, 2016)
-
 
 ***=right
 
@@ -414,6 +416,13 @@ knitr::include_graphics("images/rstudioss2.png")
 
 <!-- Wagenmakers, E. J., & Dutilh, G. (2016). Seven Selfish Reasons for Preregistration. APS Observer, 29(9). -->
 
+---
+
+```{r, out.width = "85%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("images/talkstructure.004.png")
+```
+
+
 ---&twocol
 
 ## Complexity vs. Simplicity
@@ -537,6 +546,11 @@ knitr::include_graphics(c("images/nethfft.png"))
 
 Neth et al. (2014). "Homo heuristicus in the financial world".
 
+---
+
+```{r, out.width = "85%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("images/talkstructure.005.png")
+```
 
 
 ---&twocol
@@ -544,23 +558,17 @@ Neth et al. (2014). "Homo heuristicus in the financial world".
 
 ***=left
 
-- Problem: There is no widely available tool to create FFTs from data.
-    - Tools-to-theories heuristic (Gigerenzer, 1991)
-- `FFTrees`
+- `FFTrees` An easy-to-use R package to create, visualize, and implement fast and frugal decision trees.
 
 <br>
-<div style="text-align:left"><font size="1"> Phillips et al. (under review). FFTrees: An R package to create, visualise, and impliment fast and frugal decision trees</font></div>
+<div style="text-align:left"><font size="1"> Phillips et al. (under review). FFTrees: An R package to create, visualize, and implement fast and frugal decision trees</font></div>
 
 
 ***=right
 
 ```{r, eval = FALSE}
-# Install FFTrees
+# Install FFTrees to R.
 install.packages("FFTrees")
-
-# Create FFTs from data
-my.fft <- FFTrees(formula = decision ~.,
-                  data = data)
 ```
 
 
@@ -586,7 +594,7 @@ load(file = "/Users/nphillips/Dropbox/manuscripts/ForensicFFT/data/ForensicFFTMa
 
 - How can we explain psychiatric patient release decisions?
 - Dataset: Release decisions from 1101 patients described by 46 cues (age, sex, diagnosis, drug history, etc...)
-- Goal: Create a fast and frugal decision tree to predict release decisions
+- Goal: Compare a fast and frugal decision tree model of release decisions to regression.
 
 ***=right
 
@@ -624,43 +632,94 @@ load(file = "/Users/nphillips/Dropbox/manuscripts/ForensicFFT/data/ForensicFFTMa
 
 
 ---
-## Regression
+## Creating regression and FFT models
 
 ```{r, eval = FALSE}
-forensic.lm <- glm(formula = decision ~ .,
+# Creating a regression decision model with glm()
+patient.glm <- glm(formula = decision ~ .,
                    data = patient.data,
                    family = "binomial")
 ```
 
 
+
+---
+## Regression
+
+
+
 ```{r, eval = TRUE, fig.align = 'center', echo = FALSE ,message = FALSE, dpi = 200, out.width = "55%", message = FALSE, warning=FALSE}
 valid <- sapply(1:ncol(fds.63.data), FUN = function(x) {length(unique(fds.63.data[,x])) > 1})
 
-forensic.lm <- glm(formula = fds.63.crit ~ .,
+forensic.glm <- glm(formula = fds.63.crit ~ .,
                    data = fds.63.data[,valid & names(fds.63.data) != "yit"],
                    family = "binomial")
 
-coef <- as.matrix(summary(aov(forensic.lm))[[1]])
+coef <- as.matrix(summary(aov(forensic.glm))[[1]])
 coef <- coef[1:(nrow(coef) - 1),]
 coef <- coef[coef[,5] < .05,]
 coef <- cbind(1:nrow(coef), coef)
 knitr::kable(coef[,c(1,2, 5, 6)], digits = 3)
 ```
 
-
---- 
-
-```{r, eval = FALSE}
-patient.fft <- FFTrees(formula = decision ~., 
-                       data = patient.data)
-```
-
-
-```{r, eval = TRUE, fig.align = 'center', echo = FALSE ,message = FALSE, dpi = 200, out.width = "70%", fig.width = 8, fig.height = 7}
+```{r echo = FALSE}
 set.seed(100)
 library(FFTrees)
 load(file = "/Users/nphillips/Dropbox/manuscripts/ForensicFFT/data/ForensicFFTManuscript.RData")
 x <- FFTrees::FFTrees(fds.63.crit ~ ., data = fds.63.data[, names(fds.63.data) != "yit"])
+```
+
+
+---
+
+## 3 Steps to creating FFTs with FFTrees
+
+```{r, eval = FALSE}
+# Step 0: Install FFTrees
+install.packages("FFTrees")
+
+# Step 1: Load the package
+library("FFTrees")
+
+# Step 2: Create an fft decision model with FFTrees
+patient.fft <- FFTrees(formula = decision ~.,
+                       data = patient.data)
+```
+
+
+---
+## How trees are built with FFTrees
+
+1. For each cue, calculate a decision threshold that maximizes accuracy.
+2. Rank order cues by their maximum accuracy
+3. Select the top N (i.e., 4) accurate cues
+    - If any lower levels contain less than 10\% of the data, remove them.
+4. Select the exit structure with the highest accuracy.
+
+
+---
+
+```{r, eval = FALSE}
+# Show the cue accuracies
+plot(patient.fft, what = "cues", main = "Patient cues")
+```
+
+
+```{r, echo = FALSE, fig.align = 'center', dpi = 200, out.width = "55%", fig.width = 8, fig.height = 8}
+plot(x, 
+     what = "cues", 
+     main = "Patient Cues")
+```
+
+
+--- 
+
+```{r, eval = FALSE}
+plot(patient.fft, main = "Release Decision FFT", stats = FALSE)
+```
+
+
+```{r, eval = TRUE, fig.align = 'center', echo = FALSE ,message = FALSE, dpi = 200, out.width = "70%", fig.width = 8, fig.height = 7}
 plot(x, 
      main = "Release Decision FFT", 
      decision.names = c("Unlikely Release", "Likely Release"), stats = FALSE)
@@ -668,7 +727,12 @@ plot(x,
 
 --- 
 
-```{r, eval = TRUE, fig.align = 'center', echo = FALSE ,message = FALSE, dpi = 200, out.width = "70%", fig.width = 8, fig.height = 7}
+```{r eval = FALSE}
+plot(patient.fft)
+```
+
+
+```{r, eval = TRUE, fig.align = 'center', echo = FALSE ,message = FALSE, dpi = 200, out.width = "65%", fig.width = 8, fig.height = 7}
 plot(x, 
      main = "Release Decision FFT", 
      decision.names = c("Unlikely Release", "Likely Release"))
@@ -678,16 +742,18 @@ plot(x,
 
 
 ---
+## Comparing decision accuracy
 
-## How accurate can a simple tree be?
+
+### Data fitting accuracy
+
+- Regression:, 79%, FFT: 68%
 
 ### Prediction simulation
 
 - 1,000 Cross-validation prediction simulations
-- Compare FFTrees to regression and non-frugal decision trees.
 
-
-```{r , fig.margin = TRUE, echo = FALSE, out.width = "70%", fig.align='center', fig.cap = "Cross Validation procedure"}
+```{r , fig.margin = TRUE, echo = FALSE, out.width = "40%", fig.align='center', fig.cap = "Cross Validation procedure"}
 knitr::include_graphics(c("images/crossvalidation.jpg"))
 ```
 
@@ -696,7 +762,7 @@ knitr::include_graphics(c("images/crossvalidation.jpg"))
 
 ## How accurate can a simple tree be?
 
-```{r , fig.margin = TRUE, echo = FALSE, out.width = "70%", fig.align='center'}
+```{r , fig.margin = TRUE, echo = FALSE, out.width = "75%", fig.align='center'}
 knitr::include_graphics(c("images/P63_SimulationPP.png"))
 ```
 
@@ -776,14 +842,26 @@ segments(mcu, pci, rep(7.5, length(data.name)), seq(.1, .9, length.out = length(
 ```
 
 
---- .class #id 
-## Prediction accuracy across 10 dasets
 
-```{r , fig.margin = TRUE, echo = FALSE, out.width = "90%", fig.align='center'}
-knitr::include_graphics(c("images/simulationagg_a.png"))
+---
+
+```{r}
+heart.fft <- FFTrees(diagnosis ~ ., data = heartdisease)
 ```
 
-Phillips, Neth, Gaissmaier & Woike (under review)
+```{r, echo = FALSE, out.width = "55%", dpi = 200, fig.width = 8, fig.height = 7, fig.align = 'center'}
+plot(heart.fft, main = "Heart Disease")
+```
+
+---
+
+```{r, eval = FALSE}
+mushrooms.fft <- FFTrees(poisonous ~ ., data = mushrooms)
+```
+
+```{r, echo = FALSE, out.width = "55%", dpi = 200, fig.width = 8, fig.height = 7, fig.align = 'center'}
+plot(mushrooms.fft, main = "Mushroom Toxicity")
+```
 
 --- .class #id 
 ## Prediction accuracy across 10 dasets
@@ -798,6 +876,7 @@ knitr::include_graphics(c("images/simulationagg_b.png"))
 ```{r , fig.margin = TRUE, echo = FALSE, out.width = "90%", fig.align='center'}
 knitr::include_graphics(c("images/simulationagg_c.png"))
 ```
+
 
 
 ---
