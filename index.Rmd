@@ -294,9 +294,9 @@ knitr::include_graphics("images/talkstructure.003.png")
 | Method|Availability| Documentation | Accuracy
 |:-------------:|----:|:-----|:----|
 |Don't share|    Low|Low     |Low  
-|Request only|    Medium|Low     |Low  
-|Post online|    High|Medium     |Medium    |
-|R package|    High|High     |High    |
+|By request only|    Medium|Low     |Low  
+|Post data online|    High|Medium     |Medium    |
+|Markdown + R package|    High|High     |High    |
 
 ***=right
 
@@ -312,29 +312,30 @@ knitr::include_graphics("images/cos_stack.png")
 
 --- .class #id 
 
-## A solution: Reasearch as an R manuscript package
+```{r, out.width = "85%", fig.align = "center", echo = FALSE}
+knitr::include_graphics("images/markdownexamples.png")
+```
 
-- Store all data in an R package.
-- Include documentation, vignettes and tutorials written in R Markdown.
 
-```{r, out.width = "70%", fig.align = "center", echo = FALSE}
+
+--- .class #id 
+
+## R manuscript package
+
+- Include data, documentation, vignettes and tutorials written in R Markdown.
+
+```{r, out.width = "80%", fig.align = "center", echo = FALSE}
 knitr::include_graphics("images/rpackagediagram.png")
 ```
 
 - Now everyone (even your future self) can always recover the data and analyses. Anytime. Anywhere.
 
 --- .class #id 
-
-```{r, out.width = "85%", fig.align = "center", echo = FALSE}
-knitr::include_graphics("images/markdownexamples.png")
-```
-
---- .class #id 
 ## 5 Steps to creating an R package
 
 [Full tutorial: http://rpubs.com/ndphillips/rpackagescience](Detailed instructions at http://rpubs.com/ndphillips/rpackagescience)
 
-0. Create neecssary folders `/data`, `/R`, `/vignettes`, `/inst`
+0. Create necessary folders `/data`, `/R`, `/vignettes`, `/inst`
 1. Create a package description file `DESCRIPTION.txt`.
 2. Put data files in `/data` and `/inst` folders, all R code in `/R`
 3. Write documentation files for all data in `/data`

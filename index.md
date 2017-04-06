@@ -177,9 +177,9 @@ Rotjan, R. D., Chabot, J. R., & Lewis, S. M. (2010). Social context of shell acq
 | Method|Availability| Documentation | Accuracy
 |:-------------:|----:|:-----|:----|
 |Don't share|    Low|Low     |Low  
-|Request only|    Medium|Low     |Low  
-|Post online|    High|Medium     |Medium    |
-|R package|    High|High     |High    |
+|By request only|    Medium|Low     |Low  
+|Post data online|    High|Medium     |Medium    |
+|Markdown + R package|    High|High     |High    |
 
 ***=right
 
@@ -191,25 +191,26 @@ Rotjan, R. D., Chabot, J. R., & Lewis, S. M. (2010). Social context of shell acq
 
 --- .class #id 
 
-## A solution: Reasearch as an R manuscript package
+<img src="images/markdownexamples.png" title="plot of chunk unnamed-chunk-24" alt="plot of chunk unnamed-chunk-24" width="85%" style="display: block; margin: auto;" />
 
-- Store all data in an R package.
-- Include documentation, vignettes and tutorials written in R Markdown.
 
-<img src="images/rpackagediagram.png" title="plot of chunk unnamed-chunk-24" alt="plot of chunk unnamed-chunk-24" width="70%" style="display: block; margin: auto;" />
-
-- Now everyone (even your future self) can always recover the data and analyses. Anytime. Anywhere.
 
 --- .class #id 
 
-<img src="images/markdownexamples.png" title="plot of chunk unnamed-chunk-25" alt="plot of chunk unnamed-chunk-25" width="85%" style="display: block; margin: auto;" />
+## R manuscript package
+
+- Include data, documentation, vignettes and tutorials written in R Markdown.
+
+<img src="images/rpackagediagram.png" title="plot of chunk unnamed-chunk-25" alt="plot of chunk unnamed-chunk-25" width="80%" style="display: block; margin: auto;" />
+
+- Now everyone (even your future self) can always recover the data and analyses. Anytime. Anywhere.
 
 --- .class #id 
 ## 5 Steps to creating an R package
 
 [Full tutorial: http://rpubs.com/ndphillips/rpackagescience](Detailed instructions at http://rpubs.com/ndphillips/rpackagescience)
 
-0. Create neecssary folders `/data`, `/R`, `/vignettes`, `/inst`
+0. Create necessary folders `/data`, `/R`, `/vignettes`, `/inst`
 1. Create a package description file `DESCRIPTION.txt`.
 2. Put data files in `/data` and `/inst` folders, all R code in `/R`
 3. Write documentation files for all data in `/data`
