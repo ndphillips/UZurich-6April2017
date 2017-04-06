@@ -1,6 +1,6 @@
 ---
 title       : Simplify your life with R
-subtitle    : From sharing and documenting research, to modeling simple decisions
+subtitle    : From sharing and documenting research, to modeling simple decision strategies
 author      : Nathaniel Phillips, University of Basel
 job         : Department Presentation, University of Zurich, Department of Economics
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
@@ -98,20 +98,20 @@ Rotjan, R. D., Chabot, J. R., & Lewis, S. M. (2010). Social context of shell acq
 
 --- .class #id 
 
-## Example: Phillips et al. (2014)
+## Pre-decisional search
 
 <img src="assets/fig/unnamed-chunk-15-1.png" title="plot of chunk unnamed-chunk-15" alt="plot of chunk unnamed-chunk-15" width="70%" style="display: block; margin: auto;" />
 
 
 --- .class #id 
 
-## Example: Phillips et al. (2014)
+## Pre-decisional search
 
 <img src="assets/fig/unnamed-chunk-16-1.png" title="plot of chunk unnamed-chunk-16" alt="plot of chunk unnamed-chunk-16" width="70%" style="display: block; margin: auto;" />
 
 --- .class #id 
 
-## Example: Phillips et al. (2014)
+## Pre-decisional search
 
 <img src="assets/fig/unnamed-chunk-17-1.png" title="plot of chunk unnamed-chunk-17" alt="plot of chunk unnamed-chunk-17" width="70%" style="display: block; margin: auto;" />
 
@@ -139,7 +139,7 @@ Rotjan, R. D., Chabot, J. R., & Lewis, S. M. (2010). Social context of shell acq
 
 --- .class #id 
 
-## Why did competition decrease search so much?
+## Benefits of search
 
 <img src="assets/fig/unnamed-chunk-18-1.png" title="plot of chunk unnamed-chunk-18" alt="plot of chunk unnamed-chunk-18" width="70%" style="display: block; margin: auto;" />
 
@@ -147,7 +147,7 @@ Rotjan, R. D., Chabot, J. R., & Lewis, S. M. (2010). Social context of shell acq
 
 --- .class #id 
 
-## Why did competition decrease search so much?
+## Benefits of search
 
 <img src="assets/fig/unnamed-chunk-19-1.png" title="plot of chunk unnamed-chunk-19" alt="plot of chunk unnamed-chunk-19" width="70%" style="display: block; margin: auto;" />
 
@@ -155,7 +155,7 @@ Rotjan, R. D., Chabot, J. R., & Lewis, S. M. (2010). Social context of shell acq
 
 --- .class #id 
 
-## Example: Phillips et al. (2014)
+## Observed Outcomes
 
 <img src="assets/fig/unnamed-chunk-20-1.png" title="plot of chunk unnamed-chunk-20" alt="plot of chunk unnamed-chunk-20" width="70%" style="display: block; margin: auto;" />
 

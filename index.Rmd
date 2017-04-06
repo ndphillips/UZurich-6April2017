@@ -1,6 +1,6 @@
 ---
 title       : Simplify your life with R
-subtitle    : From sharing and documenting research, to modeling simple decisions
+subtitle    : From sharing and documenting research, to modeling simple decision strategies
 author      : Nathaniel Phillips, University of Basel
 job         : Department Presentation, University of Zurich, Department of Economics
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
@@ -127,7 +127,7 @@ knitr::include_graphics("images/sampleordecide.png")
 
 --- .class #id 
 
-## Example: Phillips et al. (2014)
+## Pre-decisional search
 
 ```{r, out.width = '70%', fig.align = "center", echo = FALSE, message = FALSE, dpi = 200, fig.width = 6, fig.height = 5}
 library(phillips2014rivals)
@@ -147,7 +147,7 @@ yarrr::pirateplot(trials ~ condition, data = subset(sampling.data, condition == 
 
 --- .class #id 
 
-## Example: Phillips et al. (2014)
+## Pre-decisional search
 
 ```{r, out.width = '70%', fig.align = "center", echo = FALSE, message = FALSE, dpi = 200, fig.width = 6, fig.height = 5}
 library(phillips2014rivals)
@@ -166,7 +166,7 @@ yarrr::pirateplot(trials ~ condition, data = subset(sampling.data, condition == 
 
 --- .class #id 
 
-## Example: Phillips et al. (2014)
+## Pre-decisional search
 
 ```{r, out.width = '70%', fig.align = "center", echo = FALSE, message = FALSE, dpi = 200, fig.width = 6, fig.height = 5}
 
@@ -200,7 +200,7 @@ yarrr::pirateplot(trials ~ condition, data = sampling.data, xlim = c(.5, 2.5), s
 
 --- .class #id 
 
-## Why did competition decrease search so much?
+## Benefits of search
 
 ```{r, echo = FALSE, fig.align = 'center', fig.width = 6, fig.height = 5, out.width = "70%", dpi=200}
 
@@ -222,7 +222,7 @@ grid()
 
 --- .class #id 
 
-## Why did competition decrease search so much?
+## Benefits of search
 
 ```{r, echo = FALSE, fig.align = 'center', fig.width = 6, fig.height = 5, out.width = "70%", dpi=200}
 sample.sim <- Competitive.Sampling.Simulation.fun(Max.N = 10,      # Maximum sample size is 10
@@ -247,7 +247,7 @@ grid()
 
 --- .class #id 
 
-## Example: Phillips et al. (2014)
+## Observed Outcomes
 
 ```{r, out.width = '70%', fig.align = "center", echo = FALSE, message = FALSE, dpi = 200, fig.width = 6, fig.height = 5}
 # Rearrange the data for the pirateplot
