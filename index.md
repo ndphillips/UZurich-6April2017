@@ -635,12 +635,7 @@ mushrooms.fft <- FFTrees(poisonous ~ ., data = mushrooms)
 --- .class #id 
 ## Prediction accuracy across 10 dasets
 
-<img src="images/simulationagg_b.png" title="plot of chunk unnamed-chunk-56" alt="plot of chunk unnamed-chunk-56" width="90%" style="display: block; margin: auto;" />
-
---- .class #id 
-## Prediction accuracy across 10 dasets
-
-<img src="images/simulationagg_c.png" title="plot of chunk unnamed-chunk-57" alt="plot of chunk unnamed-chunk-57" width="90%" style="display: block; margin: auto;" />
+<img src="images/simulationagg_c.png" title="plot of chunk unnamed-chunk-56" alt="plot of chunk unnamed-chunk-56" width="90%" style="display: block; margin: auto;" />
 
 
 
@@ -656,7 +651,7 @@ mushrooms.fft <- FFTrees(poisonous ~ ., data = mushrooms)
 
 
 
-<img src="images/decisionheads.png" title="plot of chunk unnamed-chunk-59" alt="plot of chunk unnamed-chunk-59" width="75%" style="display: block; margin: auto;" />
+<img src="images/decisionheads.png" title="plot of chunk unnamed-chunk-58" alt="plot of chunk unnamed-chunk-58" width="75%" style="display: block; margin: auto;" />
 
 
 
@@ -676,9 +671,9 @@ mushrooms.fft <- FFTrees(poisonous ~ ., data = mushrooms)
 <br>
 <br>
 
-<img src="images/rpackagediagram.png" title="plot of chunk unnamed-chunk-61" alt="plot of chunk unnamed-chunk-61" width="90%" />
+<img src="images/rpackagediagram.png" title="plot of chunk unnamed-chunk-60" alt="plot of chunk unnamed-chunk-60" width="90%" />
 
-<img src="images/FFTrees_Logo.jpg" title="plot of chunk unnamed-chunk-62" alt="plot of chunk unnamed-chunk-62" width="70%" />
+<img src="images/FFTrees_Logo.jpg" title="plot of chunk unnamed-chunk-61" alt="plot of chunk unnamed-chunk-61" width="70%" />
 
 
 
@@ -702,7 +697,7 @@ mushrooms.fft <- FFTrees(poisonous ~ ., data = mushrooms)
 
 ***=right
 
-<img src="images/photocollage.png" title="plot of chunk unnamed-chunk-64" alt="plot of chunk unnamed-chunk-64" width="90%" style="display: block; margin: auto;" />
+<img src="images/photocollage.png" title="plot of chunk unnamed-chunk-63" alt="plot of chunk unnamed-chunk-63" width="90%" style="display: block; margin: auto;" />
 
 
 --- .class #id 
@@ -740,8 +735,15 @@ mushrooms.fft <- FFTrees(poisonous ~ ., data = mushrooms)
 
 ***=right
 
-<img src="images/traintreestats.png" title="plot of chunk unnamed-chunk-65" alt="plot of chunk unnamed-chunk-65" width="100%" style="display: block; margin: auto;" />
+<img src="images/traintreestats.png" title="plot of chunk unnamed-chunk-64" alt="plot of chunk unnamed-chunk-64" width="100%" style="display: block; margin: auto;" />
 
+
+
+--- .class #id 
+## Speed and frugality
+
+
+<img src="assets/fig/unnamed-chunk-65-1.png" title="plot of chunk unnamed-chunk-65" alt="plot of chunk unnamed-chunk-65" width="60%" style="display: block; margin: auto;" />
 
 
 --- .class #id 
@@ -751,14 +753,7 @@ mushrooms.fft <- FFTrees(poisonous ~ ., data = mushrooms)
 <img src="assets/fig/unnamed-chunk-66-1.png" title="plot of chunk unnamed-chunk-66" alt="plot of chunk unnamed-chunk-66" width="60%" style="display: block; margin: auto;" />
 
 
---- .class #id 
-## Speed and frugality
-
-
-<img src="assets/fig/unnamed-chunk-67-1.png" title="plot of chunk unnamed-chunk-67" alt="plot of chunk unnamed-chunk-67" width="60%" style="display: block; margin: auto;" />
-
-
 ---
 ## A forensic non-frugal tree
 
-<img src="assets/fig/unnamed-chunk-68-1.png" title="plot of chunk unnamed-chunk-68" alt="plot of chunk unnamed-chunk-68" width="55%" style="display: block; margin: auto;" />
+<img src="assets/fig/unnamed-chunk-67-1.png" title="plot of chunk unnamed-chunk-67" alt="plot of chunk unnamed-chunk-67" width="55%" style="display: block; margin: auto;" />

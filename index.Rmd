@@ -804,13 +804,6 @@ plot(mushrooms.fft, main = "Mushroom Toxicity")
 ## Prediction accuracy across 10 dasets
 
 ```{r , fig.margin = TRUE, echo = FALSE, out.width = "90%", fig.align='center'}
-knitr::include_graphics(c("images/simulationagg_b.png"))
-```
-
---- .class #id 
-## Prediction accuracy across 10 dasets
-
-```{r , fig.margin = TRUE, echo = FALSE, out.width = "90%", fig.align='center'}
 knitr::include_graphics(c("images/simulationagg_c.png"))
 ```
 
