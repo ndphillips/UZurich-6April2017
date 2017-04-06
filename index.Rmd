@@ -314,13 +314,13 @@ knitr::include_graphics("images/cos_stack.png")
 
 ## A solution: Reasearch as an R manuscript package
 
-- Store everything in an R package: Data, data descriptions, analyses, tutorials.
+- Store all data in an R package.
+- Include documentation, vignettes and tutorials written in R Markdown.
 
 ```{r, out.width = "70%", fig.align = "center", echo = FALSE}
 knitr::include_graphics("images/rpackagediagram.png")
 ```
 
-- Share the package at the time of publication (before someone asks for it)
 - Now everyone (even your future self) can always recover the data and analyses. Anytime. Anywhere.
 
 --- .class #id 
@@ -813,8 +813,7 @@ knitr::include_graphics(c("images/simulationagg_c.png"))
 
 ## FFTrees conclusion
 
-- Fast and frugal trees are promising descriptive and prescriptive models of decision making.
-    - Now with the `FFTrees` R package, you can create them and compare to compensatory models.
+- With the `FFTrees` R package, you can create descriptive or prescriptive fast and frugal trees and compare to compensatory models.
 - If data can be predicted by a very simple model, then that model should be seriously considered, even if it is terribly naive.
 
 
@@ -852,7 +851,7 @@ abline(lm(y.noisy ~ x), col = "blue", lwd = 2)
 ## If you only remember two things...
 
 1. Share and document your data and analyses -- R has great tools to do this.
-2. Consider simple heuristics in addition to compensatory models.
+2. Consider simple heuristics, like fast and frugal trees, in addition to compensatory models.
 
 
 ***=right

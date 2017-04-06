@@ -193,11 +193,11 @@ Rotjan, R. D., Chabot, J. R., & Lewis, S. M. (2010). Social context of shell acq
 
 ## A solution: Reasearch as an R manuscript package
 
-- Store everything in an R package: Data, data descriptions, analyses, tutorials.
+- Store all data in an R package.
+- Include documentation, vignettes and tutorials written in R Markdown.
 
 <img src="images/rpackagediagram.png" title="plot of chunk unnamed-chunk-24" alt="plot of chunk unnamed-chunk-24" width="70%" style="display: block; margin: auto;" />
 
-- Share the package at the time of publication (before someone asks for it)
 - Now everyone (even your future self) can always recover the data and analyses. Anytime. Anywhere.
 
 --- .class #id 
@@ -643,8 +643,7 @@ mushrooms.fft <- FFTrees(poisonous ~ ., data = mushrooms)
 
 ## FFTrees conclusion
 
-- Fast and frugal trees are promising descriptive and prescriptive models of decision making.
-    - Now with the `FFTrees` R package, you can create them and compare to compensatory models.
+- With the `FFTrees` R package, you can create descriptive or prescriptive fast and frugal trees and compare to compensatory models.
 - If data can be predicted by a very simple model, then that model should be seriously considered, even if it is terribly naive.
 
 
@@ -664,7 +663,7 @@ mushrooms.fft <- FFTrees(poisonous ~ ., data = mushrooms)
 ## If you only remember two things...
 
 1. Share and document your data and analyses -- R has great tools to do this.
-2. Consider simple heuristics in addition to compensatory models.
+2. Consider simple heuristics, like fast and frugal trees, in addition to compensatory models.
 
 
 ***=right
