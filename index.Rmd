@@ -310,6 +310,33 @@ knitr::include_graphics("images/cos_stack.png")
 
 
 
+
+---&twocol
+
+## Why R?
+
+***=left
+
+- Free, open source, shareable, replicable.
+- Huge developer community.
+- R is the language of modern data science
+    - Big data, natural language processing
+
+```{r , fig.margin = TRUE, echo = FALSE, out.width = "80%", fig.align='center', message = FALSE, echo = FALSE}
+ knitr::include_graphics(c("images/Rlogo.png"))
+```
+
+***=right
+
+#### "To be able to choose between proprietary software packages is to be able to choose your master. Freedom means not having a master. And in the area of computing, freedom means not using proprietary software." -- Richard M. Stallman
+
+<br>
+
+#### "Closed source software is useless crap because it satisfies neither repeatability nor inspectability" -- Titus Brown
+ 
+
+
+
 --- .class #id 
 
 ```{r, out.width = "85%", fig.align = "center", echo = FALSE}
@@ -329,19 +356,6 @@ knitr::include_graphics("images/rpackagediagram.png")
 ```
 
 - Now everyone (even your future self) can always recover the data and analyses. Anytime. Anywhere.
-
---- .class #id 
-## 5 Steps to creating an R package
-
-[Full tutorial: http://rpubs.com/ndphillips/rpackagescience](Detailed instructions at http://rpubs.com/ndphillips/rpackagescience)
-
-0. Create necessary folders `/data`, `/R`, `/vignettes`, `/inst`
-1. Create a package description file `DESCRIPTION.txt`.
-2. Put data files in `/data` and `/inst` folders, all R code in `/R`
-3. Write documentation files for all data in `/data`
-4. Write vignettes in Markdown and put in `/vignettes`
-5. Build the package with the `build()` function.
-    - Returns a single R package file: `phillips2014rivals_0.1.0.tar`
 
 --- .class #id 
 
@@ -638,7 +652,7 @@ patient.glm <- glm(formula = decision ~ .,
 ---
 ## Regression
 
-
+- 10 significant predictors of release decisions.
 
 ```{r, eval = TRUE, fig.align = 'center', echo = FALSE ,message = FALSE, dpi = 200, out.width = "55%", message = FALSE, warning=FALSE}
 valid <- sapply(1:ncol(fds.63.data), FUN = function(x) {length(unique(fds.63.data[,x])) > 1})
@@ -915,6 +929,22 @@ knitr::include_graphics(c("images/photocollage.png"))
 
 - YaRrr! The Pirate's Guide to R: www.thepiratesguidetor.com
 - R Markdown: http://rmarkdown.rstudio.com/
+
+
+
+
+--- .class #id 
+## 5 Steps to creating an R package
+
+[Full tutorial: http://rpubs.com/ndphillips/rpackagescience](Detailed instructions at http://rpubs.com/ndphillips/rpackagescience)
+
+0. Create necessary folders `/data`, `/R`, `/vignettes`, `/inst`
+1. Create a package description file `DESCRIPTION.txt`.
+2. Put data files in `/data` and `/inst` folders, all R code in `/R`
+3. Write documentation files for all data in `/data`
+4. Write vignettes in Markdown and put in `/vignettes`
+5. Build the package with the `build()` function.
+    - Returns a single R package file: `phillips2014rivals_0.1.0.tar`
 
 
 ---&twocol
