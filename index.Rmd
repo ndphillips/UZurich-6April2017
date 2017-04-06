@@ -291,6 +291,13 @@ knitr::include_graphics("images/talkstructure.003.png")
 
 - How can I store, document, and share data and analyses in an open and transparent way?
 
+| Method|Availability| Documentation | Accuracy
+|:-------------:|----:|:-----|:----|
+|Don't share|    Low|Low     |Low  
+|Request only|    Medium|Low     |Low  
+|Post online|    High|Medium     |Medium    |
+|R package|    High|High     |High    |
+
 ***=right
 
 ```{r, out.width = "80%", fig.align = "center", echo = FALSE}
@@ -300,8 +307,6 @@ knitr::include_graphics("images/replicationcrisis.png")
 ```{r, out.width = "50%", fig.align = "center", echo = FALSE}
 knitr::include_graphics("images/cos_stack.png")
 ```
-
-
 
 
 
@@ -318,39 +323,35 @@ knitr::include_graphics("images/rpackagediagram.png")
 - Share the package at the time of publication (before someone asks for it)
 - Now everyone (even your future self) can always recover the data and analyses. Anytime. Anywhere.
 
-
-
 --- .class #id 
-
 
 ```{r, out.width = "85%", fig.align = "center", echo = FALSE}
-knitr::include_graphics("images/markdownpage.png")
-```
-
-
-
---- .class #id 
-
-## Markdown
-
-- Write vignettes and examples using Markdown (aka, LaTeX light)
-- Markdown = Text + Code + Output.
-- Result: Data, Analyses and Output are linked.
-
-```{r, out.width = "60%", fig.align = "center", echo = FALSE}
 knitr::include_graphics("images/markdownexamples.png")
 ```
 
+--- .class #id 
+## 5 Steps to creating an R package
 
+[Full tutorial: http://rpubs.com/ndphillips/rpackagescience](Detailed instructions at http://rpubs.com/ndphillips/rpackagescience)
+
+0. Create neecssary folders `/data`, `/R`, `/vignettes`, `/inst`
+1. Create a package description file `DESCRIPTION.txt`.
+2. Put data files in `/data` and `/inst` folders, all R code in `/R`
+3. Write documentation files for all data in `/data`
+4. Write vignettes in Markdown and put in `/vignettes`
+5. Build the package with the `build()` function.
+    - Returns a single R package file: `phillips2014rivals_0.1.0.tar`
 
 --- .class #id 
 
 ## Phillips et al. (2014)
 
-All data analyses, and data descriptions are stored in an R manuscript package called `phillips2014rivals` available at [https://goo.gl/q6GvBk](https://goo.gl/q6GvBk)
+All data analyses, and data descriptions are stored in an R manuscript package called `phillips2014rivals` available in a package `phillips2014rivals_0.1.0.tar` at [https://goo.gl/q6GvBk](https://goo.gl/q6GvBk)
 
 ```{r, eval = FALSE}
 # Install the phillips2014rivals R package
+# Package file: phillips2014rivals_0.1.0.tar, 
+# Link to package file: https://goo.gl/q6GvBk
 
 install.packages("https://goo.gl/q6GvBk", 
                  repos = NULL, 
@@ -358,28 +359,14 @@ install.packages("https://goo.gl/q6GvBk",
 ```
 
 
---- .class #id 
-
-
-```{r, out.width = "100%", fig.align = "center", echo = FALSE}
-knitr::include_graphics("images/rstudioss.png")
-```
-
---- .class #id 
-
-## Data documentation
-
-```{r, out.width = "60%", fig.align = "center", echo = FALSE}
-knitr::include_graphics("images/guidess.png")
-```
-
+### Demo
 
 
 ---&twocol
 
 ***=left
 
-### R manuscript package pros
+### R Documentation Pros
 
 - Data are fully organized, documented, and linked to the analyses.
 - Accessible to anyone (like your future self) with one line of code.
@@ -387,6 +374,9 @@ knitr::include_graphics("images/guidess.png")
 - Packages make your research interactive -- calls for other researchers to get involved.
 
 
+### R Documentation Cons
+
+- It takes time!
 
 
 ***=right
@@ -788,60 +778,6 @@ knitr::include_graphics(c("images/datacollage.png"))
 ```
 
 
---- .class #id 
-## Speed and frugality
-
-
-```{r, echo = FALSE, fig.align = 'center', fig.width = 6, fig.height = 6, out.width = "60%", dpi = 200}
-
-data.name <- c("arrhythmia", "audiology", "breast", "bridges", "cmc", "credit", "dermatology", "heart", "occupancy", "yeast")
-mcu <- c(1.85, 1.73, 1.39, 2.40, 2.06, 1.9, 1.69, 1.72, 1.92, 1.63)
-pci <- c(.99, .98, .86, .76, .79, .88, .95, .88, .68, .82)
-
-plot(mcu, pci, xlim = c(1, 10), ylim = c(0, 1), xlab = "Mean cues used to make a decision", 
-     ylab = "Percent of information ignored", pch = 21, col = "white", 
-     bg = yarrr::piratepal("basel", trans = .2), cex = 2, main = "FFTrees speed and frugality", xaxt = "n", yaxt = "n", type = "n")
-grid()
-axis(1, 1:10)
-axis(2, seq(0, 1, .2), las = 1)
-
-rect(7, .05, 10, .95, col = yarrr::transparent("white", .2), border = gray(.5, .5))
-
-text(rep(8, length(data.name)), seq(.1, .9, length.out = length(data.name)), labels = data.name, adj = 0)
-points(rep(7.5, length(data.name)), seq(.1, .9, length.out = length(data.name)), pch = 21, col = "white", bg = yarrr::piratepal("basel", trans = .2), cex = 2)
-
-
-
-```
-
-
---- .class #id 
-## Speed and frugality
-
-
-```{r, echo = FALSE, fig.align = 'center', fig.width = 6, fig.height = 6, out.width = "60%", dpi = 200}
-
-data.name <- c("arrhythmia", "audiology", "breast", "bridges", "cmc", "credit", "dermatology", "heart", "occupancy", "yeast")
-mcu <- c(1.85, 1.73, 1.39, 2.40, 2.06, 1.9, 1.69, 1.72, 1.92, 1.63)
-pci <- c(.99, .98, .86, .76, .79, .88, .95, .88, .68, .82)
-
-plot(mcu, pci, xlim = c(1, 10), ylim = c(0, 1), xlab = "Mean cues used to make a decision", 
-     ylab = "Percent of information ignored", pch = 21, col = "white", 
-     bg = yarrr::piratepal("basel", trans = .2), cex = 2, main = "FFTrees speed and frugality", xaxt = "n", yaxt = "n")
-grid()
-axis(1, 1:10)
-axis(2, seq(0, 1, .2), las = 1)
-
-rect(7, .05, 10, .95, col = yarrr::transparent("white", .2), border = gray(.5, .5))
-
-text(rep(8, length(data.name)), seq(.1, .9, length.out = length(data.name)), labels = data.name, adj = 0)
-points(rep(7.5, length(data.name)), seq(.1, .9, length.out = length(data.name)), pch = 21, col = "white", bg = yarrr::piratepal("basel", trans = .7), cex = 2)
-
-segments(mcu, pci, rep(7.5, length(data.name)), seq(.1, .9, length.out = length(data.name)), col = gray(.5, .2))
-
-
-```
-
 
 
 ---
@@ -1007,6 +943,60 @@ knitr::include_graphics(c("images/traintreestats.png"))
 ```
 
 
+
+--- .class #id 
+## Speed and frugality
+
+
+```{r, echo = FALSE, fig.align = 'center', fig.width = 6, fig.height = 6, out.width = "60%", dpi = 200}
+
+data.name <- c("arrhythmia", "audiology", "breast", "bridges", "cmc", "credit", "dermatology", "heart", "occupancy", "yeast")
+mcu <- c(1.85, 1.73, 1.39, 2.40, 2.06, 1.9, 1.69, 1.72, 1.92, 1.63)
+pci <- c(.99, .98, .86, .76, .79, .88, .95, .88, .68, .82)
+
+plot(mcu, pci, xlim = c(1, 10), ylim = c(0, 1), xlab = "Mean cues used to make a decision", 
+     ylab = "Percent of information ignored", pch = 21, col = "white", 
+     bg = yarrr::piratepal("basel", trans = .2), cex = 2, main = "FFTrees speed and frugality", xaxt = "n", yaxt = "n", type = "n")
+grid()
+axis(1, 1:10)
+axis(2, seq(0, 1, .2), las = 1)
+
+rect(7, .05, 10, .95, col = yarrr::transparent("white", .2), border = gray(.5, .5))
+
+text(rep(8, length(data.name)), seq(.1, .9, length.out = length(data.name)), labels = data.name, adj = 0)
+points(rep(7.5, length(data.name)), seq(.1, .9, length.out = length(data.name)), pch = 21, col = "white", bg = yarrr::piratepal("basel", trans = .2), cex = 2)
+
+
+
+```
+
+
+--- .class #id 
+## Speed and frugality
+
+
+```{r, echo = FALSE, fig.align = 'center', fig.width = 6, fig.height = 6, out.width = "60%", dpi = 200}
+
+data.name <- c("arrhythmia", "audiology", "breast", "bridges", "cmc", "credit", "dermatology", "heart", "occupancy", "yeast")
+mcu <- c(1.85, 1.73, 1.39, 2.40, 2.06, 1.9, 1.69, 1.72, 1.92, 1.63)
+pci <- c(.99, .98, .86, .76, .79, .88, .95, .88, .68, .82)
+
+plot(mcu, pci, xlim = c(1, 10), ylim = c(0, 1), xlab = "Mean cues used to make a decision", 
+     ylab = "Percent of information ignored", pch = 21, col = "white", 
+     bg = yarrr::piratepal("basel", trans = .2), cex = 2, main = "FFTrees speed and frugality", xaxt = "n", yaxt = "n")
+grid()
+axis(1, 1:10)
+axis(2, seq(0, 1, .2), las = 1)
+
+rect(7, .05, 10, .95, col = yarrr::transparent("white", .2), border = gray(.5, .5))
+
+text(rep(8, length(data.name)), seq(.1, .9, length.out = length(data.name)), labels = data.name, adj = 0)
+points(rep(7.5, length(data.name)), seq(.1, .9, length.out = length(data.name)), pch = 21, col = "white", bg = yarrr::piratepal("basel", trans = .7), cex = 2)
+
+segments(mcu, pci, rep(7.5, length(data.name)), seq(.1, .9, length.out = length(data.name)), col = gray(.5, .2))
+
+
+```
 
 
 ---

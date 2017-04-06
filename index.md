@@ -174,13 +174,18 @@ Rotjan, R. D., Chabot, J. R., & Lewis, S. M. (2010). Social context of shell acq
 
 - How can I store, document, and share data and analyses in an open and transparent way?
 
+| Method|Availability| Documentation | Accuracy
+|:-------------:|----:|:-----|:----|
+|Don't share|    Low|Low     |Low  
+|Request only|    Medium|Low     |Low  
+|Post online|    High|Medium     |Medium    |
+|R package|    High|High     |High    |
+
 ***=right
 
 <img src="images/replicationcrisis.png" title="plot of chunk unnamed-chunk-22" alt="plot of chunk unnamed-chunk-22" width="80%" style="display: block; margin: auto;" />
 
 <img src="images/cos_stack.png" title="plot of chunk unnamed-chunk-23" alt="plot of chunk unnamed-chunk-23" width="50%" style="display: block; margin: auto;" />
-
-
 
 
 
@@ -195,36 +200,34 @@ Rotjan, R. D., Chabot, J. R., & Lewis, S. M. (2010). Social context of shell acq
 - Share the package at the time of publication (before someone asks for it)
 - Now everyone (even your future self) can always recover the data and analyses. Anytime. Anywhere.
 
-
-
 --- .class #id 
 
-
-<img src="images/markdownpage.png" title="plot of chunk unnamed-chunk-25" alt="plot of chunk unnamed-chunk-25" width="85%" style="display: block; margin: auto;" />
-
-
+<img src="images/markdownexamples.png" title="plot of chunk unnamed-chunk-25" alt="plot of chunk unnamed-chunk-25" width="85%" style="display: block; margin: auto;" />
 
 --- .class #id 
+## 5 Steps to creating an R package
 
-## Markdown
+[Full tutorial: http://rpubs.com/ndphillips/rpackagescience](Detailed instructions at http://rpubs.com/ndphillips/rpackagescience)
 
-- Write vignettes and examples using Markdown (aka, LaTeX light)
-- Markdown = Text + Code + Output.
-- Result: Data, Analyses and Output are linked.
-
-<img src="images/markdownexamples.png" title="plot of chunk unnamed-chunk-26" alt="plot of chunk unnamed-chunk-26" width="60%" style="display: block; margin: auto;" />
-
-
+0. Create neecssary folders `/data`, `/R`, `/vignettes`, `/inst`
+1. Create a package description file `DESCRIPTION.txt`.
+2. Put data files in `/data` and `/inst` folders, all R code in `/R`
+3. Write documentation files for all data in `/data`
+4. Write vignettes in Markdown and put in `/vignettes`
+5. Build the package with the `build()` function.
+    - Returns a single R package file: `phillips2014rivals_0.1.0.tar`
 
 --- .class #id 
 
 ## Phillips et al. (2014)
 
-All data analyses, and data descriptions are stored in an R manuscript package called `phillips2014rivals` available at [https://goo.gl/q6GvBk](https://goo.gl/q6GvBk)
+All data analyses, and data descriptions are stored in an R manuscript package called `phillips2014rivals` available in a package `phillips2014rivals_0.1.0.tar` at [https://goo.gl/q6GvBk](https://goo.gl/q6GvBk)
 
 
 ```r
 # Install the phillips2014rivals R package
+# Package file: phillips2014rivals_0.1.0.tar, 
+# Link to package file: https://goo.gl/q6GvBk
 
 install.packages("https://goo.gl/q6GvBk", 
                  repos = NULL, 
@@ -232,24 +235,14 @@ install.packages("https://goo.gl/q6GvBk",
 ```
 
 
---- .class #id 
-
-
-<img src="images/rstudioss.png" title="plot of chunk unnamed-chunk-28" alt="plot of chunk unnamed-chunk-28" width="100%" style="display: block; margin: auto;" />
-
---- .class #id 
-
-## Data documentation
-
-<img src="images/guidess.png" title="plot of chunk unnamed-chunk-29" alt="plot of chunk unnamed-chunk-29" width="60%" style="display: block; margin: auto;" />
-
+### Demo
 
 
 ---&twocol
 
 ***=left
 
-### R manuscript package pros
+### R Documentation Pros
 
 - Data are fully organized, documented, and linked to the analyses.
 - Accessible to anyone (like your future self) with one line of code.
@@ -257,11 +250,14 @@ install.packages("https://goo.gl/q6GvBk",
 - Packages make your research interactive -- calls for other researchers to get involved.
 
 
+### R Documentation Cons
+
+- It takes time!
 
 
 ***=right
 
-<img src="images/rstudioss2.png" title="plot of chunk unnamed-chunk-30" alt="plot of chunk unnamed-chunk-30" width="100%" />
+<img src="images/rstudioss2.png" title="plot of chunk unnamed-chunk-27" alt="plot of chunk unnamed-chunk-27" width="100%" />
 
 
 <!-- ---&twocol -->
@@ -286,7 +282,7 @@ install.packages("https://goo.gl/q6GvBk",
 
 ---
 
-<img src="images/talkstructure.004.png" title="plot of chunk unnamed-chunk-31" alt="plot of chunk unnamed-chunk-31" width="85%" style="display: block; margin: auto;" />
+<img src="images/talkstructure.004.png" title="plot of chunk unnamed-chunk-28" alt="plot of chunk unnamed-chunk-28" width="85%" style="display: block; margin: auto;" />
 
 
 ---&twocol
@@ -297,13 +293,13 @@ install.packages("https://goo.gl/q6GvBk",
 
 <br>
 
-<img src="images/complexity.jpg" title="plot of chunk unnamed-chunk-32" alt="plot of chunk unnamed-chunk-32" width="100%" style="display: block; margin: auto;" />
+<img src="images/complexity.jpg" title="plot of chunk unnamed-chunk-29" alt="plot of chunk unnamed-chunk-29" width="100%" style="display: block; margin: auto;" />
 
 ***=right
 
 <br>
 
-<img src="images/decisionsimple.jpg" title="plot of chunk unnamed-chunk-33" alt="plot of chunk unnamed-chunk-33" width="95%" style="display: block; margin: auto;" />
+<img src="images/decisionsimple.jpg" title="plot of chunk unnamed-chunk-30" alt="plot of chunk unnamed-chunk-30" width="95%" style="display: block; margin: auto;" />
 
 <!-- --- .class #id  -->
 
@@ -402,13 +398,13 @@ install.packages("https://goo.gl/q6GvBk",
 
 ***=right
 
-<img src="images/nethfft.png" title="plot of chunk unnamed-chunk-34" alt="plot of chunk unnamed-chunk-34" width="100%" style="display: block; margin: auto;" />
+<img src="images/nethfft.png" title="plot of chunk unnamed-chunk-31" alt="plot of chunk unnamed-chunk-31" width="100%" style="display: block; margin: auto;" />
 
 Neth et al. (2014). "Homo heuristicus in the financial world".
 
 ---
 
-<img src="images/talkstructure.005.png" title="plot of chunk unnamed-chunk-35" alt="plot of chunk unnamed-chunk-35" width="85%" style="display: block; margin: auto;" />
+<img src="images/talkstructure.005.png" title="plot of chunk unnamed-chunk-32" alt="plot of chunk unnamed-chunk-32" width="85%" style="display: block; margin: auto;" />
 
 
 ---&twocol
@@ -432,7 +428,7 @@ install.packages("FFTrees")
 
 
 
-<img src="images/FFTrees_Logo.jpg" title="plot of chunk unnamed-chunk-37" alt="plot of chunk unnamed-chunk-37" width="80%" style="display: block; margin: auto;" />
+<img src="images/FFTrees_Logo.jpg" title="plot of chunk unnamed-chunk-34" alt="plot of chunk unnamed-chunk-34" width="80%" style="display: block; margin: auto;" />
 
 
 
@@ -452,7 +448,7 @@ install.packages("FFTrees")
 
 ***=right
 
-<img src="images/hospital.jpg" title="plot of chunk unnamed-chunk-39" alt="plot of chunk unnamed-chunk-39" width="100%" style="display: block; margin: auto;" />
+<img src="images/hospital.jpg" title="plot of chunk unnamed-chunk-36" alt="plot of chunk unnamed-chunk-36" width="100%" style="display: block; margin: auto;" />
 
 
 
@@ -550,7 +546,7 @@ plot(patient.fft, what = "cues", main = "Patient cues")
 ```
 
 
-<img src="assets/fig/unnamed-chunk-47-1.png" title="plot of chunk unnamed-chunk-47" alt="plot of chunk unnamed-chunk-47" width="55%" style="display: block; margin: auto;" />
+<img src="assets/fig/unnamed-chunk-44-1.png" title="plot of chunk unnamed-chunk-44" alt="plot of chunk unnamed-chunk-44" width="55%" style="display: block; margin: auto;" />
 
 
 --- 
@@ -561,7 +557,7 @@ plot(patient.fft, main = "Release Decision FFT", stats = FALSE)
 ```
 
 
-<img src="assets/fig/unnamed-chunk-49-1.png" title="plot of chunk unnamed-chunk-49" alt="plot of chunk unnamed-chunk-49" width="70%" style="display: block; margin: auto;" />
+<img src="assets/fig/unnamed-chunk-46-1.png" title="plot of chunk unnamed-chunk-46" alt="plot of chunk unnamed-chunk-46" width="70%" style="display: block; margin: auto;" />
 
 --- 
 
@@ -571,7 +567,7 @@ plot(patient.fft)
 ```
 
 
-<img src="assets/fig/unnamed-chunk-51-1.png" title="plot of chunk unnamed-chunk-51" alt="plot of chunk unnamed-chunk-51" width="65%" style="display: block; margin: auto;" />
+<img src="assets/fig/unnamed-chunk-48-1.png" title="plot of chunk unnamed-chunk-48" alt="plot of chunk unnamed-chunk-48" width="65%" style="display: block; margin: auto;" />
 
 
 
@@ -595,7 +591,7 @@ plot(patient.fft)
 
 ## How accurate can a simple tree be?
 
-<img src="images/P63_SimulationPP.png" title="plot of chunk unnamed-chunk-53" alt="plot of chunk unnamed-chunk-53" width="75%" style="display: block; margin: auto;" />
+<img src="images/P63_SimulationPP.png" title="plot of chunk unnamed-chunk-50" alt="plot of chunk unnamed-chunk-50" width="75%" style="display: block; margin: auto;" />
 
 
 
@@ -613,21 +609,8 @@ plot(patient.fft)
 
 ***=right
 
-<img src="images/datacollage.png" title="plot of chunk unnamed-chunk-54" alt="plot of chunk unnamed-chunk-54" width="90%" style="display: block; margin: auto;" />
+<img src="images/datacollage.png" title="plot of chunk unnamed-chunk-51" alt="plot of chunk unnamed-chunk-51" width="90%" style="display: block; margin: auto;" />
 
-
---- .class #id 
-## Speed and frugality
-
-
-<img src="assets/fig/unnamed-chunk-55-1.png" title="plot of chunk unnamed-chunk-55" alt="plot of chunk unnamed-chunk-55" width="60%" style="display: block; margin: auto;" />
-
-
---- .class #id 
-## Speed and frugality
-
-
-<img src="assets/fig/unnamed-chunk-56-1.png" title="plot of chunk unnamed-chunk-56" alt="plot of chunk unnamed-chunk-56" width="60%" style="display: block; margin: auto;" />
 
 
 
@@ -638,7 +621,7 @@ plot(patient.fft)
 heart.fft <- FFTrees(diagnosis ~ ., data = heartdisease)
 ```
 
-<img src="assets/fig/unnamed-chunk-58-1.png" title="plot of chunk unnamed-chunk-58" alt="plot of chunk unnamed-chunk-58" width="55%" style="display: block; margin: auto;" />
+<img src="assets/fig/unnamed-chunk-53-1.png" title="plot of chunk unnamed-chunk-53" alt="plot of chunk unnamed-chunk-53" width="55%" style="display: block; margin: auto;" />
 
 ---
 
@@ -647,17 +630,17 @@ heart.fft <- FFTrees(diagnosis ~ ., data = heartdisease)
 mushrooms.fft <- FFTrees(poisonous ~ ., data = mushrooms)
 ```
 
-<img src="assets/fig/unnamed-chunk-60-1.png" title="plot of chunk unnamed-chunk-60" alt="plot of chunk unnamed-chunk-60" width="55%" style="display: block; margin: auto;" />
+<img src="assets/fig/unnamed-chunk-55-1.png" title="plot of chunk unnamed-chunk-55" alt="plot of chunk unnamed-chunk-55" width="55%" style="display: block; margin: auto;" />
 
 --- .class #id 
 ## Prediction accuracy across 10 dasets
 
-<img src="images/simulationagg_b.png" title="plot of chunk unnamed-chunk-61" alt="plot of chunk unnamed-chunk-61" width="90%" style="display: block; margin: auto;" />
+<img src="images/simulationagg_b.png" title="plot of chunk unnamed-chunk-56" alt="plot of chunk unnamed-chunk-56" width="90%" style="display: block; margin: auto;" />
 
 --- .class #id 
 ## Prediction accuracy across 10 dasets
 
-<img src="images/simulationagg_c.png" title="plot of chunk unnamed-chunk-62" alt="plot of chunk unnamed-chunk-62" width="90%" style="display: block; margin: auto;" />
+<img src="images/simulationagg_c.png" title="plot of chunk unnamed-chunk-57" alt="plot of chunk unnamed-chunk-57" width="90%" style="display: block; margin: auto;" />
 
 
 
@@ -673,7 +656,7 @@ mushrooms.fft <- FFTrees(poisonous ~ ., data = mushrooms)
 
 
 
-<img src="images/decisionheads.png" title="plot of chunk unnamed-chunk-64" alt="plot of chunk unnamed-chunk-64" width="75%" style="display: block; margin: auto;" />
+<img src="images/decisionheads.png" title="plot of chunk unnamed-chunk-59" alt="plot of chunk unnamed-chunk-59" width="75%" style="display: block; margin: auto;" />
 
 
 
@@ -693,9 +676,9 @@ mushrooms.fft <- FFTrees(poisonous ~ ., data = mushrooms)
 <br>
 <br>
 
-<img src="images/rpackagediagram.png" title="plot of chunk unnamed-chunk-66" alt="plot of chunk unnamed-chunk-66" width="90%" />
+<img src="images/rpackagediagram.png" title="plot of chunk unnamed-chunk-61" alt="plot of chunk unnamed-chunk-61" width="90%" />
 
-<img src="images/FFTrees_Logo.jpg" title="plot of chunk unnamed-chunk-67" alt="plot of chunk unnamed-chunk-67" width="70%" />
+<img src="images/FFTrees_Logo.jpg" title="plot of chunk unnamed-chunk-62" alt="plot of chunk unnamed-chunk-62" width="70%" />
 
 
 
@@ -719,7 +702,7 @@ mushrooms.fft <- FFTrees(poisonous ~ ., data = mushrooms)
 
 ***=right
 
-<img src="images/photocollage.png" title="plot of chunk unnamed-chunk-69" alt="plot of chunk unnamed-chunk-69" width="90%" style="display: block; margin: auto;" />
+<img src="images/photocollage.png" title="plot of chunk unnamed-chunk-64" alt="plot of chunk unnamed-chunk-64" width="90%" style="display: block; margin: auto;" />
 
 
 --- .class #id 
@@ -757,12 +740,25 @@ mushrooms.fft <- FFTrees(poisonous ~ ., data = mushrooms)
 
 ***=right
 
-<img src="images/traintreestats.png" title="plot of chunk unnamed-chunk-70" alt="plot of chunk unnamed-chunk-70" width="100%" style="display: block; margin: auto;" />
+<img src="images/traintreestats.png" title="plot of chunk unnamed-chunk-65" alt="plot of chunk unnamed-chunk-65" width="100%" style="display: block; margin: auto;" />
 
 
+
+--- .class #id 
+## Speed and frugality
+
+
+<img src="assets/fig/unnamed-chunk-66-1.png" title="plot of chunk unnamed-chunk-66" alt="plot of chunk unnamed-chunk-66" width="60%" style="display: block; margin: auto;" />
+
+
+--- .class #id 
+## Speed and frugality
+
+
+<img src="assets/fig/unnamed-chunk-67-1.png" title="plot of chunk unnamed-chunk-67" alt="plot of chunk unnamed-chunk-67" width="60%" style="display: block; margin: auto;" />
 
 
 ---
 ## A forensic non-frugal tree
 
-<img src="assets/fig/unnamed-chunk-71-1.png" title="plot of chunk unnamed-chunk-71" alt="plot of chunk unnamed-chunk-71" width="55%" style="display: block; margin: auto;" />
+<img src="assets/fig/unnamed-chunk-68-1.png" title="plot of chunk unnamed-chunk-68" alt="plot of chunk unnamed-chunk-68" width="55%" style="display: block; margin: auto;" />
